@@ -5,6 +5,8 @@
 
 #include "../logica/controlador/SistemaControlador.h"
 #include "../logica/interfaceSistema/ISistema.h"
+#include "DTs/DTFecha.h"
+#include "DTs/DTUsuario.h"
 
 
 using namespace std;
@@ -27,8 +29,7 @@ void AltaUsuario::pedirCredenciales() {
 
     ISistema *iSistema = new SistemaControlador();
     string nick, pass;
-    fechaNac= new DTFecha()
-
+    int dia, mes, anio;
     cout << " ** Login ** " << endl;
     cout << "Ingrese nick: ";
     cin >> nick;
@@ -37,9 +38,10 @@ void AltaUsuario::pedirCredenciales() {
     cin >> pass;
     cout << endl;
     cout << "Fecha Nacimiento: ";
-    cin >> fechaNac;
+    cin >> dia, mes, anio;
+    fechaNac= new DTFecha(dia,mes,anio);
     cout << endl;
-    cout << iSistema->ingresar(nick, pass, fechaNac);
+    cout << iSistema->ingresar(dtusuario);
 }
 
 
