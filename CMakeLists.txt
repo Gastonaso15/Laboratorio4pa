@@ -16,9 +16,7 @@ add_executable(Dis_EjemploArquitecturaLogin
         src/logica/dominio/Sistema.h
         src/logica/dominio/Usuario.cpp
         src/logica/dominio/Usuario.h
-    src/presentacion/Login.cpp
-    src/presentacion/Login.h
-    src/Principal.cpp
+        src/Principal.cpp
         src/presentacion/AltaUsuario.cpp
         src/presentacion/AltaUsuario.h
         src/DTs/DTUsuario.cpp
