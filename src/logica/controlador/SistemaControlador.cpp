@@ -1,9 +1,3 @@
-/*
- * SistemaControlador.cpp
- *
- *  Created on: 8 may 2024
- *      Author: gabriel
- */
 
 #include "SistemaControlador.h"
 

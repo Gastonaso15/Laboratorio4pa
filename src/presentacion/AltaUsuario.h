@@ -5,4 +5,13 @@
 #ifndef ALTAUSUARIO_H
 #define ALTAUSUARIO_H
 
+class AltaUsuario {
+public:
+    AltaUsuario();
+    virtual ~AltaUsuario();
+    void pedirCredenciales();
+};
+
 #endif //ALTAUSUARIO_H
+
+
