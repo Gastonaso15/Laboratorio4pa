@@ -19,14 +19,10 @@ private:
 	int intentosError;
 
 public:
-	Usuario(string nick, string pass);
+	Usuario(string nick, string pass, DTFecha * fechaNac);
 	virtual ~Usuario();
 
 	string getNick();
-
-	bool validarContrasenia(string pass);
-	bool estaBloqueado();
-
 };
 
 #endif /* LOGICA_USUARIO_H_ */

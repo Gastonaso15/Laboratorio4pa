@@ -8,9 +8,12 @@
 #include "Usuario.h"
 #include <iostream>
 
-Usuario::Usuario(string nick, string pass) {
+#include "../../DTs/DTFecha.h"
+
+Usuario::Usuario(string nick, string pass, DTFecha * fechaNac) {
 	this->nick = nick;
 	this->pass = pass;
+	this->fechaNac= fechaNac;
 }
 
 Usuario::~Usuario() {
@@ -20,20 +23,3 @@ Usuario::~Usuario() {
 string Usuario::getNick() {
 	return this->nick;
 }
-
-bool Usuario::validarContrasenia(string pass) {
-	if (this->pass == pass) {
-		cout << "pass correcta" << endl;
-		return true;
-	} else  {
-		cout << "pass incorrecta" << endl;
-		return false;
-	}
-
-}
-
-bool Usuario::estaBloqueado() {
-	if (this->intentosError > 3) return true;
-	else return false;
-}
-

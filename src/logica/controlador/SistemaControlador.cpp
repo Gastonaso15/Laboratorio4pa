@@ -27,11 +27,11 @@ void SistemaControlador::agregarUsuario(DTUsuario* usuario) {
 	DTCliente* dtoCli = dynamic_cast<DTCliente*>(usuario);
 	if (dtoCli != nullptr) {
 		nuevoUsuario = new Cliente(dtoCli->nick, dtoCli->pass,
-				dtoCli->nom, dtoCli->descrip, dtoCli->paisResidencia);
+			dtoCli->fechaNac,dtoCli->direccion, dtoCli->ciudad);
 	} else {
 		DTVendedor* dtoVen = dynamic_cast<DTVendedor*>(usuario);
 		nuevoUsuario = new Vendedor(dtoVen->nick, dtoVen->pass,
-				dtoVen->nom, dtoVen->descrip, dtoVen->instituto);
+				dtoCli->fechaNac, dtoVen->rut);
 
 		}
 	}
