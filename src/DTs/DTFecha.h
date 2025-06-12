@@ -27,6 +27,4 @@ public:
     }
 };
 
-
-
 #endif //DTFECHA_H

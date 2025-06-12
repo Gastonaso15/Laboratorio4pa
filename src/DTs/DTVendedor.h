@@ -5,10 +5,16 @@
 #ifndef DTVENDEDOR_H
 #define DTVENDEDOR_H
 
+#include "DTUsuario.h"
 
-
-class DTVendedor {
-
+class DTVendedor::public DTUsuario{
+private:
+    string RUT;
+public:
+    DTVendedor();
+    virtual DTVendedor();
+    DTVendedor(string nick, string contrasenia, DTFECHA * fecha, string RUT);
+    string getRUT();
 };
 
 

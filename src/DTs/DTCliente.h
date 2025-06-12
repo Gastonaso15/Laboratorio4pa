@@ -7,7 +7,7 @@
 
 
 
-class DTCliente {
+class DTCliente::public DTUsuario {
 
 };
 

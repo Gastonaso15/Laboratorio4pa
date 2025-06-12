@@ -3,3 +3,19 @@
 //
 
 #include "DTVendedor.h"
+
+DTVendedor::DTVendedor(){
+    this->RUT="";
+}
+
+DTVendedor::~DTVendedor() {
+
+}
+
+DTVendedor::DTVendedor(string nick, string contrasenia, DTFECHA * fecha, string RUT) {
+    this->RUT=RUT;
+}
+
+string DTVendedor::getRUT() {
+    return this->RUT;
+}
