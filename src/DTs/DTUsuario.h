@@ -13,12 +13,14 @@ class DTUsuario {
 protected:
     string nick;
     string contrasenia;
-    DTFECHA * fechaNac;
+    DTFecha * fechaNac;
 public:
     DTUsuario();
-    vitual ~DTUsuario();
-    DTUsuario(string nick, string contrasenia, DTFECHA * fechaNac);
-    string getNick()const;
-    string getContrasenia()const;
-    DTFecha getFechaNac()const;
+    virtual ~DTUsuario();
+    DTUsuario(string nick, string contrasenia, DTFecha * fechaNac);
+    string getNick();
+    string getContrasenia();
+    DTFecha getFechaNac();
 };
+
+#endif

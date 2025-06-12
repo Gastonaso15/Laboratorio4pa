@@ -10,16 +10,16 @@
 #include <iostream>
 using namespace std;
 
-class DTCliente::public DTUsuario {
+class DTCliente:public DTUsuario {
 private:
     string ciudad;
     DTDireccion * direccion;
 public:
     DTCliente();
     virtual ~DTCliente();
-    DTCliente(string nick, string contrasenia, DTFECHA * fecha, string ciudad, DTDireccion * direccion);
+    DTCliente(string nick, string contrasenia, DTFecha * fecha, string ciudad, DTDireccion * direccion);
     string getCiudad();
-    DTDireccion * getDireccion();
+    DTDireccion getDireccion();
 };
 
 

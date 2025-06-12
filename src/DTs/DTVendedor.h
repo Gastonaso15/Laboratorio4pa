@@ -9,13 +9,13 @@
 #include <iostream>
 using namespace std;
 
-class DTVendedor::public DTUsuario{
+class DTVendedor:public DTUsuario{
 private:
     string RUT;
 public:
     DTVendedor();
     virtual ~DTVendedor();
-    DTVendedor(string nick, string contrasenia, DTFECHA * fecha, string RUT);
+    DTVendedor(string nick, string contrasenia, DTFecha * fecha, string RUT);
     string getRUT();
 };
 

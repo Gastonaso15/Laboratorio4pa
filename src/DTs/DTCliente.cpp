@@ -8,14 +8,14 @@ using namespace std;
 
 DTCliente::DTCliente() {
     this->ciudad="";
-    this->direccion="";
+    this->direccion=NULL;
 }
 
 DTCliente::~DTCliente() {
 
 }
 
-DTCliente::DTCliente(string nick, string contrasenia, DTFECHA * fecha, string ciudad, DTDireccion * direccion) {
+DTCliente::DTCliente(string nick, string contrasenia, DTFecha * fecha, string ciudad, DTDireccion * direccion) {
     this->ciudad=ciudad;
     this->direccion=direccion;
 }
@@ -25,5 +25,5 @@ string DTCliente::getCiudad() {
 }
 
 DTDireccion DTCliente::getDireccion() {
-    return this->direccion;
+    return *(this->direccion);
 }

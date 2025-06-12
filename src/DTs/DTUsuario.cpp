@@ -14,22 +14,22 @@ DTUsuario::~DTUsuario() {
 
 }
 
-DTUsuario::DTUsuario(string nick, string contrasenia, DTFECHA *fechaNac) {
+DTUsuario::DTUsuario(string nick, string contrasenia, DTFecha *fechaNac) {
     this->nick = nick;
     this->contrasenia= contrasenia;
     this->fechaNac = fechaNac;
 }
 
-string DTUsuario::getNick()const {
+string DTUsuario::getNick() {
     return this->nick;
 }
 
-string DTUsuario::getContrasenia()const {
+string DTUsuario::getContrasenia() {
     return this->contrasenia;
 }
 
-DTFecha DTUsuario::getFechaNac()const {
-    return this->fechaNac;
+DTFecha DTUsuario::getFechaNac() {
+    return *(this->fechaNac);
 }
 
 

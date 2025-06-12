@@ -14,7 +14,7 @@ DTVendedor::~DTVendedor() {
 
 }
 
-DTVendedor::DTVendedor(string nick, string contrasenia, DTFECHA * fecha, string RUT) {
+DTVendedor::DTVendedor(string nick, string contrasenia, DTFecha * fecha, string RUT) {
     this->RUT=RUT;
 }
 
