@@ -21,13 +21,13 @@ add_executable(Dis_EjemploArquitecturaLogin
     src/Principal.cpp
         src/presentacion/AltaUsuario.cpp
         src/presentacion/AltaUsuario.h
-        src/logica/DTs/DTUsuario.cpp
-        src/logica/DTs/DTUsuario.h
-        src/logica/DTs/DTVendedor.cpp
-        src/logica/DTs/DTVendedor.h
-        src/logica/DTs/DTCliente.cpp
-        src/logica/DTs/DTCliente.h
-        src/logica/DTs/DTDireccion.cpp
-        src/logica/DTs/DTDireccion.h
-        src/logica/DTs/DTFecha.cpp
-        src/logica/DTs/DTFecha.h)
+        src/DTs/DTUsuario.cpp
+        src/DTs/DTUsuario.h
+        src/DTs/DTVendedor.cpp
+        src/DTs/DTVendedor.h
+        src/DTs/DTCliente.cpp
+        src/DTs/DTCliente.h
+        src/DTs/DTDireccion.cpp
+        src/DTs/DTDireccion.h
+        src/DTs/DTFecha.cpp
+        src/DTs/DTFecha.h)
