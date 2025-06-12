@@ -6,6 +6,8 @@
 #define DTUSUARIO_H
 
 #include "DTFecha.h"
+#include <iostream>
+using namespace std;
 
 class DTUsuario {
 protected:

@@ -6,13 +6,15 @@
 #define DTVENDEDOR_H
 
 #include "DTUsuario.h"
+#include <iostream>
+using namespace std;
 
 class DTVendedor::public DTUsuario{
 private:
     string RUT;
 public:
     DTVendedor();
-    virtual DTVendedor();
+    virtual ~DTVendedor();
     DTVendedor(string nick, string contrasenia, DTFECHA * fecha, string RUT);
     string getRUT();
 };

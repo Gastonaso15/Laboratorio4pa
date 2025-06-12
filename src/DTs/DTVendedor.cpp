@@ -3,6 +3,8 @@
 //
 
 #include "DTVendedor.h"
+#include <iostream>
+using namespace std;
 
 DTVendedor::DTVendedor(){
     this->RUT="";

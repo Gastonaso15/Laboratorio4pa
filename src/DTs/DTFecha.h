@@ -5,7 +5,7 @@
 #ifndef DTFECHA_H
 #define DTFECHA_H
 #include <iostream>
-
+using namespace std;
 
 class DTFecha {
 private:

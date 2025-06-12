@@ -3,6 +3,8 @@
 //
 
 #include "DTUsuario.h"
+#include <iostream>
+using namespace std;
 
 DTUsuario::DTUsuario() {
 
