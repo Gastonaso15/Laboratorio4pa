@@ -1,15 +1,15 @@
 
 #include "SistemaControlador.h"
-
-#include <string>
-
-#include "../dominio/Sistema.h"
-#include "DTs/DTCliente.h"
-#include "DTs/DTUsuario.h"
-#include "DTs/DTVendedor.h"
+#include <iostream>
+#include "../DTs/DTFecha.h"
+#include "../DTs/DTProducto.h"
+#include "../DTs/DTUsuario.h"
+#include "../DTs/DTVendedor.h"
+#include "../DTs/DTCliente.h"
+#include <map>
+using namespace std;
 
 SistemaControlador::SistemaControlador() {
-	this->sistema = new Sistema();
 
 }
 
@@ -23,7 +23,7 @@ string SistemaControlador::AltaUsuario(DTUsuario usuario) {
 
 
 void SistemaControlador::agregarUsuario(DTUsuario* usuario) {
-	Usuario *nuevoUsuario;
+	DTUsuario *nuevoUsuario;
 	DTCliente* dtoCli = dynamic_cast<DTCliente*>(usuario);
 	if (dtoCli != nullptr) {
 		nuevoUsuario = new Cliente(dtoCli->nick, dtoCli->pass,
@@ -34,7 +34,4 @@ void SistemaControlador::agregarUsuario(DTUsuario* usuario) {
 				dtoCli->fechaNac, dtoVen->rut);
 
 		}
-	}
-
-	this->sistema->usuarios.insert(nuevoUsuario);
 }
