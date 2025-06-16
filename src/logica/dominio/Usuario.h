@@ -1,28 +1,20 @@
-/*
- * Usuario.h
- *
- *  Created on: 8 may 2024
- *      Author: gabriel
- */
-
 #ifndef LOGICA_USUARIO_H_
 #define LOGICA_USUARIO_H_
 #include <iostream>
-
+#include "../DTs/DTFecha.h"
 using namespace std;
 
 class Usuario {
-private:
+protected:
 	string nick;
 	string pass;
-
-	int intentosError;
+	DTFecha * fechaNac;
 
 public:
+	Usuario();
 	Usuario(string nick, string pass, DTFecha * fechaNac);
 	virtual ~Usuario();
-
 	string getNick();
 };
 
-#endif /* LOGICA_USUARIO_H_ */
+#endif

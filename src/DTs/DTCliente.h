@@ -11,13 +11,12 @@
 using namespace std;
 
 class DTCliente:public DTUsuario {
-private:
+public:
     string ciudad;
     DTDireccion * direccion;
-public:
     DTCliente();
     virtual ~DTCliente();
-    DTCliente(string nick, string contrasenia, DTFecha * fecha, string ciudad, DTDireccion * direccion);
+    DTCliente(string nick, string pass, DTFecha * fecha, string ciudad, DTDireccion * direccion);
     string getCiudad();
     DTDireccion getDireccion();
     void asociarProd();

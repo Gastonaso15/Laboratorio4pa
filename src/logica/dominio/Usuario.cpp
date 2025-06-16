@@ -1,14 +1,8 @@
-/*
- * Usuario.cpp
- *
- *  Created on: 8 may 2024
- *      Author: gabriel
- */
 
 #include "Usuario.h"
+#include "../DTs/DTFecha.h"
 #include <iostream>
 
-#include "../../DTs/DTFecha.h"
 
 Usuario::Usuario(string nick, string pass, DTFecha * fechaNac) {
 	this->nick = nick;

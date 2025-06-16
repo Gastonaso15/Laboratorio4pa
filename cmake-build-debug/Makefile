@@ -296,6 +296,30 @@ src/logica/controlador/SistemaControlador.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/controlador/SistemaControlador.cpp.s
 .PHONY : src/logica/controlador/SistemaControlador.cpp.s
 
+src/logica/dominio/Cliente.obj: src/logica/dominio/Cliente.cpp.obj
+.PHONY : src/logica/dominio/Cliente.obj
+
+# target to build an object file
+src/logica/dominio/Cliente.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.obj
+.PHONY : src/logica/dominio/Cliente.cpp.obj
+
+src/logica/dominio/Cliente.i: src/logica/dominio/Cliente.cpp.i
+.PHONY : src/logica/dominio/Cliente.i
+
+# target to preprocess a source file
+src/logica/dominio/Cliente.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.i
+.PHONY : src/logica/dominio/Cliente.cpp.i
+
+src/logica/dominio/Cliente.s: src/logica/dominio/Cliente.cpp.s
+.PHONY : src/logica/dominio/Cliente.s
+
+# target to generate assembly for a file
+src/logica/dominio/Cliente.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.s
+.PHONY : src/logica/dominio/Cliente.cpp.s
+
 src/logica/dominio/Usuario.obj: src/logica/dominio/Usuario.cpp.obj
 .PHONY : src/logica/dominio/Usuario.obj
 
@@ -319,6 +343,30 @@ src/logica/dominio/Usuario.s: src/logica/dominio/Usuario.cpp.s
 src/logica/dominio/Usuario.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Usuario.cpp.s
 .PHONY : src/logica/dominio/Usuario.cpp.s
+
+src/logica/dominio/Vendedor.obj: src/logica/dominio/Vendedor.cpp.obj
+.PHONY : src/logica/dominio/Vendedor.obj
+
+# target to build an object file
+src/logica/dominio/Vendedor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.obj
+.PHONY : src/logica/dominio/Vendedor.cpp.obj
+
+src/logica/dominio/Vendedor.i: src/logica/dominio/Vendedor.cpp.i
+.PHONY : src/logica/dominio/Vendedor.i
+
+# target to preprocess a source file
+src/logica/dominio/Vendedor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.i
+.PHONY : src/logica/dominio/Vendedor.cpp.i
+
+src/logica/dominio/Vendedor.s: src/logica/dominio/Vendedor.cpp.s
+.PHONY : src/logica/dominio/Vendedor.s
+
+# target to generate assembly for a file
+src/logica/dominio/Vendedor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.s
+.PHONY : src/logica/dominio/Vendedor.cpp.s
 
 src/presentacion/AltaUsuario.obj: src/presentacion/AltaUsuario.cpp.obj
 .PHONY : src/presentacion/AltaUsuario.obj
@@ -374,9 +422,15 @@ help:
 	@echo ... src/logica/controlador/SistemaControlador.obj
 	@echo ... src/logica/controlador/SistemaControlador.i
 	@echo ... src/logica/controlador/SistemaControlador.s
+	@echo ... src/logica/dominio/Cliente.obj
+	@echo ... src/logica/dominio/Cliente.i
+	@echo ... src/logica/dominio/Cliente.s
 	@echo ... src/logica/dominio/Usuario.obj
 	@echo ... src/logica/dominio/Usuario.i
 	@echo ... src/logica/dominio/Usuario.s
+	@echo ... src/logica/dominio/Vendedor.obj
+	@echo ... src/logica/dominio/Vendedor.i
+	@echo ... src/logica/dominio/Vendedor.s
 	@echo ... src/presentacion/AltaUsuario.obj
 	@echo ... src/presentacion/AltaUsuario.i
 	@echo ... src/presentacion/AltaUsuario.s

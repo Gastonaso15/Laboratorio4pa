@@ -3,7 +3,7 @@
 #include "DTFecha.h"
 using namespace std;
 
-DTComentario::DTComentario();{
+DTComentario::DTComentario(){
 
 }
 

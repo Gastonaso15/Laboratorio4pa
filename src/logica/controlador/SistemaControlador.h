@@ -4,20 +4,23 @@
 #include "../DTs/DTFecha.h"
 #include "../DTs/DTProducto.h"
 #include "../DTs/DTUsuario.h"
+#include "../dominio/Usuario.h"
+#include "../dominio/Cliente.h"
+#include "../dominio/Vendedor.h"
 #include <map>
 using namespace std;
 
 #include <string>
 
 class SistemaControlador{
-private:
+protected:
 	map<string,DTProducto*>carrito;
-	map<string,DTUsuario*> usuarios;
+	map<string,Usuario*> usuarios;
 public:
 	SistemaControlador();
 	virtual ~SistemaControlador();
 	void agregarUsuario(DTUsuario* usuario);
-	virtual string ingresar(string nick, string pass);
+	void AltaUsuario(DTUsuario usuario);
 };
 
 

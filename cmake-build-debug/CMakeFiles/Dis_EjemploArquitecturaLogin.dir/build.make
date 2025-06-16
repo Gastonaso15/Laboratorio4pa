@@ -203,6 +203,36 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTFecha.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTFecha.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Laboratorio4pa\src\DTs\DTFecha.cpp -o CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\DTs\DTFecha.cpp.s
 
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.obj: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/flags.make
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.obj: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/includes_CXX.rsp
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.obj: C:/Laboratorio4pa/src/logica/dominio/Cliente.cpp
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.obj: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Laboratorio4pa\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.obj -MF CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\logica\dominio\Cliente.cpp.obj.d -o CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\logica\dominio\Cliente.cpp.obj -c C:\Laboratorio4pa\src\logica\dominio\Cliente.cpp
+
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Laboratorio4pa\src\logica\dominio\Cliente.cpp > CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\logica\dominio\Cliente.cpp.i
+
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Laboratorio4pa\src\logica\dominio\Cliente.cpp -o CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\logica\dominio\Cliente.cpp.s
+
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.obj: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/flags.make
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.obj: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/includes_CXX.rsp
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.obj: C:/Laboratorio4pa/src/logica/dominio/Vendedor.cpp
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.obj: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Laboratorio4pa\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.obj -MF CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\logica\dominio\Vendedor.cpp.obj.d -o CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\logica\dominio\Vendedor.cpp.obj -c C:\Laboratorio4pa\src\logica\dominio\Vendedor.cpp
+
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Laboratorio4pa\src\logica\dominio\Vendedor.cpp > CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\logica\dominio\Vendedor.cpp.i
+
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Laboratorio4pa\src\logica\dominio\Vendedor.cpp -o CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\logica\dominio\Vendedor.cpp.s
+
 # Object files for target Dis_EjemploArquitecturaLogin
 Dis_EjemploArquitecturaLogin_OBJECTS = \
 "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/controlador/SistemaControlador.cpp.obj" \
@@ -213,7 +243,9 @@ Dis_EjemploArquitecturaLogin_OBJECTS = \
 "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTVendedor.cpp.obj" \
 "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTCliente.cpp.obj" \
 "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTDireccion.cpp.obj" \
-"CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTFecha.cpp.obj"
+"CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTFecha.cpp.obj" \
+"CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.obj" \
+"CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.obj"
 
 # External object files for target Dis_EjemploArquitecturaLogin
 Dis_EjemploArquitecturaLogin_EXTERNAL_OBJECTS =
@@ -227,11 +259,13 @@ Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/sr
 Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTCliente.cpp.obj
 Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTDireccion.cpp.obj
 Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTFecha.cpp.obj
+Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.obj
+Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.obj
 Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/build.make
 Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/linkLibs.rsp
 Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/objects1.rsp
 Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Laboratorio4pa\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Dis_EjemploArquitecturaLogin.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Laboratorio4pa\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable Dis_EjemploArquitecturaLogin.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Dis_EjemploArquitecturaLogin.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

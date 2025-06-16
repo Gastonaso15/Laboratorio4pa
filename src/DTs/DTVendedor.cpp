@@ -3,21 +3,24 @@
 //
 
 #include "DTVendedor.h"
+#include "DTFecha.h"
 #include <iostream>
 using namespace std;
 
 DTVendedor::DTVendedor(){
-    this->RUT="";
 }
 
 DTVendedor::~DTVendedor() {
 
 }
 
-DTVendedor::DTVendedor(string nick, string contrasenia, DTFecha * fecha, string RUT) {
-    this->RUT=RUT;
+DTVendedor::DTVendedor(string nick, string pass, DTFecha * fechaNac, string rut) {
+    this->nick=nick;
+    this->pass=pass;
+    this->rut=rut;
+    this->fechaNac=fechaNac;
 }
 
 string DTVendedor::getRUT() {
-    return this->RUT;
+    return this->rut;
 }

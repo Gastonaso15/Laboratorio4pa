@@ -16,7 +16,7 @@ class DTCompra {
     DTCompra();
     ~DTCompra();
     DTCompra(int cantProd, DTFecha fecCompra, float montoTotal);
-    agregatProd(DTProducto* producto);
+    void agregarProd(DTProducto* producto);
 };
 
 

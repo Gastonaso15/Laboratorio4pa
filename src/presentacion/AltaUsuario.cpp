@@ -4,9 +4,8 @@
 #include <string>
 
 #include "../logica/controlador/SistemaControlador.h"
-#include "../logica/interfaceSistema/ISistema.h"
-#include "DTs/DTFecha.h"
-#include "DTs/DTUsuario.h"
+#include "../DTs/DTFecha.h"
+#include "../DTs/DTUsuario.h"
 
 
 using namespace std;
@@ -22,12 +21,6 @@ AltaUsuario::~AltaUsuario() {
 
 void AltaUsuario::pedirCredenciales() {
 
-    //notese que si bien estamos usando la interface ISistema,
-    //estamos haciendo un new de su implementacioón
-    //por lo tanto el desacoplamiento que tenemos es un bajo
-    //mojoraremos esto utilizando el patrón Factory en futuras versiones
-
-    ISistema *iSistema = new SistemaControlador();
     string nick, pass;
     int dia, mes, anio;
     cout << " ** Login ** " << endl;
@@ -39,9 +32,8 @@ void AltaUsuario::pedirCredenciales() {
     cout << endl;
     cout << "Fecha Nacimiento: ";
     cin >> dia, mes, anio;
-    fechaNac= new DTFecha(dia,mes,anio);
+    //fechaNac= new DTFecha(dia,mes,anio); PARA REVISAR
     cout << endl;
-    cout << iSistema->ingresar(dtusuario);
 }
 
 

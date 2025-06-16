@@ -10,16 +10,15 @@
 using namespace std;
 
 class DTUsuario {
-protected:
-    string nick;
-    string contrasenia;
-    DTFecha * fechaNac;
 public:
+    string nick;
+    string pass;
+    DTFecha * fechaNac;
     DTUsuario();
     virtual ~DTUsuario();
     DTUsuario(string nick, string contrasenia, DTFecha * fechaNac);
     string getNick();
-    string getContrasenia();
+    string getPass();
     DTFecha getFechaNac();
 };
 

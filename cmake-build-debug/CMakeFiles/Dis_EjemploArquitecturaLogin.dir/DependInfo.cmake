@@ -15,7 +15,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Laboratorio4pa/src/DTs/DTVendedor.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTVendedor.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTVendedor.cpp.obj.d"
   "C:/Laboratorio4pa/src/Principal.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/Principal.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/Principal.cpp.obj.d"
   "C:/Laboratorio4pa/src/logica/controlador/SistemaControlador.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/controlador/SistemaControlador.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/controlador/SistemaControlador.cpp.obj.d"
+  "C:/Laboratorio4pa/src/logica/dominio/Cliente.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.obj.d"
   "C:/Laboratorio4pa/src/logica/dominio/Usuario.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Usuario.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Usuario.cpp.obj.d"
+  "C:/Laboratorio4pa/src/logica/dominio/Vendedor.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.obj.d"
   "C:/Laboratorio4pa/src/presentacion/AltaUsuario.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/AltaUsuario.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/AltaUsuario.cpp.obj.d"
   )
 

@@ -26,4 +26,8 @@ add_executable(Dis_EjemploArquitecturaLogin
         src/DTs/DTDireccion.cpp
         src/DTs/DTDireccion.h
         src/DTs/DTFecha.cpp
-        src/DTs/DTFecha.h)
+        src/DTs/DTFecha.h
+        src/logica/dominio/Cliente.cpp
+        src/logica/dominio/Cliente.h
+        src/logica/dominio/Vendedor.cpp
+        src/logica/dominio/Vendedor.h)
