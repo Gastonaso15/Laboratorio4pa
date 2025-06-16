@@ -20,6 +20,7 @@ public:
     DTCliente(string nick, string contrasenia, DTFecha * fecha, string ciudad, DTDireccion * direccion);
     string getCiudad();
     DTDireccion getDireccion();
+    void asociarProd();
 };
 
 

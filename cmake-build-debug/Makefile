@@ -296,30 +296,6 @@ src/logica/controlador/SistemaControlador.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/controlador/SistemaControlador.cpp.s
 .PHONY : src/logica/controlador/SistemaControlador.cpp.s
 
-src/logica/dominio/Sistema.obj: src/logica/dominio/Sistema.cpp.obj
-.PHONY : src/logica/dominio/Sistema.obj
-
-# target to build an object file
-src/logica/dominio/Sistema.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Sistema.cpp.obj
-.PHONY : src/logica/dominio/Sistema.cpp.obj
-
-src/logica/dominio/Sistema.i: src/logica/dominio/Sistema.cpp.i
-.PHONY : src/logica/dominio/Sistema.i
-
-# target to preprocess a source file
-src/logica/dominio/Sistema.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Sistema.cpp.i
-.PHONY : src/logica/dominio/Sistema.cpp.i
-
-src/logica/dominio/Sistema.s: src/logica/dominio/Sistema.cpp.s
-.PHONY : src/logica/dominio/Sistema.s
-
-# target to generate assembly for a file
-src/logica/dominio/Sistema.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Sistema.cpp.s
-.PHONY : src/logica/dominio/Sistema.cpp.s
-
 src/logica/dominio/Usuario.obj: src/logica/dominio/Usuario.cpp.obj
 .PHONY : src/logica/dominio/Usuario.obj
 
@@ -398,9 +374,6 @@ help:
 	@echo ... src/logica/controlador/SistemaControlador.obj
 	@echo ... src/logica/controlador/SistemaControlador.i
 	@echo ... src/logica/controlador/SistemaControlador.s
-	@echo ... src/logica/dominio/Sistema.obj
-	@echo ... src/logica/dominio/Sistema.i
-	@echo ... src/logica/dominio/Sistema.s
 	@echo ... src/logica/dominio/Usuario.obj
 	@echo ... src/logica/dominio/Usuario.i
 	@echo ... src/logica/dominio/Usuario.s

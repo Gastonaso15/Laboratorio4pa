@@ -27,3 +27,6 @@ string DTCliente::getCiudad() {
 DTDireccion DTCliente::getDireccion() {
     return *(this->direccion);
 }
+void DTCliente::asociarProd() {
+
+}
