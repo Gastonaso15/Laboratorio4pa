@@ -7,6 +7,8 @@
 #include "Usuario.h"
 #include "../DTs/DTFecha.h"
 #include <iostream>
+
+#include "../../DTs/DTCliente.h"
 #include "../DTs/DTDireccion.h"
 
 class Cliente: public Usuario{
@@ -20,6 +22,7 @@ public:
     Cliente();
     ~Cliente();
     void asociarProd();
+    DTCliente getCliente() const;
 };
 
 
