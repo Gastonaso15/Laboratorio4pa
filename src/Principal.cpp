@@ -1,6 +1,11 @@
+#include "../presentacion/Menu.h"
+#include <iostream>
+#include "../logica/controlador/SistemaControlador.h"
+using namespace std;
 
 int main() {
-//	Login * log = new Login();
-//	log->pedirCredenciales();
-	return 0;
+    SistemaControlador controlador;
+    Menu menu(controlador);
+    menu.mostrarMenu();
+    return 0;
 }

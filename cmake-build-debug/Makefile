@@ -392,6 +392,30 @@ src/presentacion/AltaUsuario.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/AltaUsuario.cpp.s
 .PHONY : src/presentacion/AltaUsuario.cpp.s
 
+src/presentacion/Menu.obj: src/presentacion/Menu.cpp.obj
+.PHONY : src/presentacion/Menu.obj
+
+# target to build an object file
+src/presentacion/Menu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/Menu.cpp.obj
+.PHONY : src/presentacion/Menu.cpp.obj
+
+src/presentacion/Menu.i: src/presentacion/Menu.cpp.i
+.PHONY : src/presentacion/Menu.i
+
+# target to preprocess a source file
+src/presentacion/Menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/Menu.cpp.i
+.PHONY : src/presentacion/Menu.cpp.i
+
+src/presentacion/Menu.s: src/presentacion/Menu.cpp.s
+.PHONY : src/presentacion/Menu.s
+
+# target to generate assembly for a file
+src/presentacion/Menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/Menu.cpp.s
+.PHONY : src/presentacion/Menu.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -434,6 +458,9 @@ help:
 	@echo ... src/presentacion/AltaUsuario.obj
 	@echo ... src/presentacion/AltaUsuario.i
 	@echo ... src/presentacion/AltaUsuario.s
+	@echo ... src/presentacion/Menu.obj
+	@echo ... src/presentacion/Menu.i
+	@echo ... src/presentacion/Menu.s
 .PHONY : help
 
 

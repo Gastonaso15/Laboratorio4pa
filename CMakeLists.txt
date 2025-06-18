@@ -11,7 +11,6 @@ include_directories(src/presentacion)
 add_executable(Dis_EjemploArquitecturaLogin
     src/logica/controlador/SistemaControlador.cpp
     src/logica/controlador/SistemaControlador.h
-    src/logica/interfaceSistema/ISistema.h
         src/logica/dominio/Usuario.cpp
         src/logica/dominio/Usuario.h
         src/Principal.cpp
@@ -30,4 +29,6 @@ add_executable(Dis_EjemploArquitecturaLogin
         src/logica/dominio/Cliente.cpp
         src/logica/dominio/Cliente.h
         src/logica/dominio/Vendedor.cpp
-        src/logica/dominio/Vendedor.h)
+        src/logica/dominio/Vendedor.h
+        src/presentacion/Menu.cpp
+        src/presentacion/Menu.h)

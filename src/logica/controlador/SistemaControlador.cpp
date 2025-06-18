@@ -24,27 +24,27 @@ SistemaControlador::~SistemaControlador() {
     usuarios.clear();
 }
 
-void SistemaControlador::agregarUsuario(DTUsuario* usuario) {
+string SistemaControlador::altaUsuario(DTUsuario* usuario) { //cambiar a string
     Usuario* nuevoUsuario = nullptr;
-
+    string respuesta;
     if (DTCliente* dtoCli = dynamic_cast<DTCliente*>(usuario)) {
-        DTFecha* fechaCopia = new DTFecha(*dtoCli->fechaNac);  // copia por valor
+        DTFecha* fechaNac = new DTFecha(*dtoCli->fechaNac);  // copia por valor
 
         nuevoUsuario = new Cliente(
             dtoCli->nick,
             dtoCli->pass,
-            fechaCopia,
+            fechaNac,
             dtoCli->direccion,
             dtoCli->ciudad
         );
 
     } else if (DTVendedor* dtoVen = dynamic_cast<DTVendedor*>(usuario)) {
-        DTFecha* fechaCopia = new DTFecha(*dtoVen->fechaNac);  // copia por valor
+        DTFecha* fechaNac = new DTFecha(*dtoVen->fechaNac);  // copia por valor
 
         nuevoUsuario = new Vendedor(
             dtoVen->nick,
             dtoVen->pass,
-            fechaCopia,
+            fechaNac,
             dtoVen->rut
         );
     }
@@ -53,11 +53,13 @@ void SistemaControlador::agregarUsuario(DTUsuario* usuario) {
         string nick = usuario->nick;
         if (usuarios.find(nick) == usuarios.end()) {
             usuarios[nick] = nuevoUsuario;
+            respuesta="Alta Usuario realizada con exito";
         } else {
             delete nuevoUsuario;
-            throw runtime_error("El usuario con ese nick ya existe.");
+            respuesta="El usuario con ese nick ya existe.";
         }
     } else {
-        throw runtime_error("Tipo de usuario desconocido.");
+        respuesta="Tipo de usuario desconocido.";
     }
+    return respuesta;  // <<--- esto te faltaba
 }

@@ -9,10 +9,9 @@
 using namespace std;
 
 class DTDireccion {
-private:
+public:
     string calle;
     int nroPuerta;
-public:
     DTDireccion();
     ~DTDireccion();
     DTDireccion(string calle, int nroPuerta);

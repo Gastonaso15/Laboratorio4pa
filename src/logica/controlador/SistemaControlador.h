@@ -19,8 +19,7 @@ protected:
 public:
 	SistemaControlador();
 	virtual ~SistemaControlador();
-	void agregarUsuario(DTUsuario* usuario);
-	void AltaUsuario(DTUsuario usuario);
+	string altaUsuario(DTUsuario * usuario);
 };
 
 

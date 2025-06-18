@@ -18,7 +18,7 @@ public:
     virtual ~DTCliente();
     DTCliente(string nick, string pass, DTFecha * fecha, string ciudad, DTDireccion * direccion);
     string getCiudad();
-    DTDireccion getDireccion();
+    DTDireccion getDireccion();//no es necesario porque esta en publico
     void asociarProd();
 };
 

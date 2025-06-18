@@ -6,34 +6,74 @@
 #include "../logica/controlador/SistemaControlador.h"
 #include "../DTs/DTFecha.h"
 #include "../DTs/DTUsuario.h"
-
+#include "../DTs/DTVendedor.h"
+#include "../DTs/DTCliente.h"
+#include "../DTs/DTDireccion.h"
 
 using namespace std;
 
-AltaUsuario::AltaUsuario() {
-    // TODO Auto-generated constructor stub
 
-}
+AltaUsuario::AltaUsuario(SistemaControlador& controlador): controlador(controlador) {}
 
-AltaUsuario::~AltaUsuario() {
-    // TODO Auto-generated destructor stub
-}
+AltaUsuario::~AltaUsuario() {}
 
-void AltaUsuario::pedirCredenciales() {
-
+string AltaUsuario::altaUsuario() {
     string nick, pass;
     int dia, mes, anio;
-    cout << " ** Login ** " << endl;
+
+    cout << "** Alta de Usuario **" << endl;
     cout << "Ingrese nick: ";
     cin >> nick;
-    cout << endl;
     cout << "Ingrese pass: ";
     cin >> pass;
-    cout << endl;
-    cout << "Fecha Nacimiento: ";
-    cin >> dia, mes, anio;
-    //fechaNac= new DTFecha(dia,mes,anio); PARA REVISAR
-    cout << endl;
+
+    cout << "Ingrese fecha de nacimiento: " << endl;
+    cout << "Dia: ";
+    cin >> dia;
+    cout << "Mes: ";
+    cin >> mes;
+    cout << "Anio: ";
+    cin >> anio;
+
+    DTFecha* fechaNac = new DTFecha(dia, mes, anio);
+
+    int tipoUsuario;
+    cout << "Seleccione el tipo de usuario:" << endl;
+    cout << "1 - Cliente" << endl;
+    cout << "2 - Vendedor" << endl;
+    cout << "Opcion: ";
+    cin >> tipoUsuario;
+
+    string resultado;
+
+    if (tipoUsuario == 1) {
+        string ciudad, calle;
+        int numero;
+        cout << "Ingrese ciudad: ";
+        cin >> ciudad;
+        cout << "Ingrese calle: ";
+        cin >> calle;
+        cout << "Ingrese numero: ";
+        cin >> numero;
+
+        DTDireccion* direccion = new DTDireccion(calle, numero);
+        DTCliente* dtCliente = new DTCliente(nick, pass, fechaNac, ciudad, direccion);
+        resultado = controlador.altaUsuario(dtCliente);
+
+    }
+    else if (tipoUsuario == 2) {
+        string rut;
+        cout << "Ingrese RUT: ";
+        cin >> rut;
+
+        DTVendedor* dtVendedor = new DTVendedor(nick, pass, fechaNac, rut);
+        resultado = controlador.altaUsuario(dtVendedor);
+
+    }
+    else {
+        resultado = "Tipo de usuario invalido.";
+        delete fechaNac;
+    }
+
+    return resultado;
 }
-
-

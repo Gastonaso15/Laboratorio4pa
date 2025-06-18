@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Laboratorio4pa/src/logica/dominio/Usuario.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Usuario.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Usuario.cpp.obj.d"
   "C:/Laboratorio4pa/src/logica/dominio/Vendedor.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.obj.d"
   "C:/Laboratorio4pa/src/presentacion/AltaUsuario.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/AltaUsuario.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/AltaUsuario.cpp.obj.d"
+  "C:/Laboratorio4pa/src/presentacion/Menu.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/Menu.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/Menu.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

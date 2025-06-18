@@ -1,15 +1,14 @@
-//
-// Created by marti on 12/6/2025.
-//
-
 #ifndef ALTAUSUARIO_H
 #define ALTAUSUARIO_H
-
+#include "../logica/controlador/SistemaControlador.h"
+#include <string>
 class AltaUsuario {
+private:
+    SistemaControlador& controlador;
 public:
-    AltaUsuario();
+    AltaUsuario(SistemaControlador& controlador);
     virtual ~AltaUsuario();
-    void pedirCredenciales();
+    string altaUsuario();
 };
 
 #endif //ALTAUSUARIO_H

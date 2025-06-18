@@ -21,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.obj.d"
   "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/AltaUsuario.cpp.obj"
   "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/AltaUsuario.cpp.obj.d"
+  "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/Menu.cpp.obj"
+  "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/Menu.cpp.obj.d"
   "Dis_EjemploArquitecturaLogin.exe"
   "Dis_EjemploArquitecturaLogin.exe.manifest"
   "Dis_EjemploArquitecturaLogin.pdb"
