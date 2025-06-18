@@ -21,3 +21,7 @@ Cliente::~Cliente() {
 void Cliente::asociarProd() {
 
 }
+
+DTCliente Cliente::getCliente() const{
+    return DTCliente(this->nick, this->pass, this->fechaNac, this->ciudad, this->direccion );
+}
