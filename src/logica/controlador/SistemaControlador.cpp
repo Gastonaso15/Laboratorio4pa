@@ -63,3 +63,16 @@ string SistemaControlador::altaUsuario(DTUsuario* usuario) { //cambiar a string
     }
     return respuesta;  // <<--- esto te faltaba
 }
+
+set<string> SistemaControlador::listarNickVendedor() {
+    set <string> nicks;
+    for (auto& par : usuarios) {
+        Usuario* u = par.second;
+        Vendedor* v = dynamic_cast<Vendedor*>(u);
+        if (v != nullptr) {
+            nicks.insert(v->getNick());
+        }
+    }
+    return nicks;
+}
+

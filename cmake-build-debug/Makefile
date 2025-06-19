@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2024.3.5\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Laboratorio4pa
+CMAKE_SOURCE_DIR = C:\Users\agusm\CLionProjects\Laboratorio4pa
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Laboratorio4pa\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Laboratorio4pa\cmake-build-debug\CMakeFiles C:\Laboratorio4pa\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\CMakeFiles C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Laboratorio4pa\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -368,6 +368,30 @@ src/logica/dominio/Vendedor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.s
 .PHONY : src/logica/dominio/Vendedor.cpp.s
 
+src/presentacion/AltaProducto.obj: src/presentacion/AltaProducto.cpp.obj
+.PHONY : src/presentacion/AltaProducto.obj
+
+# target to build an object file
+src/presentacion/AltaProducto.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/AltaProducto.cpp.obj
+.PHONY : src/presentacion/AltaProducto.cpp.obj
+
+src/presentacion/AltaProducto.i: src/presentacion/AltaProducto.cpp.i
+.PHONY : src/presentacion/AltaProducto.i
+
+# target to preprocess a source file
+src/presentacion/AltaProducto.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/AltaProducto.cpp.i
+.PHONY : src/presentacion/AltaProducto.cpp.i
+
+src/presentacion/AltaProducto.s: src/presentacion/AltaProducto.cpp.s
+.PHONY : src/presentacion/AltaProducto.s
+
+# target to generate assembly for a file
+src/presentacion/AltaProducto.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/AltaProducto.cpp.s
+.PHONY : src/presentacion/AltaProducto.cpp.s
+
 src/presentacion/AltaUsuario.obj: src/presentacion/AltaUsuario.cpp.obj
 .PHONY : src/presentacion/AltaUsuario.obj
 
@@ -455,6 +479,9 @@ help:
 	@echo ... src/logica/dominio/Vendedor.obj
 	@echo ... src/logica/dominio/Vendedor.i
 	@echo ... src/logica/dominio/Vendedor.s
+	@echo ... src/presentacion/AltaProducto.obj
+	@echo ... src/presentacion/AltaProducto.i
+	@echo ... src/presentacion/AltaProducto.s
 	@echo ... src/presentacion/AltaUsuario.obj
 	@echo ... src/presentacion/AltaUsuario.i
 	@echo ... src/presentacion/AltaUsuario.s

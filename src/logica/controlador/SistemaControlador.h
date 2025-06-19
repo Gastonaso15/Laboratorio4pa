@@ -8,6 +8,7 @@
 #include "../dominio/Cliente.h"
 #include "../dominio/Vendedor.h"
 #include <map>
+#include <set>
 using namespace std;
 
 #include <string>
@@ -20,6 +21,9 @@ public:
 	SistemaControlador();
 	virtual ~SistemaControlador();
 	string altaUsuario(DTUsuario * usuario);
+	set<string> listarNickVendedor();
+	string selectVendedor(string nick);
+	string ingProducto(DTProducto producto);
 };
 
 
