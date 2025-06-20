@@ -1,6 +1,7 @@
 #include "SistemaControlador.h"
 #include <iostream>
 #include <string>
+#include "dominio/Producto.h"
 #include "../DTs/DTFecha.h"
 #include "../DTs/DTProducto.h"
 #include "../DTs/DTUsuario.h"
@@ -76,3 +77,13 @@ set<string> SistemaControlador::listarNickVendedor() {
     return nicks;
 }
 
+set<DTProducto> SistemaControlador::listarProd() {
+    set<DTProducto> resultado;
+    for (const auto& par : productos) {
+        Producto* p = par.second;
+        DTProducto dto = p->retornarDTProducto();
+        resultado.insert(dto);
+    }
+
+    return resultado;
+}

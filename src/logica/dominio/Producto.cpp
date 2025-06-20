@@ -1,4 +1,5 @@
 #include "Producto.h"
+#include "../../DTs/DTProducto.h"
 #include <iostream>
 using namespace std;
 
@@ -20,4 +21,9 @@ Producto::Producto(int codigo, string nombre, int precio,int stock, string descr
 
 Producto::getCodigo(){
   return this->codigo;
+}
+
+DTProducto Producto::retornarDTProducto(){
+  return DTProducto(this->codigo, this->nombre, this->precio, this->stock, this->descripcion, this->categoria);
+
 }

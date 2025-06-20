@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2024.3.5\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\agusm\CLionProjects\Laboratorio4pa
+CMAKE_SOURCE_DIR = C:\proyectosClion\laboratorio4pa
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug
+CMAKE_BINARY_DIR = C:\proyectosClion\laboratorio4pa\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\CMakeFiles C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\proyectosClion\laboratorio4pa\cmake-build-debug\CMakeFiles C:\proyectosClion\laboratorio4pa\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\proyectosClion\laboratorio4pa\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -152,6 +152,54 @@ src/DTs/DTCliente.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTCliente.cpp.s
 .PHONY : src/DTs/DTCliente.cpp.s
 
+src/DTs/DTComentario.obj: src/DTs/DTComentario.cpp.obj
+.PHONY : src/DTs/DTComentario.obj
+
+# target to build an object file
+src/DTs/DTComentario.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTComentario.cpp.obj
+.PHONY : src/DTs/DTComentario.cpp.obj
+
+src/DTs/DTComentario.i: src/DTs/DTComentario.cpp.i
+.PHONY : src/DTs/DTComentario.i
+
+# target to preprocess a source file
+src/DTs/DTComentario.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTComentario.cpp.i
+.PHONY : src/DTs/DTComentario.cpp.i
+
+src/DTs/DTComentario.s: src/DTs/DTComentario.cpp.s
+.PHONY : src/DTs/DTComentario.s
+
+# target to generate assembly for a file
+src/DTs/DTComentario.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTComentario.cpp.s
+.PHONY : src/DTs/DTComentario.cpp.s
+
+src/DTs/DTCompra.obj: src/DTs/DTCompra.cpp.obj
+.PHONY : src/DTs/DTCompra.obj
+
+# target to build an object file
+src/DTs/DTCompra.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTCompra.cpp.obj
+.PHONY : src/DTs/DTCompra.cpp.obj
+
+src/DTs/DTCompra.i: src/DTs/DTCompra.cpp.i
+.PHONY : src/DTs/DTCompra.i
+
+# target to preprocess a source file
+src/DTs/DTCompra.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTCompra.cpp.i
+.PHONY : src/DTs/DTCompra.cpp.i
+
+src/DTs/DTCompra.s: src/DTs/DTCompra.cpp.s
+.PHONY : src/DTs/DTCompra.s
+
+# target to generate assembly for a file
+src/DTs/DTCompra.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTCompra.cpp.s
+.PHONY : src/DTs/DTCompra.cpp.s
+
 src/DTs/DTDireccion.obj: src/DTs/DTDireccion.cpp.obj
 .PHONY : src/DTs/DTDireccion.obj
 
@@ -199,6 +247,102 @@ src/DTs/DTFecha.s: src/DTs/DTFecha.cpp.s
 src/DTs/DTFecha.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTFecha.cpp.s
 .PHONY : src/DTs/DTFecha.cpp.s
+
+src/DTs/DTProdComprado.obj: src/DTs/DTProdComprado.cpp.obj
+.PHONY : src/DTs/DTProdComprado.obj
+
+# target to build an object file
+src/DTs/DTProdComprado.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProdComprado.cpp.obj
+.PHONY : src/DTs/DTProdComprado.cpp.obj
+
+src/DTs/DTProdComprado.i: src/DTs/DTProdComprado.cpp.i
+.PHONY : src/DTs/DTProdComprado.i
+
+# target to preprocess a source file
+src/DTs/DTProdComprado.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProdComprado.cpp.i
+.PHONY : src/DTs/DTProdComprado.cpp.i
+
+src/DTs/DTProdComprado.s: src/DTs/DTProdComprado.cpp.s
+.PHONY : src/DTs/DTProdComprado.s
+
+# target to generate assembly for a file
+src/DTs/DTProdComprado.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProdComprado.cpp.s
+.PHONY : src/DTs/DTProdComprado.cpp.s
+
+src/DTs/DTProdPromocion.obj: src/DTs/DTProdPromocion.cpp.obj
+.PHONY : src/DTs/DTProdPromocion.obj
+
+# target to build an object file
+src/DTs/DTProdPromocion.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProdPromocion.cpp.obj
+.PHONY : src/DTs/DTProdPromocion.cpp.obj
+
+src/DTs/DTProdPromocion.i: src/DTs/DTProdPromocion.cpp.i
+.PHONY : src/DTs/DTProdPromocion.i
+
+# target to preprocess a source file
+src/DTs/DTProdPromocion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProdPromocion.cpp.i
+.PHONY : src/DTs/DTProdPromocion.cpp.i
+
+src/DTs/DTProdPromocion.s: src/DTs/DTProdPromocion.cpp.s
+.PHONY : src/DTs/DTProdPromocion.s
+
+# target to generate assembly for a file
+src/DTs/DTProdPromocion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProdPromocion.cpp.s
+.PHONY : src/DTs/DTProdPromocion.cpp.s
+
+src/DTs/DTProducto.obj: src/DTs/DTProducto.cpp.obj
+.PHONY : src/DTs/DTProducto.obj
+
+# target to build an object file
+src/DTs/DTProducto.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProducto.cpp.obj
+.PHONY : src/DTs/DTProducto.cpp.obj
+
+src/DTs/DTProducto.i: src/DTs/DTProducto.cpp.i
+.PHONY : src/DTs/DTProducto.i
+
+# target to preprocess a source file
+src/DTs/DTProducto.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProducto.cpp.i
+.PHONY : src/DTs/DTProducto.cpp.i
+
+src/DTs/DTProducto.s: src/DTs/DTProducto.cpp.s
+.PHONY : src/DTs/DTProducto.s
+
+# target to generate assembly for a file
+src/DTs/DTProducto.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProducto.cpp.s
+.PHONY : src/DTs/DTProducto.cpp.s
+
+src/DTs/DTPromocion.obj: src/DTs/DTPromocion.cpp.obj
+.PHONY : src/DTs/DTPromocion.obj
+
+# target to build an object file
+src/DTs/DTPromocion.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTPromocion.cpp.obj
+.PHONY : src/DTs/DTPromocion.cpp.obj
+
+src/DTs/DTPromocion.i: src/DTs/DTPromocion.cpp.i
+.PHONY : src/DTs/DTPromocion.i
+
+# target to preprocess a source file
+src/DTs/DTPromocion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTPromocion.cpp.i
+.PHONY : src/DTs/DTPromocion.cpp.i
+
+src/DTs/DTPromocion.s: src/DTs/DTPromocion.cpp.s
+.PHONY : src/DTs/DTPromocion.s
+
+# target to generate assembly for a file
+src/DTs/DTPromocion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTPromocion.cpp.s
+.PHONY : src/DTs/DTPromocion.cpp.s
 
 src/DTs/DTUsuario.obj: src/DTs/DTUsuario.cpp.obj
 .PHONY : src/DTs/DTUsuario.obj
@@ -320,6 +464,30 @@ src/logica/dominio/Cliente.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.s
 .PHONY : src/logica/dominio/Cliente.cpp.s
 
+src/logica/dominio/Producto.obj: src/logica/dominio/Producto.cpp.obj
+.PHONY : src/logica/dominio/Producto.obj
+
+# target to build an object file
+src/logica/dominio/Producto.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Producto.cpp.obj
+.PHONY : src/logica/dominio/Producto.cpp.obj
+
+src/logica/dominio/Producto.i: src/logica/dominio/Producto.cpp.i
+.PHONY : src/logica/dominio/Producto.i
+
+# target to preprocess a source file
+src/logica/dominio/Producto.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Producto.cpp.i
+.PHONY : src/logica/dominio/Producto.cpp.i
+
+src/logica/dominio/Producto.s: src/logica/dominio/Producto.cpp.s
+.PHONY : src/logica/dominio/Producto.s
+
+# target to generate assembly for a file
+src/logica/dominio/Producto.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Producto.cpp.s
+.PHONY : src/logica/dominio/Producto.cpp.s
+
 src/logica/dominio/Usuario.obj: src/logica/dominio/Usuario.cpp.obj
 .PHONY : src/logica/dominio/Usuario.obj
 
@@ -416,6 +584,30 @@ src/presentacion/AltaUsuario.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/AltaUsuario.cpp.s
 .PHONY : src/presentacion/AltaUsuario.cpp.s
 
+src/presentacion/ConsultarProducto.obj: src/presentacion/ConsultarProducto.cpp.obj
+.PHONY : src/presentacion/ConsultarProducto.obj
+
+# target to build an object file
+src/presentacion/ConsultarProducto.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ConsultarProducto.cpp.obj
+.PHONY : src/presentacion/ConsultarProducto.cpp.obj
+
+src/presentacion/ConsultarProducto.i: src/presentacion/ConsultarProducto.cpp.i
+.PHONY : src/presentacion/ConsultarProducto.i
+
+# target to preprocess a source file
+src/presentacion/ConsultarProducto.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ConsultarProducto.cpp.i
+.PHONY : src/presentacion/ConsultarProducto.cpp.i
+
+src/presentacion/ConsultarProducto.s: src/presentacion/ConsultarProducto.cpp.s
+.PHONY : src/presentacion/ConsultarProducto.s
+
+# target to generate assembly for a file
+src/presentacion/ConsultarProducto.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ConsultarProducto.cpp.s
+.PHONY : src/presentacion/ConsultarProducto.cpp.s
+
 src/presentacion/Menu.obj: src/presentacion/Menu.cpp.obj
 .PHONY : src/presentacion/Menu.obj
 
@@ -452,12 +644,30 @@ help:
 	@echo ... src/DTs/DTCliente.obj
 	@echo ... src/DTs/DTCliente.i
 	@echo ... src/DTs/DTCliente.s
+	@echo ... src/DTs/DTComentario.obj
+	@echo ... src/DTs/DTComentario.i
+	@echo ... src/DTs/DTComentario.s
+	@echo ... src/DTs/DTCompra.obj
+	@echo ... src/DTs/DTCompra.i
+	@echo ... src/DTs/DTCompra.s
 	@echo ... src/DTs/DTDireccion.obj
 	@echo ... src/DTs/DTDireccion.i
 	@echo ... src/DTs/DTDireccion.s
 	@echo ... src/DTs/DTFecha.obj
 	@echo ... src/DTs/DTFecha.i
 	@echo ... src/DTs/DTFecha.s
+	@echo ... src/DTs/DTProdComprado.obj
+	@echo ... src/DTs/DTProdComprado.i
+	@echo ... src/DTs/DTProdComprado.s
+	@echo ... src/DTs/DTProdPromocion.obj
+	@echo ... src/DTs/DTProdPromocion.i
+	@echo ... src/DTs/DTProdPromocion.s
+	@echo ... src/DTs/DTProducto.obj
+	@echo ... src/DTs/DTProducto.i
+	@echo ... src/DTs/DTProducto.s
+	@echo ... src/DTs/DTPromocion.obj
+	@echo ... src/DTs/DTPromocion.i
+	@echo ... src/DTs/DTPromocion.s
 	@echo ... src/DTs/DTUsuario.obj
 	@echo ... src/DTs/DTUsuario.i
 	@echo ... src/DTs/DTUsuario.s
@@ -473,6 +683,9 @@ help:
 	@echo ... src/logica/dominio/Cliente.obj
 	@echo ... src/logica/dominio/Cliente.i
 	@echo ... src/logica/dominio/Cliente.s
+	@echo ... src/logica/dominio/Producto.obj
+	@echo ... src/logica/dominio/Producto.i
+	@echo ... src/logica/dominio/Producto.s
 	@echo ... src/logica/dominio/Usuario.obj
 	@echo ... src/logica/dominio/Usuario.i
 	@echo ... src/logica/dominio/Usuario.s
@@ -485,6 +698,9 @@ help:
 	@echo ... src/presentacion/AltaUsuario.obj
 	@echo ... src/presentacion/AltaUsuario.i
 	@echo ... src/presentacion/AltaUsuario.s
+	@echo ... src/presentacion/ConsultarProducto.obj
+	@echo ... src/presentacion/ConsultarProducto.i
+	@echo ... src/presentacion/ConsultarProducto.s
 	@echo ... src/presentacion/Menu.obj
 	@echo ... src/presentacion/Menu.i
 	@echo ... src/presentacion/Menu.s

@@ -1,6 +1,7 @@
 #ifndef LOGICA_CONTROLADOR_SISTEMACONTROLADOR_H_
 #define LOGICA_CONTROLADOR_SISTEMACONTROLADOR_H_
 #include <iostream>
+#include "dominio/Producto.h"
 #include "../DTs/DTFecha.h"
 #include "../DTs/DTProducto.h"
 #include "../DTs/DTUsuario.h"
@@ -15,6 +16,7 @@ using namespace std;
 
 class SistemaControlador{
 protected:
+	map<string,Producto*> productos;
 	map<string,DTProducto*>carrito;
 	map<string,Usuario*> usuarios;
 public:
@@ -24,6 +26,7 @@ public:
 	set<string> listarNickVendedor();
 	string selectVendedor(string nick);
 	string ingProducto(DTProducto producto);
+	set<DTProducto> listarProd();
 };
 
 

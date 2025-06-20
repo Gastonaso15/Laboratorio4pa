@@ -13,24 +13,45 @@ add_executable(Dis_EjemploArquitecturaLogin
     src/logica/controlador/SistemaControlador.h
         src/logica/dominio/Usuario.cpp
         src/logica/dominio/Usuario.h
+        src/logica/dominio/Cliente.cpp
+        src/logica/dominio/Cliente.h
+        src/logica/dominio/Producto.cpp
+        src/logica/dominio/Producto.h
+        src/logica/dominio/Vendedor.cpp
+        src/logica/dominio/Vendedor.h
         src/Principal.cpp
         src/presentacion/AltaUsuario.cpp
         src/presentacion/AltaUsuario.h
         src/presentacion/AltaProducto.cpp
         src/presentacion/AltaProducto.h
-        src/DTs/DTUsuario.cpp
-        src/DTs/DTUsuario.h
-        src/DTs/DTVendedor.cpp
         src/DTs/DTVendedor.h
-        src/DTs/DTCliente.cpp
-        src/DTs/DTCliente.h
+        src/DTs/DTVendedor.cpp
+        src/DTs/DTUsuario.h
+        src/DTs/DTUsuario.cpp
+        src/DTs/DTPromocion.h
+        src/DTs/DTPromocion.cpp
+        src/DTs/DTProducto.cpp
+        src/DTs/DTProducto.h
+        src/DTs/DTProdPromocion.h
+        src/DTs/DTProdComprado.h
+        src/DTs/DTProdPromocion.cpp
+        src/DTs/DTProdComprado.cpp
+        src/DTs/DTFecha.h
+        src/DTs/DTFecha.cpp
         src/DTs/DTDireccion.cpp
         src/DTs/DTDireccion.h
-        src/DTs/DTFecha.cpp
-        src/DTs/DTFecha.h
+        src/DTs/DTCompra.h
+        src/DTs/DTComentario.h
+        src/DTs/DTCompra.cpp
+        src/DTs/DTComentario.cpp
+        src/DTs/DTCliente.cpp
+        src/DTs/DTCliente.h
         src/logica/dominio/Cliente.cpp
         src/logica/dominio/Cliente.h
         src/logica/dominio/Vendedor.cpp
         src/logica/dominio/Vendedor.h
         src/presentacion/Menu.cpp
-        src/presentacion/Menu.h)
+        src/presentacion/Menu.h
+        src/DTs/Definiciones.h
+        src/presentacion/ConsultarProducto.cpp
+        src/presentacion/ConsultarProducto.h)

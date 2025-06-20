@@ -3,15 +3,15 @@
 
 #include "../dominio/Vendedor.h"
 #include <iostream>
+#include "../../DTs/Definiciones.h"
+
 using namespace std;
+
+class DTProducto;
 
 class Producto {
   private:
-    enum cat {
-        Electrodomestico,
-        Ropa,
-        Otro
-      };
+
     int codigo;
     string nombre;
     int precio;
@@ -27,6 +27,7 @@ class Producto {
     Producto(int codigo, string nombre, int precio,int stock, string descripcion, cat categoria);
     virtual ~Producto();
     int getCodigo();
+    DTProducto retornarDTProducto();
 };
 
 
