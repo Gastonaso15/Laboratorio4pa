@@ -87,3 +87,13 @@ set<DTProducto> SistemaControlador::listarProd() {
 
     return resultado;
 }
+
+set<DTUsuario*> SistemaControlador::listarUsuarios() {
+    set<DTUsuario*> resultado;
+    for (auto const& par: usuarios){
+        Usuario* usuario = par.second;
+        resultado.insert(usuario->retornarDTUsuario());
+    }
+    return resultado;
+}
+

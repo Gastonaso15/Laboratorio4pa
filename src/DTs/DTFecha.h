@@ -16,7 +16,6 @@ public:
     DTFecha();
     ~DTFecha();
     DTFecha(int anio, int mes, int dia);
-
     int getAnio()const;
     int getMes()const;
     int getDia()const;
@@ -25,6 +24,7 @@ public:
                (anio == otra.anio && mes < otra.mes) ||
                (anio == otra.anio && mes == otra.mes && dia <= otra.dia);
     }
+    string toString() const;
 };
 
 #endif //DTFECHA_H

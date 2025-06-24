@@ -24,3 +24,11 @@ DTVendedor::DTVendedor(string nick, string pass, DTFecha * fechaNac, string rut)
 string DTVendedor::getRUT() {
     return this->rut;
 }
+
+string DTVendedor::getTipo() const {
+    return "Vendedor";
+}
+
+string DTVendedor::obtenerInfo() const {
+    return "Nickname: " + nick + "\nFecha de Nacimiento: " + fechaNac->toString() + "\nRUT: " + rut;
+}

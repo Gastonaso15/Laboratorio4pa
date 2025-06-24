@@ -6,6 +6,7 @@
 #define VENDEDOR_H
 #include "Usuario.h"
 #include "../DTs/DTFecha.h"
+#include "../DTs/DTUsuario.h"
 #include <iostream>
 #include "../DTs/DTDireccion.h"
 
@@ -15,8 +16,9 @@ protected:
 public:
     Vendedor();
     Vendedor(string nick, string pass, DTFecha *  fechaNac,string rut);
+    ~Vendedor();
     void añadirProdListaVendedor();
     void retornarProductos();
-    ~Vendedor();
+    DTUsuario* retornarDTUsuario() const override;
 };
 #endif //VENDEDOR_H

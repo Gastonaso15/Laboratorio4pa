@@ -22,6 +22,8 @@ add_executable(Dis_EjemploArquitecturaLogin
         src/Principal.cpp
         src/presentacion/AltaUsuario.cpp
         src/presentacion/AltaUsuario.h
+        src/presentacion/ListadoUsuarios.cpp
+        src/presentacion/ListadoUsuarios.h
         src/presentacion/AltaProducto.cpp
         src/presentacion/AltaProducto.h
         src/DTs/DTVendedor.h

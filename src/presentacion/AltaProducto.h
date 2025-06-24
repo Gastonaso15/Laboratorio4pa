@@ -1,6 +1,3 @@
-//
-// Created by agusm on 19/06/2025.
-//
 
 #ifndef ALTAPRODUCTO_H
 #define ALTAPRODUCTO_H

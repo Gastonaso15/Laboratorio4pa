@@ -2,6 +2,7 @@
 #define LOGICA_USUARIO_H_
 #include <iostream>
 #include "../DTs/DTFecha.h"
+#include "../DTs/DTUsuario.h"
 using namespace std;
 
 class Usuario {
@@ -15,6 +16,7 @@ public:
 	Usuario(string nick, string pass, DTFecha * fechaNac);
 	virtual ~Usuario();
 	string getNick();
+	virtual DTUsuario* retornarDTUsuario()const=0;
 };
 
 #endif

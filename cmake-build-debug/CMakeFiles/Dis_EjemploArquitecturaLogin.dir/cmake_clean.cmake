@@ -39,6 +39,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/AltaUsuario.cpp.obj.d"
   "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ConsultarProducto.cpp.obj"
   "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ConsultarProducto.cpp.obj.d"
+  "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ListadoUsuarios.cpp.obj"
+  "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ListadoUsuarios.cpp.obj.d"
   "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/Menu.cpp.obj"
   "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/Menu.cpp.obj.d"
   "Dis_EjemploArquitecturaLogin.exe"

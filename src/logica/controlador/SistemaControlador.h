@@ -23,6 +23,7 @@ public:
 	SistemaControlador();
 	virtual ~SistemaControlador();
 	string altaUsuario(DTUsuario * usuario);
+	set<DTUsuario*> listarUsuarios();
 	set<string> listarNickVendedor();
 	string selectVendedor(string nick);
 	string ingProducto(DTProducto producto);

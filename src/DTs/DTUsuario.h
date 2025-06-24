@@ -20,6 +20,8 @@ public:
     string getNick();
     string getPass();
     DTFecha getFechaNac();
+    virtual string getTipo() const = 0;
+    virtual string obtenerInfo() const = 0;
 };
 
 #endif

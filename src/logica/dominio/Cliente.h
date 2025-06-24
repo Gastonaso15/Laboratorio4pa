@@ -23,6 +23,7 @@ public:
     ~Cliente();
     void asociarProd();
     DTCliente getCliente() const;
+    DTUsuario* retornarDTUsuario() const override;
 };
 
 

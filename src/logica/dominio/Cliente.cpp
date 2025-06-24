@@ -10,7 +10,7 @@
 #include "../DTs/DTUsuario.h"
 using namespace std;
 
-Cliente::Cliente(string nick, string pass, DTFecha* fecha, DTDireccion* direccion, string ciudad)
+Cliente::Cliente(string nick, string pass, DTFecha* fechaNac, DTDireccion* direccion, string ciudad)
  : Usuario(nick, pass, fechaNac){
     this->direccion=direccion;
     this->ciudad=ciudad;
@@ -24,4 +24,8 @@ void Cliente::asociarProd() {
 
 DTCliente Cliente::getCliente() const{
     return DTCliente(this->nick, this->pass, this->fechaNac, this->ciudad, this->direccion );
+}
+
+DTUsuario* Cliente::retornarDTUsuario()const{
+    return new DTCliente(this->nick,"", this->fechaNac, this->ciudad, this->direccion);
 }

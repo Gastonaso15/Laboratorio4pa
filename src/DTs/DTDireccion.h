@@ -17,6 +17,7 @@ public:
     DTDireccion(string calle, int nroPuerta);
     string getCalle();
     int getNroPuerta();
+    string toString() const;
 };
 
 

@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2024.3.5\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\proyectosClion\laboratorio4pa
+CMAKE_SOURCE_DIR = C:\Users\agusm\CLionProjects\Laboratorio4pa
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\proyectosClion\laboratorio4pa\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\proyectosClion\laboratorio4pa\cmake-build-debug\CMakeFiles C:\proyectosClion\laboratorio4pa\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\CMakeFiles C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\proyectosClion\laboratorio4pa\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -608,6 +608,30 @@ src/presentacion/ConsultarProducto.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ConsultarProducto.cpp.s
 .PHONY : src/presentacion/ConsultarProducto.cpp.s
 
+src/presentacion/ListadoUsuarios.obj: src/presentacion/ListadoUsuarios.cpp.obj
+.PHONY : src/presentacion/ListadoUsuarios.obj
+
+# target to build an object file
+src/presentacion/ListadoUsuarios.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ListadoUsuarios.cpp.obj
+.PHONY : src/presentacion/ListadoUsuarios.cpp.obj
+
+src/presentacion/ListadoUsuarios.i: src/presentacion/ListadoUsuarios.cpp.i
+.PHONY : src/presentacion/ListadoUsuarios.i
+
+# target to preprocess a source file
+src/presentacion/ListadoUsuarios.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ListadoUsuarios.cpp.i
+.PHONY : src/presentacion/ListadoUsuarios.cpp.i
+
+src/presentacion/ListadoUsuarios.s: src/presentacion/ListadoUsuarios.cpp.s
+.PHONY : src/presentacion/ListadoUsuarios.s
+
+# target to generate assembly for a file
+src/presentacion/ListadoUsuarios.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ListadoUsuarios.cpp.s
+.PHONY : src/presentacion/ListadoUsuarios.cpp.s
+
 src/presentacion/Menu.obj: src/presentacion/Menu.cpp.obj
 .PHONY : src/presentacion/Menu.obj
 
@@ -701,6 +725,9 @@ help:
 	@echo ... src/presentacion/ConsultarProducto.obj
 	@echo ... src/presentacion/ConsultarProducto.i
 	@echo ... src/presentacion/ConsultarProducto.s
+	@echo ... src/presentacion/ListadoUsuarios.obj
+	@echo ... src/presentacion/ListadoUsuarios.i
+	@echo ... src/presentacion/ListadoUsuarios.s
 	@echo ... src/presentacion/Menu.obj
 	@echo ... src/presentacion/Menu.i
 	@echo ... src/presentacion/Menu.s

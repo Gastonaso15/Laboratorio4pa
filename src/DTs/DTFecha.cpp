@@ -27,3 +27,6 @@ int DTFecha::getMes()const {
 int DTFecha::getDia()const {
     return this->dia;
 }
+string DTFecha::toString() const {
+    return to_string(dia) + "/" + to_string(mes) + "/" + to_string(anio);
+}

@@ -26,3 +26,7 @@ string DTDireccion::getCalle() {
 int DTDireccion::getNroPuerta() {
     return this->nroPuerta;
 }
+
+string DTDireccion::toString() const {
+    return calle + " " +to_string(nroPuerta);
+}

@@ -20,6 +20,8 @@ public:
     string getCiudad();
     DTDireccion getDireccion();//no es necesario porque esta en publico
     void asociarProd();
+    string getTipo() const override;
+    string obtenerInfo() const override;
 };
 
 

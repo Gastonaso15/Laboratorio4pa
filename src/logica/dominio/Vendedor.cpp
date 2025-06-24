@@ -17,3 +17,7 @@ Vendedor::Vendedor(string nick, string pass, DTFecha* fechaNac, string rut)
 Vendedor::~Vendedor() {
     // TODO Auto-generated destructor stub
 }
+
+DTUsuario* Vendedor::retornarDTUsuario()const{
+    return new DTVendedor(this->nick,"", this->fechaNac, this->rut);
+}
