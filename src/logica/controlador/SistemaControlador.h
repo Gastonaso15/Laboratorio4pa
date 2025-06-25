@@ -16,9 +16,11 @@ using namespace std;
 
 class SistemaControlador{
 protected:
-	map<string,Producto*> productos;
-	map<string,DTProducto*>carrito;
+	map<int,Producto*> productos;
+	map<int,DTProducto*>carrito;
 	map<string,Usuario*> usuarios;
+	map<string, Vendedor*> vendedores;
+	Vendedor* vendedorSeleccionado = nullptr;
 public:
 	SistemaControlador();
 	virtual ~SistemaControlador();
@@ -26,7 +28,7 @@ public:
 	set<DTUsuario*> listarUsuarios();
 	set<string> listarNickVendedor();
 	string selectVendedor(string nick);
-	string ingProducto(DTProducto producto);
+	bool ingProducto(DTProducto producto);
 	set<DTProducto> listarProd();
 };
 
