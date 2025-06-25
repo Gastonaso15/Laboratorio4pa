@@ -18,10 +18,12 @@ public:
     DTVendedor * vendedor;
     DTProducto();
     DTProducto(int codigo, string nombre, int precio,int stock, string descripcion, cat categoria);
+    DTProducto(int codigo, string nombre, int precio, int stock, string descripcion, cat categoria,DTVendedor * vendedor);
     virtual ~DTProducto();
     bool operator<(const DTProducto& other) const;
     DTProducto getCodDTProd();
     DTProducto getNombreDTProd();
+    static string catToString(cat categoria);
 };
 
 

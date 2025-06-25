@@ -2,7 +2,9 @@
 #include "AltaUsuario.h"
 #include "ListadoUsuarios.h"
 #include "AltaProducto.h"
+#include "ConsultarProducto.h"
 #include <iostream>
+
 using namespace std;
 
 
@@ -16,12 +18,14 @@ void Menu::mostrarMenu() {
     AltaUsuario altaUsuario(controlador);
     ListadoUsuarios listadoUsuarios(controlador);
     AltaProducto altaProducto(controlador);
+    ConsultarProducto consultarProducto(controlador);
 
     do {
         cout << "------ MENU PRINCIPAL ------" << endl;
         cout << "1 - Alta de Usuario" << endl;
         cout << "2 - Listado de Usuarios" << endl;
         cout << "3 - Alta de Producto" << endl;
+        cout << "4 - Consultar Producto" << endl;
         cout << "0 - Salir" << endl;
         cout << "Seleccione una opcion: ";
         cin >> opcion;
@@ -38,6 +42,11 @@ void Menu::mostrarMenu() {
             }
             case 3: {
                 respuesta = altaProducto.altaProducto();
+                cout << respuesta << endl;
+                break;
+            }
+            case 4: {
+                respuesta = consultarProducto.consultarProducto();
                 cout << respuesta << endl;
                 break;
             }

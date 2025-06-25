@@ -2857,6 +2857,7 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/Menu.cpp.obj: C:/Us
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Vendedor.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/AltaProducto.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/AltaUsuario.h \
+  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/ConsultarProducto.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/ListadoUsuarios.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/Menu.h
 

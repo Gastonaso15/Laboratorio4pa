@@ -31,6 +31,7 @@ public:
 	string selectVendedor(string nick);
 	bool ingProducto(DTProducto producto);
 	set<DTProducto> listarProd();
+	DTProducto* selectProd(int codigo);
 };
 
 

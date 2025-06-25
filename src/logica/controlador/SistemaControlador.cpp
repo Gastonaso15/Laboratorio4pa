@@ -77,17 +77,6 @@ set<string> SistemaControlador::listarNickVendedor() {
     return nicks;
 }
 
-set<DTProducto> SistemaControlador::listarProd() {
-    set<DTProducto> resultado;
-    for (const auto& par : productos) {
-        Producto* p = par.second;
-        DTProducto dto = p->retornarDTProducto();
-        resultado.insert(dto);
-    }
-
-    return resultado;
-}
-
 set<DTUsuario*> SistemaControlador::listarUsuarios() {
     set<DTUsuario*> resultado;
     for (auto const& par: usuarios){
@@ -118,12 +107,31 @@ bool SistemaControlador::ingProducto(DTProducto producto) {
     Producto * prod = new Producto(cod, producto.nombre, producto.precio, producto.stock, producto.descripcion, producto.categoria);
     //dynamic_cast<Producto*>(vendedorSeleccionado)->asociarProdVendedor(vendedorSeleccionado); Por que el cast?
     prod->asociarProdVendedor(vendedorSeleccionado);
-    //En el Diagrama de Clase se pasa solo el nick, pero es mejor pasarle el puntero para evitar porblemas
+    //En los diagramas se pasa solo el nick, pero es mejor pasarle el puntero para evitar porblemas
     vendedorSeleccionado->aniadirProdListaVendedor(prod);
     int codigo = prod->getCodigo();
     auto result = productos.insert({codigo, prod});
     return result.second; // true si se insertó, false si ya existía --- Siempre va a dar true porque el codigo siempre es diferente
 }
 
+set<DTProducto> SistemaControlador::listarProd() {
+    set<DTProducto> resultado;
+    for (const auto& par : productos) {
+        Producto* p = par.second;
+        DTProducto dto = p->retornarDTProducto();
+        resultado.insert(dto);
+    }
 
+    return resultado;
+}
 
+DTProducto* SistemaControlador::selectProd(int codigo) {
+    //En los diagramas ingresa DTProducto, pero es mas comodo con int
+    auto it = productos.find(codigo);
+    if (it != productos.end()) {
+        Producto* prod = it->second;
+        return new DTProducto(prod->retornarDTProducto());
+    } else {
+        return nullptr;
+    }
+}

@@ -67,7 +67,8 @@ string AltaProducto::altaProducto() {
     cout << "Ingrese nombre: ";
     cin >> nombre;
     cout << "Ingrese descripcion: ";
-    cin >> descripcion;
+    cin.ignore();
+    getline(cin, descripcion);
     cout << "Ingrese precio: ";
     cin >> precio;
     cout << "Ingrese stock: ";

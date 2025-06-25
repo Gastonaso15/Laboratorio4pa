@@ -24,8 +24,8 @@ Producto::getCodigo(){
 }
 
 DTProducto Producto::retornarDTProducto(){
-  return DTProducto(this->codigo, this->nombre, this->precio, this->stock, this->descripcion, this->categoria);
-
+  DTVendedor* dtVen = dynamic_cast<DTVendedor*>(this->vendedor->retornarDTUsuario());
+  return DTProducto(this->codigo, this->nombre, this->precio, this->stock, this->descripcion, this->categoria,dtVen);
 }
 
 void Producto::asociarProdVendedor(Vendedor* vendedor) {
