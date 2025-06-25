@@ -12,6 +12,7 @@ Menu::Menu(SistemaControlador& controlador): controlador(controlador) {
 
 void Menu::mostrarMenu() {
     int opcion;
+    string respuesta;
     AltaUsuario altaUsuario(controlador);
     ListadoUsuarios listadoUsuarios(controlador);
     AltaProducto altaProducto(controlador);
@@ -27,7 +28,7 @@ void Menu::mostrarMenu() {
 
         switch (opcion) {
             case 1: {
-                string respuesta = altaUsuario.altaUsuario();
+                respuesta = altaUsuario.altaUsuario();
                 cout << respuesta << endl;
                 break;
             }
@@ -36,7 +37,8 @@ void Menu::mostrarMenu() {
                 break;
             }
             case 3: {
-                altaProducto.listarNickVendedor(); //Solo para probar, falta el resto de AltaProducto
+                respuesta = altaProducto.altaProducto();
+                cout << respuesta << endl;
                 break;
             }
             case 0:

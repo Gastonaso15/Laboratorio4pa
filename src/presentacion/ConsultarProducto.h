@@ -1,6 +1,3 @@
-//
-// Created by Gastón on 19/6/2025.
-//
 
 #ifndef CONSULTARPRODUCTO_H
 #define CONSULTARPRODUCTO_H

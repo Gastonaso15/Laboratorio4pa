@@ -12,16 +12,17 @@
 #include "../DTs/DTDireccion.h"
 #include <map>
 
+class Producto;
 
 class Vendedor: public Usuario {
 protected:
     string rut;
-    map<int, Producto*> producto;
+    map<int, Producto*> productos;
 public:
     Vendedor();
     Vendedor(string nick, string pass, DTFecha *  fechaNac,string rut);
     ~Vendedor();
-    void aniadirProdListaVendedor();
+    void aniadirProdListaVendedor(Producto * producto);
     void retornarProductos();
     DTUsuario* retornarDTUsuario() const override;
 

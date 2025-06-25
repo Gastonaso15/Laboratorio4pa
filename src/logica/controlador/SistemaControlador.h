@@ -21,6 +21,7 @@ protected:
 	map<string,Usuario*> usuarios;
 	map<string, Vendedor*> vendedores;
 	Vendedor* vendedorSeleccionado = nullptr;
+	int ultimoCodigoProducto = 0;
 public:
 	SistemaControlador();
 	virtual ~SistemaControlador();

@@ -12,9 +12,10 @@ class AltaProducto {
   public:
     AltaProducto(SistemaControlador& controlador);
     virtual ~AltaProducto();
-    void listarNickVendedor();
-    string selectVendedor(string nick);
-    string ingProducto(DTProducto producto);
+    string altaProducto();
+    /*void listarNickVendedor();
+    string selectVendedor();
+    string ingProducto(DTProducto producto);*/
 };
 
 

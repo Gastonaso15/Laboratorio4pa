@@ -27,3 +27,7 @@ DTProducto Producto::retornarDTProducto(){
   return DTProducto(this->codigo, this->nombre, this->precio, this->stock, this->descripcion, this->categoria);
 
 }
+
+void Producto::asociarProdVendedor(Vendedor* vendedor) {
+  this->vendedor=vendedor;
+}

@@ -98,22 +98,32 @@ set<DTUsuario*> SistemaControlador::listarUsuarios() {
 }
 
 string SistemaControlador::selectVendedor(string nick) {
-    auto it = vendedores.find(nick);
-    if (it != vendedores.end()) {
-        vendedorSeleccionado = it->second;
-        return "Vendedor " + nick + " seleccionado correctamente.";
+    auto it = usuarios.find(nick);
+    if (it != usuarios.end()) {
+        Vendedor* v = dynamic_cast<Vendedor*>(it->second);
+        if (v != nullptr) {
+            vendedorSeleccionado = v;
+            return "Vendedor " + nick + " seleccionado correctamente.";
+        } else {
+            return "Error: El usuario no es un vendedor.";
+        }
     } else {
-        return "Error: No se encontro un vendedor con nickname '" + nick + "'.";
+        return "Error: No se encontro un usuario con ese nick.";
     }
 }
 
+
 bool SistemaControlador::ingProducto(DTProducto producto) {
-  Producto * prod = new Producto(producto.codigo, producto.nombre, producto.precio, producto.stock, producto.descripcion, producto.categoria);
-    dynamic_cast<Producto*>(vendedorSeleccionado)->asociarProdVendedor(vendedorSeleccionado->getNick());
+    int cod = ++ultimoCodigoProducto;
+    Producto * prod = new Producto(cod, producto.nombre, producto.precio, producto.stock, producto.descripcion, producto.categoria);
+    //dynamic_cast<Producto*>(vendedorSeleccionado)->asociarProdVendedor(vendedorSeleccionado); Por que el cast?
+    prod->asociarProdVendedor(vendedorSeleccionado);
+    //En el Diagrama de Clase se pasa solo el nick, pero es mejor pasarle el puntero para evitar porblemas
+    vendedorSeleccionado->aniadirProdListaVendedor(prod);
     int codigo = prod->getCodigo();
     auto result = productos.insert({codigo, prod});
-    return result.second; // true si se insertó, false si ya existía
-} // YO ME QUEDE ACA CON ESTA FUNCION NO SE SI FUNCA PERO ES LO QUE SALIO
+    return result.second; // true si se insertó, false si ya existía --- Siempre va a dar true porque el codigo siempre es diferente
+}
 
 
 

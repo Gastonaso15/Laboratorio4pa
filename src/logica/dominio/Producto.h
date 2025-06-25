@@ -8,6 +8,7 @@
 using namespace std;
 
 class DTProducto;
+class Vendedor;
 
 class Producto {
   private:
@@ -28,6 +29,7 @@ class Producto {
     virtual ~Producto();
     int getCodigo();
     DTProducto retornarDTProducto();
+    void asociarProdVendedor(Vendedor* vendedor);
 };
 
 

@@ -21,3 +21,8 @@ Vendedor::~Vendedor() {
 DTUsuario* Vendedor::retornarDTUsuario()const{
     return new DTVendedor(this->nick,"", this->fechaNac, this->rut);
 }
+
+void Vendedor::aniadirProdListaVendedor(Producto* producto) {
+    int codigo = producto->getCodigo();
+    productos.insert({codigo, producto});
+}
