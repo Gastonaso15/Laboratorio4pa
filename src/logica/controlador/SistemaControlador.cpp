@@ -15,6 +15,9 @@
 #include <stdexcept>
 
 using namespace std;
+set<Vendedor*> vendedores;
+set<Promocion*> promociones;
+Promocion* promocionActual = nullptr;
 
 SistemaControlador::SistemaControlador() {}
 
@@ -138,5 +141,13 @@ DTProducto* SistemaControlador::selectProd(int codigo) {
 }
 
 set<string> SistemaControlador::ingDatos(DTPromocion prom) {
-    Promocion* promocion = new Promocion(prom.nom, prom.desc, prom.fecVencimiento);
+    Promocion* nuevaPromo = new Promocion(prom.nom, prom.desc, prom.fecVencimiento);
+    promocionActual = nuevaPromo;
+    promociones.insert(nuevaPromo);
+    set<string> nicks;
+    for (const auto& v : vendedores) {
+        nicks.insert(v.second->getNick());
+    }
+    return nicks;
 }
+

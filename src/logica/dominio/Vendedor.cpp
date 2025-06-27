@@ -18,6 +18,10 @@ Vendedor::~Vendedor() {
     // TODO Auto-generated destructor stub
 }
 
+string Vendedor::getNick() const {
+    return this->nick;
+}
+
 DTUsuario* Vendedor::retornarDTUsuario()const{
     return new DTVendedor(this->nick,"", this->fechaNac, this->rut);
 }
