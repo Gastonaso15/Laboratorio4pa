@@ -7,11 +7,13 @@
 #include "Usuario.h"
 #include "../DTs/DTFecha.h"
 #include "../DTs/DTUsuario.h"
+#include "../DTs/DTProducto.h"
 #include "../dominio/Producto.h"
 #include <iostream>
 #include "../DTs/DTDireccion.h"
 #include <map>
-
+#include <set>
+class DTProducto;
 class Producto;
 
 class Vendedor: public Usuario {
@@ -24,7 +26,7 @@ public:
     ~Vendedor();
     string getNick() const;
     void aniadirProdListaVendedor(Producto * producto);
-    void retornarProductos();
+    set<DTProducto> retornarProductos();
     DTUsuario* retornarDTUsuario() const override;
 
 };

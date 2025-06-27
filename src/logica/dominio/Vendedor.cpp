@@ -30,3 +30,11 @@ void Vendedor::aniadirProdListaVendedor(Producto* producto) {
     int codigo = producto->getCodigo();
     productos.insert({codigo, producto});
 }
+
+set<DTProducto> Vendedor::retornarProductos() {
+    set<DTProducto> productosVendedor;
+    for (const auto& prod : productos) {
+        productosVendedor.insert(prod.second->retornarDTProducto());
+    }
+    return productosVendedor;
+}

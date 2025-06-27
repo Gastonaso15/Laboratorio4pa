@@ -6,9 +6,8 @@ using namespace std;
 
 DTProducto::~DTProducto(){}
 DTProducto::DTProducto(){}
-DTProducto::DTProducto(int codigo, string nombre, int precio, int stock, string descripcion, cat categoria)
-    : codigo(codigo), nombre(nombre), precio(precio), stock(stock), descripcion(descripcion), categoria(categoria){
-    //por que la declaracion esta asi?
+DTProducto::DTProducto(int codigo, string nombre, int precio, int stock, string descripcion, cat categoria){
+
     this->codigo = codigo;
     this->nombre = nombre;
     this->precio = precio;

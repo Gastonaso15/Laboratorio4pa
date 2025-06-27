@@ -151,3 +151,41 @@ set<string> SistemaControlador::ingDatos(DTPromocion prom) {
     return nicks;
 }
 
+set<DTProducto> SistemaControlador::seleccionarVendedor(string nick) {
+    auto it = usuarios.find(nick);
+    if (it != usuarios.end()) {
+        Vendedor* v = dynamic_cast<Vendedor*>(it->second);
+        if (v != nullptr) {
+            vendedorSeleccionado = v;
+            set<DTProducto> productosVendedor;
+            for (const auto& p : v->retornarProductos()) {
+                productosVendedor.insert(p);
+            }
+            return productosVendedor;
+        }
+    }
+    return set<DTProducto>();  // Retorna set vacío si no encuentra el vendedor
+}
+
+/*bool SistemaControlador::agregarProdProm(const set<DTProducto>& productosDT) {
+    for (const auto& p : productosDT) {}
+    auto it = productos.find(nick);
+    bool todosAgregados = true;
+
+    // Recorrer cada producto a agregar
+    for (const auto& dtProd : productosDT) {
+        // Buscar el producto real en el vendedor
+        Producto* producto = vendedorSeleccionado->buscarProducto(dtProd.codigo);
+
+        if (producto != nullptr) {
+            // Intentar agregar a la promoción (asumiendo cantidad mínima y descuento por defecto)
+            if (!promocionActual->agregarProducto(producto, 1, 0.0f)) { // 1 unidad mínima, 0% descuento por defecto
+                todosAgregados = false;
+            }
+        } else {
+            todosAgregados = false;
+        }
+    }
+
+    return todosAgregados;
+}*/

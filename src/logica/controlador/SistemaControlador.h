@@ -35,6 +35,7 @@ public:
 	set<DTProducto> listarProd();
 	DTProducto* selectProd(int codigo);
 	set<string> ingDatos(DTPromocion prom);
+	set<DTProducto> seleccionarVendedor(string nick);
 };
 
 
