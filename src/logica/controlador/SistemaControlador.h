@@ -10,6 +10,8 @@
 #include "../dominio/Vendedor.h"
 #include <map>
 #include <set>
+
+#include "../../DTs/DTPromocion.h"
 using namespace std;
 
 #include <string>
@@ -32,6 +34,7 @@ public:
 	bool ingProducto(DTProducto producto);
 	set<DTProducto> listarProd();
 	DTProducto* selectProd(int codigo);
+	set<string> ingDatos(DTPromocion prom);
 };
 
 

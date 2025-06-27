@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2024.3.5\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\agusm\CLionProjects\Laboratorio4pa
+CMAKE_SOURCE_DIR = C:\proyectosClion\laboratorio4pa
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug
+CMAKE_BINARY_DIR = C:\proyectosClion\laboratorio4pa\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\CMakeFiles C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\proyectosClion\laboratorio4pa\cmake-build-debug\CMakeFiles C:\proyectosClion\laboratorio4pa\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\proyectosClion\laboratorio4pa\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -488,6 +488,30 @@ src/logica/dominio/Producto.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Producto.cpp.s
 .PHONY : src/logica/dominio/Producto.cpp.s
 
+src/logica/dominio/Promocion.obj: src/logica/dominio/Promocion.cpp.obj
+.PHONY : src/logica/dominio/Promocion.obj
+
+# target to build an object file
+src/logica/dominio/Promocion.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Promocion.cpp.obj
+.PHONY : src/logica/dominio/Promocion.cpp.obj
+
+src/logica/dominio/Promocion.i: src/logica/dominio/Promocion.cpp.i
+.PHONY : src/logica/dominio/Promocion.i
+
+# target to preprocess a source file
+src/logica/dominio/Promocion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Promocion.cpp.i
+.PHONY : src/logica/dominio/Promocion.cpp.i
+
+src/logica/dominio/Promocion.s: src/logica/dominio/Promocion.cpp.s
+.PHONY : src/logica/dominio/Promocion.s
+
+# target to generate assembly for a file
+src/logica/dominio/Promocion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Promocion.cpp.s
+.PHONY : src/logica/dominio/Promocion.cpp.s
+
 src/logica/dominio/Usuario.obj: src/logica/dominio/Usuario.cpp.obj
 .PHONY : src/logica/dominio/Usuario.obj
 
@@ -710,6 +734,9 @@ help:
 	@echo ... src/logica/dominio/Producto.obj
 	@echo ... src/logica/dominio/Producto.i
 	@echo ... src/logica/dominio/Producto.s
+	@echo ... src/logica/dominio/Promocion.obj
+	@echo ... src/logica/dominio/Promocion.i
+	@echo ... src/logica/dominio/Promocion.s
 	@echo ... src/logica/dominio/Usuario.obj
 	@echo ... src/logica/dominio/Usuario.i
 	@echo ... src/logica/dominio/Usuario.s

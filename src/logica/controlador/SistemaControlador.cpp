@@ -1,7 +1,7 @@
 #include "SistemaControlador.h"
 #include <iostream>
 #include <string>
-#include "dominio/Producto.h"
+#include "../dominio/Producto.h"
 #include "../DTs/DTFecha.h"
 #include "../DTs/DTProducto.h"
 #include "../DTs/DTUsuario.h"
@@ -10,6 +10,7 @@
 #include "../dominio/Usuario.h"
 #include "../dominio/Cliente.h"
 #include "../dominio/Vendedor.h"
+#include "../dominio/Promocion.h"
 #include <map>
 #include <stdexcept>
 
@@ -134,4 +135,8 @@ DTProducto* SistemaControlador::selectProd(int codigo) {
     } else {
         return nullptr;
     }
+}
+
+set<string> SistemaControlador::ingDatos(DTPromocion prom) {
+    Promocion* promocion = new Promocion(prom.nom, prom.desc, prom.fecVencimiento);
 }
