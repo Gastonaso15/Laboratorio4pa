@@ -56,5 +56,22 @@ string CrearPromocion::crearPromocion() {
     }
   }
   //agregarProdProm
- return respuesta="kaka";
+  set<DTProducto> prodprom;
+  string continuar="Si";
+  int codigo,cantidad,descuento;
+  cout << endl << "** Ingresar Datos **" << endl;
+  while(continuar=="Si" || continuar=="SI" || continuar=="si") {
+    cout << "Ingrese codigo del Producto: ";
+    cin >> codigo;
+    cout << "Ingrese cantidad minima para la Promocion: ";
+    cin >> cantidad;
+    cout << "Ingrese el porcentaje de descuento: ";
+    cin >> descuento;
+    cout << "Desea agregar mas Productos?: ";
+    cin >> continuar;
+    DTProducto * prod = new DTProducto(codigo,descuento,cantidad);
+    prodprom.insert(*prod);
+    }
+    respuesta=controlador.agregarProdProm(prodprom);
+    return respuesta;
 }

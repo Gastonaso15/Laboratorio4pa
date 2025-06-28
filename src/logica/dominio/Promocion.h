@@ -6,6 +6,9 @@
 using namespace std;
 #include "../../DTs/DTProdPromocion.h"
 #include "../../DTs/DTPromocion.h"
+#include "../../DTs/DTProducto.h"
+#include "../DTs/DTFecha.h"
+#include "ProdPromocion.h"
 
 class Vendedor;
 class ProdPromocion;
@@ -23,9 +26,11 @@ public:
     Promocion(string nom, string desc, DTFecha *fecVencimiento);
     virtual ~Promocion();
     string getNom();
-    void agregarProdProm(DTProducto p);
+    void agregarProdProm(const DTProducto& p);
     DTPromocion retornarDTPromocion();
     set<DTPromocion> retornarDTProdPromocion(DTProdPromocion d);
+    bool estaVigente();
+
 };
 
 

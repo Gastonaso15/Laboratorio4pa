@@ -464,6 +464,30 @@ src/logica/dominio/Cliente.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.s
 .PHONY : src/logica/dominio/Cliente.cpp.s
 
+src/logica/dominio/ProdPromocion.obj: src/logica/dominio/ProdPromocion.cpp.obj
+.PHONY : src/logica/dominio/ProdPromocion.obj
+
+# target to build an object file
+src/logica/dominio/ProdPromocion.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/ProdPromocion.cpp.obj
+.PHONY : src/logica/dominio/ProdPromocion.cpp.obj
+
+src/logica/dominio/ProdPromocion.i: src/logica/dominio/ProdPromocion.cpp.i
+.PHONY : src/logica/dominio/ProdPromocion.i
+
+# target to preprocess a source file
+src/logica/dominio/ProdPromocion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/ProdPromocion.cpp.i
+.PHONY : src/logica/dominio/ProdPromocion.cpp.i
+
+src/logica/dominio/ProdPromocion.s: src/logica/dominio/ProdPromocion.cpp.s
+.PHONY : src/logica/dominio/ProdPromocion.s
+
+# target to generate assembly for a file
+src/logica/dominio/ProdPromocion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/ProdPromocion.cpp.s
+.PHONY : src/logica/dominio/ProdPromocion.cpp.s
+
 src/logica/dominio/Producto.obj: src/logica/dominio/Producto.cpp.obj
 .PHONY : src/logica/dominio/Producto.obj
 
@@ -779,6 +803,9 @@ help:
 	@echo ... src/logica/dominio/Cliente.obj
 	@echo ... src/logica/dominio/Cliente.i
 	@echo ... src/logica/dominio/Cliente.s
+	@echo ... src/logica/dominio/ProdPromocion.obj
+	@echo ... src/logica/dominio/ProdPromocion.i
+	@echo ... src/logica/dominio/ProdPromocion.s
 	@echo ... src/logica/dominio/Producto.obj
 	@echo ... src/logica/dominio/Producto.i
 	@echo ... src/logica/dominio/Producto.s

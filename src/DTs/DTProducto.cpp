@@ -38,3 +38,9 @@ string DTProducto::catToString(cat categoria) {
         default: return "Categoria desconocida";
     }
 }
+
+DTProducto::DTProducto(int codigo, int descuento, int cantidad) {
+    this->codigo = codigo;
+    this->precio = descuento;
+    this->stock = cantidad;
+}

@@ -19,6 +19,7 @@ public:
     DTProducto();
     DTProducto(int codigo, string nombre, int precio,int stock, string descripcion, cat categoria);
     DTProducto(int codigo, string nombre, int precio, int stock, string descripcion, cat categoria,DTVendedor * vendedor);
+    DTProducto(int codigo, int descuento, int cantidad);
     virtual ~DTProducto();
     bool operator<(const DTProducto& other) const;
     DTProducto getCodDTProd();

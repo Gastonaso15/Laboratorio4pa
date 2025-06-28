@@ -35,3 +35,17 @@ DTProducto Producto::retornarDTProducto(){
 void Producto::asociarProdVendedor(Vendedor* vendedor) {
   this->vendedor=vendedor;
 }
+
+bool Producto::productoEnPromo() {
+  //Cambios respecto al Diagrama de Clase; asi es mas eficiente
+  bool enPromo=!prodsprom.empty();
+  if (enPromo) {
+    for (const auto& prodProm : prodsprom) {
+      if (prodProm->retornarPromocion()->estaVigente()) {
+        return true;
+      }
+    }
+  } else {
+    return false;
+  }
+}

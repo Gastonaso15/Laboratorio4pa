@@ -25,6 +25,7 @@ public:
                (anio == otra.anio && mes == otra.mes && dia <= otra.dia);
     }
     string toString() const;
+    static DTFecha obtenerFechaActual();
 };
 
 #endif //DTFECHA_H

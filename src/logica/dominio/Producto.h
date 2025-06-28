@@ -3,6 +3,7 @@
 
 #include "../../DTs/Definiciones.h"
 #include "Vendedor.h"
+#include "Promocion.h"
 #include <set>
 #include <map>
 #include <string>
@@ -35,6 +36,7 @@ class Producto {
     int getPrecio();
     DTProducto retornarDTProducto();
     void asociarProdVendedor(Vendedor* vendedor);
+    bool productoEnPromo();
 };
 
 

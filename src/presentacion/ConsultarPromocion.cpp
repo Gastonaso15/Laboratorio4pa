@@ -9,6 +9,5 @@ ConsultarPromocion::ConsultarPromocion(SistemaControlador& controlador):controla
 ConsultarPromocion::~ConsultarPromocion() {}
 
 string ConsultarPromocion::consultarPromocion() {
-    string respuesta="Hay que chambear";
-    return respuesta;
+
 }
