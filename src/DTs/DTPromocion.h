@@ -15,9 +15,9 @@ class DTPromocion {
 public:
     string nom;
     string desc;
-    DTFecha fecVencimiento;
+    DTFecha *fecVencimiento;
     DTPromocion();
-    DTPromocion(string nom, string desc, DTFecha fecVencimiento);
+    DTPromocion(string nom, string desc, DTFecha *fecVencimiento);
     DTPromocion getPromocion();
 };
 

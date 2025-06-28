@@ -7,7 +7,7 @@
 Promocion::Promocion() {
 }
 
-Promocion::Promocion(string nom, string desc, DTFecha fecVencimiento) {
+Promocion::Promocion(string nom, string desc, DTFecha * fecVencimiento) {
     this->nom = nom;
     this->desc = desc;
     this->fecVencimiento = fecVencimiento;

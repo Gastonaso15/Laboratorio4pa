@@ -1,13 +1,10 @@
-//
-// Created by agusm on 12/06/2025.
-//
 
 #include "DTPromocion.h"
 
 DTPromocion::DTPromocion() {
 }
 
-DTPromocion::DTPromocion(string nom, string desc, DTFecha fecVencimiento) {
+DTPromocion::DTPromocion(string nom, string desc, DTFecha *fecVencimiento) {
     this->nom = nom;
     this->desc = desc;
     this->fecVencimiento = fecVencimiento;

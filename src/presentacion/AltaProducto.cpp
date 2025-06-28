@@ -14,27 +14,6 @@ AltaProducto::AltaProducto(SistemaControlador& controlador):controlador(controla
 
 AltaProducto::~AltaProducto() {}
 
-/* Todas las funciones van juntas, esto no va
-void AltaProducto::listarNickVendedor() {
-    set<string> vendedores = controlador.listarNickVendedor();
-    if (vendedores.empty()) {
-        cout << "No hay vendedores registrados." << endl;
-    } else {
-        cout << "--- Vendedores registrados ---" << endl;
-        for (const string& nick : vendedores) {
-            cout << "- " << nick << endl;
-        }
-    }
-}
-
-string AltaProducto::selectVendedor() {
-    string nick,resultado;
-    cout << "Ingrese nick del Vendedor: ";
-    cin >> nick;
-    resultado = controlador.selectVendedor(nick);
-    return resultado;
-}*/
-
 string AltaProducto::altaProducto() {
     string respuesta;
     //listarNickVendedor

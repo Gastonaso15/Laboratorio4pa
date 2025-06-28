@@ -17,10 +17,10 @@ class Promocion {
 private:
     string nom;
     string desc;
-    DTFecha fecVencimiento;
+    DTFecha * fecVencimiento;
 public:
     Promocion();
-    Promocion(string nom, string desc, DTFecha fecVencimiento);
+    Promocion(string nom, string desc, DTFecha *fecVencimiento);
     void agregarProdProm(DTProducto p);
     DTPromocion retornarDTPromocion();
     set<DTPromocion> retornarDTProdPromocion(DTProdPromocion d);
