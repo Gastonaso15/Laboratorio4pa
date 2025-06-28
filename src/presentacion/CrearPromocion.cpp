@@ -30,7 +30,7 @@ string CrearPromocion::crearPromocion() {
   cin >> anio;
   DTFecha* fecha = new DTFecha(dia, mes, anio);
   DTPromocion * promocion = new DTPromocion(nombre,descripcion,fecha);
-  set<string> vendedores;=controlador.ingDatos(*promocion);
+  set<string> vendedores=controlador.ingDatos(*promocion);
   if (vendedores.empty()) {
     respuesta= "Error: No hay vendedores registrados.";
     return respuesta;
@@ -56,5 +56,5 @@ string CrearPromocion::crearPromocion() {
     }
   }
   //agregarProdProm
-
+ return respuesta="kaka";
 }

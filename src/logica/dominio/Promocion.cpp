@@ -1,11 +1,9 @@
-//
-// Created by Gastón on 27/6/2025.
-//
-
 #include "Promocion.h"
 
 Promocion::Promocion() {
 }
+
+Promocion::~Promocion() {}
 
 Promocion::Promocion(string nom, string desc, DTFecha * fecVencimiento) {
     this->nom = nom;
@@ -13,6 +11,9 @@ Promocion::Promocion(string nom, string desc, DTFecha * fecVencimiento) {
     this->fecVencimiento = fecVencimiento;
 }
 
+string Promocion::getNom() {
+    return nom;
+}
 // void Promocion::agregarProdProm(DTProducto p) {
 //     //to do
 // }

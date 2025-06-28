@@ -8,6 +8,7 @@
 #include "../dominio/Usuario.h"
 #include "../dominio/Cliente.h"
 #include "../dominio/Vendedor.h"
+#include "../dominio/Promocion.h"
 #include <map>
 #include <set>
 
@@ -19,8 +20,10 @@ using namespace std;
 class SistemaControlador{
 protected:
 	map<int,Producto*> productos;
-	map<int,DTProducto*>carrito;
+	map<int,DTProducto*> carrito;
 	map<string,Usuario*> usuarios;
+	map<string,Promocion*> promociones;
+	map<int, Compra*> compras;
 	map<string, Vendedor*> vendedores;
 	Vendedor* vendedorSeleccionado = nullptr;
 	int ultimoCodigoProducto = 0;

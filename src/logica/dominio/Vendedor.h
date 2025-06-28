@@ -1,25 +1,20 @@
-//
-// Created by marti on 16/6/2025.
-//
-
 #ifndef VENDEDOR_H
 #define VENDEDOR_H
 #include "Usuario.h"
-#include "../DTs/DTFecha.h"
-#include "../DTs/DTUsuario.h"
 #include "../DTs/DTProducto.h"
-#include "../dominio/Producto.h"
-#include <iostream>
-#include "../DTs/DTDireccion.h"
 #include <map>
 #include <set>
+
+class ProdPromocion;
 class DTProducto;
 class Producto;
+class Promocion;
 
 class Vendedor: public Usuario {
 protected:
     string rut;
     map<int, Producto*> productos;
+    map<string,Promocion*> promociones;
 public:
     Vendedor();
     Vendedor(string nick, string pass, DTFecha *  fechaNac,string rut);

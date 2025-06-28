@@ -143,7 +143,7 @@ DTProducto* SistemaControlador::selectProd(int codigo) {
 set<string> SistemaControlador::ingDatos(DTPromocion prom) {
     Promocion* nuevaPromo = new Promocion(prom.nom, prom.desc, prom.fecVencimiento);
     promocionActual = nuevaPromo;
-    promociones.insert(nuevaPromo);
+    promociones.insert({nuevaPromo->getNom(), nuevaPromo});
     set<string> nicks;
     for (const auto& v : vendedores) {
         nicks.insert(v.second->getNick());
@@ -166,8 +166,8 @@ set<DTProducto> SistemaControlador::seleccionarVendedor(string nick) {
     }
     return set<DTProducto>();  // Retorna set vacío si no encuentra el vendedor
 }
-
-/*bool SistemaControlador::agregarProdProm(const set<DTProducto>& productosDT) {
+/*
+bool SistemaControlador::agregarProdProm(const set<DTProducto>& productosDT) {
     for (const auto& p : productosDT) {}
     auto it = productos.find(nick);
     bool todosAgregados = true;
@@ -188,4 +188,5 @@ set<DTProducto> SistemaControlador::seleccionarVendedor(string nick) {
     }
 
     return todosAgregados;
-}*/
+}
+*/

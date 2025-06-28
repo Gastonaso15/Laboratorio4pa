@@ -632,6 +632,54 @@ src/presentacion/ConsultarProducto.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ConsultarProducto.cpp.s
 .PHONY : src/presentacion/ConsultarProducto.cpp.s
 
+src/presentacion/ConsultarPromocion.obj: src/presentacion/ConsultarPromocion.cpp.obj
+.PHONY : src/presentacion/ConsultarPromocion.obj
+
+# target to build an object file
+src/presentacion/ConsultarPromocion.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ConsultarPromocion.cpp.obj
+.PHONY : src/presentacion/ConsultarPromocion.cpp.obj
+
+src/presentacion/ConsultarPromocion.i: src/presentacion/ConsultarPromocion.cpp.i
+.PHONY : src/presentacion/ConsultarPromocion.i
+
+# target to preprocess a source file
+src/presentacion/ConsultarPromocion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ConsultarPromocion.cpp.i
+.PHONY : src/presentacion/ConsultarPromocion.cpp.i
+
+src/presentacion/ConsultarPromocion.s: src/presentacion/ConsultarPromocion.cpp.s
+.PHONY : src/presentacion/ConsultarPromocion.s
+
+# target to generate assembly for a file
+src/presentacion/ConsultarPromocion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ConsultarPromocion.cpp.s
+.PHONY : src/presentacion/ConsultarPromocion.cpp.s
+
+src/presentacion/CrearPromocion.obj: src/presentacion/CrearPromocion.cpp.obj
+.PHONY : src/presentacion/CrearPromocion.obj
+
+# target to build an object file
+src/presentacion/CrearPromocion.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/CrearPromocion.cpp.obj
+.PHONY : src/presentacion/CrearPromocion.cpp.obj
+
+src/presentacion/CrearPromocion.i: src/presentacion/CrearPromocion.cpp.i
+.PHONY : src/presentacion/CrearPromocion.i
+
+# target to preprocess a source file
+src/presentacion/CrearPromocion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/CrearPromocion.cpp.i
+.PHONY : src/presentacion/CrearPromocion.cpp.i
+
+src/presentacion/CrearPromocion.s: src/presentacion/CrearPromocion.cpp.s
+.PHONY : src/presentacion/CrearPromocion.s
+
+# target to generate assembly for a file
+src/presentacion/CrearPromocion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/CrearPromocion.cpp.s
+.PHONY : src/presentacion/CrearPromocion.cpp.s
+
 src/presentacion/ListadoUsuarios.obj: src/presentacion/ListadoUsuarios.cpp.obj
 .PHONY : src/presentacion/ListadoUsuarios.obj
 
@@ -752,6 +800,12 @@ help:
 	@echo ... src/presentacion/ConsultarProducto.obj
 	@echo ... src/presentacion/ConsultarProducto.i
 	@echo ... src/presentacion/ConsultarProducto.s
+	@echo ... src/presentacion/ConsultarPromocion.obj
+	@echo ... src/presentacion/ConsultarPromocion.i
+	@echo ... src/presentacion/ConsultarPromocion.s
+	@echo ... src/presentacion/CrearPromocion.obj
+	@echo ... src/presentacion/CrearPromocion.i
+	@echo ... src/presentacion/CrearPromocion.s
 	@echo ... src/presentacion/ListadoUsuarios.obj
 	@echo ... src/presentacion/ListadoUsuarios.i
 	@echo ... src/presentacion/ListadoUsuarios.s

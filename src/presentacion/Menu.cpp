@@ -3,6 +3,8 @@
 #include "ListadoUsuarios.h"
 #include "AltaProducto.h"
 #include "ConsultarProducto.h"
+#include "CrearPromocion.h"
+#include "ConsultarPromocion.h"
 #include <iostream>
 
 using namespace std;
@@ -19,6 +21,8 @@ void Menu::mostrarMenu() {
     ListadoUsuarios listadoUsuarios(controlador);
     AltaProducto altaProducto(controlador);
     ConsultarProducto consultarProducto(controlador);
+    CrearPromocion crearPromocion(controlador);
+    ConsultarPromocion consultarPromocion(controlador);
 
     do {
         cout << "------ MENU PRINCIPAL ------" << endl;
@@ -26,6 +30,13 @@ void Menu::mostrarMenu() {
         cout << "2 - Listado de Usuarios" << endl;
         cout << "3 - Alta de Producto" << endl;
         cout << "4 - Consultar Producto" << endl;
+        cout << "5 - Crear Promocion" << endl;
+        cout << "6 - Consultar Promocion" << endl;
+        cout << "7 - Realizar Compra" << endl;
+        cout << "8 - Dejar Comentario" << endl;
+        cout << "9 - Eliminar Comentario" << endl;
+        cout << "10 - Enviar Producto" << endl;
+        cout << "11 - Expediente Usuario" << endl;
         cout << "0 - Salir" << endl;
         cout << "Seleccione una opcion: ";
         cin >> opcion;
@@ -48,6 +59,31 @@ void Menu::mostrarMenu() {
             case 4: {
                 respuesta = consultarProducto.consultarProducto();
                 cout << respuesta << endl;
+                break;
+            }
+            case 5: {
+                respuesta = crearPromocion.crearPromocion();
+                cout << respuesta << endl;
+                break;
+            }
+            case 6: {
+                respuesta = consultarPromocion.consultarPromocion();
+                cout << respuesta << endl;
+                break;
+            }
+            case 7: {
+                break;
+            }
+            case 8: {
+                break;
+            }
+            case 9: {
+                break;
+            }
+            case 10: {
+                break;
+            }
+            case 11: {
                 break;
             }
             case 0:

@@ -58,5 +58,9 @@ add_executable(Dis_EjemploArquitecturaLogin
         src/DTs/Definiciones.h
         src/presentacion/ConsultarProducto.cpp
         src/presentacion/ConsultarProducto.h
+        src/presentacion/CrearPromocion.cpp
+        src/presentacion/CrearPromocion.h
+        src/presentacion/ConsultarPromocion.cpp
+        src/presentacion/ConsultarPromocion.h
         src/logica/dominio/Promocion.cpp
         src/logica/dominio/Promocion.h)
