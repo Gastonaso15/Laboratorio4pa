@@ -186,6 +186,28 @@ string SistemaControlador::agregarProdProm(set<DTProducto> productosDT) {
     return "Promocion creada con exito";
 }
 
+set<DTPromocion*> SistemaControlador::listarPromociones() {
+    set<DTPromocion*> resultado;
+    for (auto const& par : promociones) {
+        Promocion* p = par.second;
+        resultado.insert(p->retornarDTPromocion());
+    }
+    return resultado;
+}
+
+set<DTProdPromocion*> SistemaControlador::selectPromo(string nombre) {
+    auto it = promociones.find(nombre);
+    if (it != promociones.end()) {
+        Promocion* prom = it->second;
+        //DTPromocion *promo = prom->retornarDTPromocionConProd();
+        set<DTProdPromocion*> prodprom =prom->retornarDTProdPromocion();
+        return prodprom;
+    } else {
+        return {};
+    }
+}
+
+
 /*bool SistemaControlador::agregarProdProm(const set<DTProducto>& productosDT) {
     for (const auto& p : productosDT) {}
     auto it = productos.find(nick);

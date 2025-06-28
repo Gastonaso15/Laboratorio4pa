@@ -13,6 +13,8 @@ using namespace std;
 class Vendedor;
 class ProdPromocion;
 class DTProducto;
+class DTProdPromocion;
+class DTPromocion;
 
 class Promocion {
 private:
@@ -27,8 +29,9 @@ public:
     virtual ~Promocion();
     string getNom();
     void agregarProdProm(const DTProducto& p);
-    DTPromocion retornarDTPromocion();
-    set<DTPromocion> retornarDTProdPromocion(DTProdPromocion d);
+    DTPromocion * retornarDTPromocion();
+    DTPromocion * retornarDTPromocionConProd();
+    set<DTProdPromocion*> retornarDTProdPromocion();
     bool estaVigente();
 
 };

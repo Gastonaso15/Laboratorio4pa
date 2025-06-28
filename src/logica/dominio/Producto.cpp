@@ -45,7 +45,6 @@ bool Producto::productoEnPromo() {
         return true;
       }
     }
-  } else {
-    return false;
   }
+  return false;
 }

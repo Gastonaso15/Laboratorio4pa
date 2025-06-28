@@ -14,3 +14,8 @@ ProdPromocion::ProdPromocion(int cantMininima,int descuento){
 Promocion* ProdPromocion::retornarPromocion() {
   return this->promocion;
 }
+
+DTProdPromocion ProdPromocion::retornarDTProdPromocion(){
+  DTProducto* dto = new DTProducto(producto->retornarDTProducto());
+  return DTProdPromocion(this->cantMininima, this->descuento, dto);
+}

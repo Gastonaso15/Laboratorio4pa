@@ -2,10 +2,12 @@
 #define PRODPROMOCION_H
 
 #include "../DTs/DTPromocion.h"
+#include "../DTs/DTProdPromocion.h"
 #include "Promocion.h"
 
 class Producto;
 class Promocion;
+class DTProdPromocion;
 
 class ProdPromocion {
     private:
@@ -18,6 +20,7 @@ class ProdPromocion {
         ProdPromocion(int cantMininima,int descuento);
         virtual ~ProdPromocion();
         Promocion* retornarPromocion();
+        DTProdPromocion retornarDTProdPromocion();
 };
 
 

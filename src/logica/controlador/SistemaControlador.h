@@ -40,6 +40,8 @@ public:
 	set<string> ingDatos(DTPromocion prom);
 	set<DTProducto> seleccionarVendedor(string nick);
 	string agregarProdProm(set<DTProducto> productosDT);
+	set<DTPromocion*> listarPromociones();
+	set<DTProdPromocion*> selectPromo(string nombre);
 };
 
 
