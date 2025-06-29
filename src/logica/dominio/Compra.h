@@ -2,6 +2,7 @@
 #define COMPRA_H
 #include "../dominio/ProdComprado.h"
 #include "../dominio/Cliente.h"
+#include <set>
 
 class Cliente;
 class ProdComprado;
