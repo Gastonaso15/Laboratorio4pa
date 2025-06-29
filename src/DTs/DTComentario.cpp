@@ -13,6 +13,14 @@ DTComentario::DTComentario(int id, string texto, DTFecha* fecEscrito){
   this->texto=texto;
   this->fecEscrito=fecEscrito;
 }
+
+DTComentario::DTComentario(int id, string texto, DTFecha* fecEscrito, DTComentario * padre){
+  this->id=id;
+  this->texto=texto;
+  this->fecEscrito=fecEscrito;
+  this->padre=padre;
+}
+
 DTComentario::~DTComentario() {
 
 }

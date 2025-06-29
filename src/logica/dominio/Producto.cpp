@@ -101,3 +101,7 @@ Comentario* Producto::getComentario(int id) {
   }
   return nullptr;
 }
+
+void Producto::eliminarComentario(int id) {
+  comentarios.erase(id);
+}

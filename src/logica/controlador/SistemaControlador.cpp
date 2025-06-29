@@ -348,7 +348,7 @@ string SistemaControlador::agregarRespuesta(string texto) {
     }
     int id = ++ultimoCodigoComentario;
     DTFecha* fechaActual = new DTFecha(DTFecha::obtenerFechaActual());
-    Comentario * com = new Comentario(id,texto,fechaActual,productoSeleccionado);
+    Comentario * com = new Comentario(id,texto,fechaActual,productoSeleccionado,comentarioSeleccionado);
     comentarioSeleccionado->agregarRespuesta(com);
     usuarioSeleccionado->asociarComentarioUsuario(com);
     productoSeleccionado->asociarComentarioProducto(com);
@@ -366,10 +366,23 @@ set<DTComentario*> SistemaControlador::seleccionarUsuarioComentario(string nick)
     return resultado;  // Retorna set vacío si no encuentra al usuario
 }
 
+void SistemaControlador::auxBorrarComentarioRecursivo(Comentario* com, Usuario* usuario, Producto* producto) {
+    for (auto& par : com->getRespuestas()) {
+        auxBorrarComentarioRecursivo(par.second, usuario, producto);
+    }
+    usuario->eliminarComentario(com->getId());
+    producto->eliminarComentario(com->getId());
+    delete com;
+}
+
 string SistemaControlador::borrarComentario(int id) {
-    string respuesta;
-    //usuarioSeleccionado->borrarComentario(id);
-    return respuesta;
+    Comentario* com = usuarioSeleccionado->obtenerComentario(id);
+    if (com == nullptr) {
+        return "Error: No existe un comentario con ese ID";
+    }
+    Producto* prod = com->getProducto();
+    auxBorrarComentarioRecursivo(com, usuarioSeleccionado, prod);
+    return "Comentario borrado con exito";
 }
 
 set<DTCompra> SistemaControlador::seleccionarProductoC(int codigoProducto) {

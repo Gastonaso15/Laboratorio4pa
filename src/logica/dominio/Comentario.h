@@ -16,6 +16,7 @@ class Comentario {
     DTFecha * fecEscrito;
     map<int,Comentario*> respuestas;
     Producto * producto;
+    Comentario * padre;
   public:
     Comentario();
     Comentario(int id, string texto, DTFecha * fecEscrito,Producto * producto);
@@ -23,8 +24,11 @@ class Comentario {
     virtual ~Comentario();
     int getId();
     DTComentario* retornarDTComentario();
+    DTComentario* retornarDTComentarioPadre();
     void agregarRespuesta(Comentario * com);
     bool tieneRespuestas();
+    Producto* getProducto();
+    map<int,Comentario*>& getRespuestas();
 
 };
 

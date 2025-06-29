@@ -68,7 +68,11 @@ string DejarComentario::dejarComentario() {
     } else {
       cout << "--- Comentarios registrados ---" << endl;
       for (const DTComentario* com : comentarios) {
-        cout << "Id: " << com->id << " Comentario: " << com->texto << endl << "Fecha Escrito: " << com->fecEscrito->toString() << endl;
+          cout << "Id: " << com->id << " Comentario: " << com->texto << endl << "Fecha Escrito: " << com->fecEscrito->toString() << endl;
+          if (com->padre!=nullptr) {
+            cout << "Id de comentario respondido: " << com->padre->id << endl;
+          }
+          cout << "---------------------------" << endl;
       }
     }
     //seleccionarComentario

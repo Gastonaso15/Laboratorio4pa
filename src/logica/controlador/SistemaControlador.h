@@ -72,11 +72,13 @@ public:
 	string agregarRespuesta(string texto);
 	set<DTComentario*> seleccionarUsuarioComentario(string nick);
 	string borrarComentario(int id);
+	void auxBorrarComentarioRecursivo(Comentario* com, Usuario* usuario, Producto* producto);
 	set<DTProducto> obtenerProductosPendientesPorVendedor(string nickVendedor);
 	set<DTCompra> seleccionarProductoC(int codigoProducto);
 	string marcarProductoComoEnviado(int codigoProducto, int idCompra);
 
 };
+
 
 
 #endif /* LOGICA_CONTROLADOR_SISTEMACONTROLADOR_H_ */
