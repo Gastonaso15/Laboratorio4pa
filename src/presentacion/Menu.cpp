@@ -5,6 +5,7 @@
 #include "ConsultarProducto.h"
 #include "CrearPromocion.h"
 #include "ConsultarPromocion.h"
+#include "EnviarProducto.h"
 #include <iostream>
 
 using namespace std;
@@ -23,6 +24,7 @@ void Menu::mostrarMenu() {
     ConsultarProducto consultarProducto(controlador);
     CrearPromocion crearPromocion(controlador);
     ConsultarPromocion consultarPromocion(controlador);
+    EnviarProducto enviarProductoInstancia(controlador);
 
     do {
         cout << "------ MENU PRINCIPAL ------" << endl;
@@ -81,6 +83,8 @@ void Menu::mostrarMenu() {
                 break;
             }
             case 10: {
+                respuesta = enviarProductoInstancia.enviarProducto();
+                cout << respuesta << endl;
                 break;
             }
             case 11: {

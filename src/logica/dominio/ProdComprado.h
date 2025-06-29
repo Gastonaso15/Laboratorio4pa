@@ -15,7 +15,9 @@ class ProdComprado {
   ProdComprado();
   ProdComprado(int cantidad,bool enviado);
   virtual ~ProdComprado();
-
+  Producto* getProducto() const { return producto; }
+  bool getEnviado() const { return enviado; }
+  void setEnviado(bool valor) { enviado = valor; }
 };
 
 

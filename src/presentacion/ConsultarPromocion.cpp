@@ -9,5 +9,5 @@ ConsultarPromocion::ConsultarPromocion(SistemaControlador& controlador):controla
 ConsultarPromocion::~ConsultarPromocion() {}
 
 string ConsultarPromocion::consultarPromocion() {
-
+    return "";
 }

@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2024.3.5\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\agusm\CLionProjects\Laboratorio4pa
+CMAKE_SOURCE_DIR = C:\Laboratorio4pa
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Laboratorio4pa\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\CMakeFiles C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Laboratorio4pa\cmake-build-debug\CMakeFiles C:\Laboratorio4pa\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Laboratorio4pa\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -392,30 +392,6 @@ src/DTs/DTVendedor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTVendedor.cpp.s
 .PHONY : src/DTs/DTVendedor.cpp.s
 
-src/Principal.obj: src/Principal.cpp.obj
-.PHONY : src/Principal.obj
-
-# target to build an object file
-src/Principal.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/Principal.cpp.obj
-.PHONY : src/Principal.cpp.obj
-
-src/Principal.i: src/Principal.cpp.i
-.PHONY : src/Principal.i
-
-# target to preprocess a source file
-src/Principal.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/Principal.cpp.i
-.PHONY : src/Principal.cpp.i
-
-src/Principal.s: src/Principal.cpp.s
-.PHONY : src/Principal.s
-
-# target to generate assembly for a file
-src/Principal.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/Principal.cpp.s
-.PHONY : src/Principal.cpp.s
-
 src/logica/controlador/SistemaControlador.obj: src/logica/controlador/SistemaControlador.cpp.obj
 .PHONY : src/logica/controlador/SistemaControlador.obj
 
@@ -463,6 +439,30 @@ src/logica/dominio/Cliente.s: src/logica/dominio/Cliente.cpp.s
 src/logica/dominio/Cliente.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.s
 .PHONY : src/logica/dominio/Cliente.cpp.s
+
+src/logica/dominio/Compra.obj: src/logica/dominio/Compra.cpp.obj
+.PHONY : src/logica/dominio/Compra.obj
+
+# target to build an object file
+src/logica/dominio/Compra.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Compra.cpp.obj
+.PHONY : src/logica/dominio/Compra.cpp.obj
+
+src/logica/dominio/Compra.i: src/logica/dominio/Compra.cpp.i
+.PHONY : src/logica/dominio/Compra.i
+
+# target to preprocess a source file
+src/logica/dominio/Compra.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Compra.cpp.i
+.PHONY : src/logica/dominio/Compra.cpp.i
+
+src/logica/dominio/Compra.s: src/logica/dominio/Compra.cpp.s
+.PHONY : src/logica/dominio/Compra.s
+
+# target to generate assembly for a file
+src/logica/dominio/Compra.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Compra.cpp.s
+.PHONY : src/logica/dominio/Compra.cpp.s
 
 src/logica/dominio/ProdPromocion.obj: src/logica/dominio/ProdPromocion.cpp.obj
 .PHONY : src/logica/dominio/ProdPromocion.obj
@@ -584,6 +584,30 @@ src/logica/dominio/Vendedor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.s
 .PHONY : src/logica/dominio/Vendedor.cpp.s
 
+src/main.obj: src/main.cpp.obj
+.PHONY : src/main.obj
+
+# target to build an object file
+src/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
 src/presentacion/AltaProducto.obj: src/presentacion/AltaProducto.cpp.obj
 .PHONY : src/presentacion/AltaProducto.obj
 
@@ -704,6 +728,30 @@ src/presentacion/CrearPromocion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/CrearPromocion.cpp.s
 .PHONY : src/presentacion/CrearPromocion.cpp.s
 
+src/presentacion/EnviarProducto.obj: src/presentacion/EnviarProducto.cpp.obj
+.PHONY : src/presentacion/EnviarProducto.obj
+
+# target to build an object file
+src/presentacion/EnviarProducto.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EnviarProducto.cpp.obj
+.PHONY : src/presentacion/EnviarProducto.cpp.obj
+
+src/presentacion/EnviarProducto.i: src/presentacion/EnviarProducto.cpp.i
+.PHONY : src/presentacion/EnviarProducto.i
+
+# target to preprocess a source file
+src/presentacion/EnviarProducto.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EnviarProducto.cpp.i
+.PHONY : src/presentacion/EnviarProducto.cpp.i
+
+src/presentacion/EnviarProducto.s: src/presentacion/EnviarProducto.cpp.s
+.PHONY : src/presentacion/EnviarProducto.s
+
+# target to generate assembly for a file
+src/presentacion/EnviarProducto.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EnviarProducto.cpp.s
+.PHONY : src/presentacion/EnviarProducto.cpp.s
+
 src/presentacion/ListadoUsuarios.obj: src/presentacion/ListadoUsuarios.cpp.obj
 .PHONY : src/presentacion/ListadoUsuarios.obj
 
@@ -794,15 +842,15 @@ help:
 	@echo ... src/DTs/DTVendedor.obj
 	@echo ... src/DTs/DTVendedor.i
 	@echo ... src/DTs/DTVendedor.s
-	@echo ... src/Principal.obj
-	@echo ... src/Principal.i
-	@echo ... src/Principal.s
 	@echo ... src/logica/controlador/SistemaControlador.obj
 	@echo ... src/logica/controlador/SistemaControlador.i
 	@echo ... src/logica/controlador/SistemaControlador.s
 	@echo ... src/logica/dominio/Cliente.obj
 	@echo ... src/logica/dominio/Cliente.i
 	@echo ... src/logica/dominio/Cliente.s
+	@echo ... src/logica/dominio/Compra.obj
+	@echo ... src/logica/dominio/Compra.i
+	@echo ... src/logica/dominio/Compra.s
 	@echo ... src/logica/dominio/ProdPromocion.obj
 	@echo ... src/logica/dominio/ProdPromocion.i
 	@echo ... src/logica/dominio/ProdPromocion.s
@@ -818,6 +866,9 @@ help:
 	@echo ... src/logica/dominio/Vendedor.obj
 	@echo ... src/logica/dominio/Vendedor.i
 	@echo ... src/logica/dominio/Vendedor.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
 	@echo ... src/presentacion/AltaProducto.obj
 	@echo ... src/presentacion/AltaProducto.i
 	@echo ... src/presentacion/AltaProducto.s
@@ -833,6 +884,9 @@ help:
 	@echo ... src/presentacion/CrearPromocion.obj
 	@echo ... src/presentacion/CrearPromocion.i
 	@echo ... src/presentacion/CrearPromocion.s
+	@echo ... src/presentacion/EnviarProducto.obj
+	@echo ... src/presentacion/EnviarProducto.i
+	@echo ... src/presentacion/EnviarProducto.s
 	@echo ... src/presentacion/ListadoUsuarios.obj
 	@echo ... src/presentacion/ListadoUsuarios.i
 	@echo ... src/presentacion/ListadoUsuarios.s

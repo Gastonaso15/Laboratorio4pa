@@ -4,9 +4,9 @@
 #include <iostream>
 
 
-Usuario::Usuario(string nick, string pass, DTFecha * fechaNac) {
+Usuario::Usuario(string nick, string contrasenia, DTFecha * fechaNac) {
 	this->nick = nick;
-	this->pass = pass;
+	this->contrasenia = contrasenia;
 	this->fechaNac= fechaNac;
 }
 
@@ -14,6 +14,14 @@ Usuario::~Usuario() {
 	// TODO Auto-generated destructor stub
 }
 
-string Usuario::getNick() {
-	return this->nick;
+std::string Usuario::getNickname() const {
+	return nick;
+}
+
+std::string Usuario::getContrasenia() const {
+	return contrasenia;
+}
+
+DTFecha* Usuario::getFechaNac() const {
+	return fechaNac;
 }

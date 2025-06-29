@@ -1,6 +1,9 @@
 #include "SistemaControlador.h"
 #include <iostream>
+#include <stdexcept>
 #include <string>
+using namespace std;
+
 #include "../dominio/Producto.h"
 #include "../DTs/DTFecha.h"
 #include "../DTs/DTProducto.h"
@@ -11,14 +14,16 @@
 #include "../dominio/Cliente.h"
 #include "../dominio/Vendedor.h"
 #include "../dominio/Promocion.h"
+#include "../dominio/Compra.h"
+#include "../dominio/ProdComprado.h"
 #include <map>
-#include <stdexcept>
+#include "../presentacion/EnviarProducto.h"
 
-using namespace std;
-set<Vendedor*> vendedores;
+
+
 set<Promocion*> promociones;
 Promocion* promocionActual = nullptr;
-
+SistemaControlador* SistemaControlador::instancia = nullptr;
 SistemaControlador::SistemaControlador() {}
 
 SistemaControlador::~SistemaControlador() {
@@ -27,6 +32,12 @@ SistemaControlador::~SistemaControlador() {
         delete par.second;
     }
     usuarios.clear();
+}
+SistemaControlador& SistemaControlador::getInstancia() {
+    if (instancia == nullptr) {
+        instancia = new SistemaControlador(); // Crea la instancia si no existe
+    }
+    return *instancia; // Devuelve la referencia a la instancia
 }
 
 string SistemaControlador::altaUsuario(DTUsuario* usuario) { //cambiar a string
@@ -208,3 +219,32 @@ string SistemaControlador::agregarProdProm(set<DTProducto> productosDT) {
 
     return todosAgregados;
 }*/
+
+set<DTCompra> SistemaControlador::seleccionarProducto(int codigoProducto) {
+    set<DTCompra> resultado;
+
+    for (const auto& par : compras) {
+        Compra* compra = par.second;
+        for (ProdComprado* pc : compra->getProdComprado()) {
+            if (pc->getProducto()->getCodigo() == codigoProducto && !pc->getEnviado()) {
+                resultado.insert(compra->toDT()); // Asume que Compra tiene un método toDT()
+            }
+        }
+    }
+    return resultado;
+}
+
+string SistemaControlador::marcarProductoComoEnviado(int codigoProducto, int idCompra) {
+    auto itCompra = compras.find(idCompra);
+    if (itCompra != compras.end()) {
+        Compra* compra = itCompra->second;
+        for (ProdComprado* pc : compra->getProdComprado()) {
+            if (pc->getProducto()->getCodigo() == codigoProducto && !pc->getEnviado()) {
+                pc->setEnviado(true);
+                return "Producto marcado como enviado correctamente en la compra " + to_string(idCompra) + ".";
+            }
+        }
+        return "Error: El producto no se encontró pendiente de envío en la compra seleccionada.";
+    }
+    return "Error: No se encontró la compra con el ID especificado.";
+}

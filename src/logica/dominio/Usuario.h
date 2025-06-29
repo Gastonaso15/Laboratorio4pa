@@ -11,15 +11,18 @@ class Comentario;
 class Usuario {
 protected:
 	string nick;
-	string pass;
+	string contrasenia;
 	DTFecha * fechaNac;
 	map<int,Comentario*> comentarios;
 public:
 	Usuario();
-	Usuario(string nick, string pass, DTFecha * fechaNac);
+	Usuario(string nick, string contrasenia, DTFecha * fechaNac);
 	virtual ~Usuario();
 	string getNick();
 	virtual DTUsuario* retornarDTUsuario()const=0;
+	std::string getNickname() const;
+	std::string getContrasenia() const;
+	DTFecha* getFechaNac() const;
 };
 
 #endif

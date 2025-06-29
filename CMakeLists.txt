@@ -4,14 +4,18 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(src/logica)
-include_directories(src/logica/controlador)
-include_directories(src/logica/interfaceSistema)
-include_directories(src/presentacion)
-
+include_directories(
+        ${CMAKE_SOURCE_DIR}/src
+        ${CMAKE_SOURCE_DIR}/src/DTs
+        ${CMAKE_SOURCE_DIR}/src/logica/controlador
+        ${CMAKE_SOURCE_DIR}/src/logica/dominio
+        ${CMAKE_SOURCE_DIR}/src/presentacion
+)
 add_executable(Dis_EjemploArquitecturaLogin
-    src/logica/controlador/SistemaControlador.cpp
-    src/logica/controlador/SistemaControlador.h
+        src/main.cpp
+        src/logica/controlador/SistemaControlador.cpp
+        src/logica/controlador/SistemaControlador.h
+        src/logica/dominio/Compra.cpp
         src/logica/dominio/Usuario.cpp
         src/logica/dominio/Usuario.h
         src/logica/dominio/Cliente.cpp
@@ -20,7 +24,6 @@ add_executable(Dis_EjemploArquitecturaLogin
         src/logica/dominio/Producto.h
         src/logica/dominio/Vendedor.cpp
         src/logica/dominio/Vendedor.h
-        src/Principal.cpp
         src/presentacion/AltaUsuario.cpp
         src/presentacion/AltaUsuario.h
         src/presentacion/ListadoUsuarios.cpp
@@ -65,4 +68,9 @@ add_executable(Dis_EjemploArquitecturaLogin
         src/logica/dominio/ProdPromocion.cpp
         src/logica/dominio/ProdPromocion.h
         src/logica/dominio/Promocion.cpp
-        src/logica/dominio/Promocion.h)
+        src/logica/dominio/Promocion.h
+        src/presentacion/EnviarProducto.cpp
+        src/presentacion/EnviarProducto.h
+
+)
+

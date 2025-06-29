@@ -19,11 +19,11 @@ Producto::Producto(int codigo, string nombre, int precio,int stock, string descr
   this->categoria = categoria;
 }
 
-Producto::getCodigo(){
+int Producto::getCodigo()const{
   return this->codigo;
 }
 
-Producto::getPrecio(){
+int Producto::getPrecio()const{
   return this->precio;
 }
 
@@ -36,16 +36,19 @@ void Producto::asociarProdVendedor(Vendedor* vendedor) {
   this->vendedor=vendedor;
 }
 
+
 bool Producto::productoEnPromo() {
-  //Cambios respecto al Diagrama de Clase; asi es mas eficiente
-  bool enPromo=!prodsprom.empty();
-  if (enPromo) {
-    for (const auto& prodProm : prodsprom) {
-      if (prodProm->retornarPromocion()->estaVigente()) {
-        return true;
-      }
-    }
-  } else {
+  if (prodsprom.empty()) { // Si no hay productos en promoción asociados
     return false;
   }
+
+  // Si hay promociones, verificamos si alguna está vigente
+  for (const auto& prodProm : prodsprom) {
+    if (prodProm->retornarPromocion()->estaVigente()) {
+      return true; // Encontramos al menos una promoción vigente
+    }
+  }
+
+  // Si iteramos por todas y ninguna está vigente
+  return false;
 }

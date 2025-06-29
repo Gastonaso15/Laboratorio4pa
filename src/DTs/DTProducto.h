@@ -1,7 +1,7 @@
 
 #ifndef DTPRODUCTO_H
 #define DTPRODUCTO_H
-#include "dominio/Producto.h"
+#include "../dominio/Producto.h"
 #include "DTVendedor.h"
 #include "../../DTs/Definiciones.h"
 #include <iostream>
