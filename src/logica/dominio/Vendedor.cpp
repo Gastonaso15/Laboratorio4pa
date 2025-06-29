@@ -18,7 +18,7 @@ Vendedor::~Vendedor() {
 
 }
 
-string Vendedor::getNick() const {
+string Vendedor::getNickname() const {
     return this->nick;
 }
 

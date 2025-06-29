@@ -14,7 +14,7 @@ public:
     DTUsuario();
     virtual ~DTUsuario();
     DTUsuario(string nick, string contrasenia, DTFecha * fechaNac);
-    string getNick();
+    string getNick() const;
     string getPass();
     DTFecha getFechaNac();
     virtual string getTipo() const = 0;

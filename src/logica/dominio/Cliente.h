@@ -2,6 +2,7 @@
 #define CLIENTE_H
 #include "Usuario.h"
 #include "../../DTs/DTCliente.h"
+#include "../../DTs/DTDireccion.h"
 #include "../dominio/Compra.h"
 
 class Cliente: public Usuario{

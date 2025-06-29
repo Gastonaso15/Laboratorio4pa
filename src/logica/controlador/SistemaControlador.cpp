@@ -25,6 +25,7 @@ using namespace std;
 set<Promocion*> promociones;
 Promocion* promocionActual = nullptr;
 SistemaControlador* SistemaControlador::instancia = nullptr;
+
 SistemaControlador::SistemaControlador() {}
 
 SistemaControlador::~SistemaControlador() {
@@ -95,7 +96,7 @@ set<string> SistemaControlador::listarNickVendedor() {
         Usuario* u = par.second;
         Vendedor* v = dynamic_cast<Vendedor*>(u);
         if (v != nullptr) {
-            nicks.insert(v->getNick());
+            nicks.insert(v->getNickname());
         }
     }
     return nicks;
@@ -263,7 +264,7 @@ set<string> SistemaControlador::listarNicknamesUsuario() {
     set<string> resultado;
     for (auto const& par: usuarios){
         Usuario* usuario = par.second;
-        resultado.insert(usuario->getNick());
+        resultado.insert(usuario->getNickname());
     }
     return resultado;
 }
@@ -335,7 +336,7 @@ string SistemaControlador::agregarRespuesta(string texto) {
     return "Respuesta creada con exito";
 }
 
-set<DTCompra> SistemaControlador::seleccionarProducto(int codigoProducto) {
+set<DTCompra> SistemaControlador::seleccionarProductoC(int codigoProducto) {
     set<DTCompra> resultado;
 
     for (const auto& par : compras) {
@@ -347,6 +348,7 @@ set<DTCompra> SistemaControlador::seleccionarProducto(int codigoProducto) {
         }
     }
     return resultado;
+}
 
 string SistemaControlador::marcarProductoComoEnviado(int codigoProducto, int idCompra) {
     auto itCompra = compras.find(idCompra);
@@ -361,4 +363,9 @@ string SistemaControlador::marcarProductoComoEnviado(int codigoProducto, int idC
         return "Error: El producto no se encontró pendiente de envío en la compra seleccionada.";
     }
     return "Error: No se encontró la compra con el ID especificado.";
+}
+
+set<DTProducto> SistemaControlador::obtenerProductosPendientesPorVendedor(string nickVendedor) {
+    set<DTProducto> resultado;
+    return resultado;
 }

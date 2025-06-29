@@ -78,7 +78,7 @@ std::string EnviarProducto::enviarProducto() {
     // 5. el Sistema lista todas las compras como parejas (nickname del cliente, fecha de compra),
     // para aquellas compras que tienen pendientes de enviar el producto.
     cout << "\nListando compras pendientes para el producto Codigo " << codigoProductoSeleccionado << ":" << endl;
-    set<DTCompra> comprasPendientesParaProducto = controlador.seleccionarProducto(codigoProductoSeleccionado);
+    set<DTCompra> comprasPendientesParaProducto = controlador.seleccionarProductoC(codigoProductoSeleccionado);
 
     if (comprasPendientesParaProducto.empty()) {
         // Esto no debería pasar si el paso anterior fue correcto, pero es una buena verificación de seguridad.

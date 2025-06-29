@@ -29,3 +29,4 @@ void Usuario::asociarComentarioUsuario(Comentario *com) {
 
 DTFecha* Usuario::getFechaNac() const {
 	return fechaNac;
+}

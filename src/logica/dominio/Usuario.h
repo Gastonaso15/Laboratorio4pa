@@ -21,8 +21,8 @@ public:
 	string getNick();
 	virtual DTUsuario* retornarDTUsuario()const=0;
 	void asociarComentarioUsuario(Comentario * com);
-	std::string getNickname() const;
-	std::string getContrasenia() const;
+	string getNickname() const;
+	string getContrasenia() const;
 	DTFecha* getFechaNac() const;
 };
 

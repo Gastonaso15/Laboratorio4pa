@@ -20,7 +20,7 @@ public:
     Vendedor();
     Vendedor(string nick, string pass, DTFecha *  fechaNac,string rut);
     ~Vendedor();
-    string getNick() const;
+    string getNickname() const;
     void aniadirProdListaVendedor(Producto * producto);
     set<DTProducto> retornarProductos();
     DTUsuario* retornarDTUsuario() const override;

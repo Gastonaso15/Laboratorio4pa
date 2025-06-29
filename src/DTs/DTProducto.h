@@ -1,7 +1,6 @@
 
 #ifndef DTPRODUCTO_H
 #define DTPRODUCTO_H
-#include "../dominio/Producto.h"
 #include "DTVendedor.h"
 #include "../../DTs/Definiciones.h"
 #include <iostream>
@@ -20,6 +19,8 @@ public:
     DTProducto(int codigo, string nombre, int precio,int stock, string descripcion, cat categoria);
     DTProducto(int codigo, string nombre, int precio, int stock, string descripcion, cat categoria,DTVendedor * vendedor);
     DTProducto(int codigo, int descuento, int cantidad);
+    DTProducto(const DTProducto& other);
+    DTProducto& operator=(const DTProducto& other);
     virtual ~DTProducto();
     bool operator<(const DTProducto& other) const;
     DTProducto getCodDTProd();

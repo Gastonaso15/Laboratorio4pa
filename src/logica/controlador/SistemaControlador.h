@@ -24,6 +24,7 @@ using namespace std;
 class SistemaControlador{
 protected:
 	static SistemaControlador* instancia;
+	SistemaControlador();
 	map<int,Producto*> productos;
 	map<int,DTProducto*> carrito;
 	map<string,Usuario*> usuarios;
@@ -39,8 +40,8 @@ protected:
 	int ultimoCodigoProducto = 0;
 	int ultimoCodigoComentario = 0;
 public:
-	SistemaControlador();
 	virtual ~SistemaControlador();
+	static SistemaControlador& getInstancia();
 	string altaUsuario(DTUsuario * usuario);
 	set<DTUsuario*> listarUsuarios();
 	set<string> listarNickVendedor();
@@ -64,7 +65,7 @@ public:
 	bool seleccionarComentario(int id);
 	string agregarRespuesta(string texto);
 	set<DTProducto> obtenerProductosPendientesPorVendedor(string nickVendedor);
-	set<DTCompra> seleccionarProducto(int codigoProducto);
+	set<DTCompra> seleccionarProductoC(int codigoProducto);
 	string marcarProductoComoEnviado(int codigoProducto, int idCompra);
 
 };

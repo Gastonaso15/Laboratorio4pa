@@ -11,7 +11,7 @@
 using namespace std;
 
 
-Cliente::Cliente(string nick, string pass, DTFecha* fechaNac, string ciudad, Direccion* direccion)
+Cliente::Cliente(string nick, string pass, DTFecha* fechaNac, DTDireccion* direccion, string ciudad)
  : Usuario(nick, pass, fechaNac),
    ciudad(ciudad),
    direccion(direccion)
@@ -22,7 +22,7 @@ Cliente::~Cliente() {
 
 }
 
-void Cliente::asociarProd() {
+void Cliente::asociarProd() {}
 
 DTCliente* Cliente::toDT() {
     return new DTCliente(
@@ -60,8 +60,10 @@ std::string Cliente::getCiudad() const {
 }
 
 DTDireccion* Cliente::getDireccion() const {
-    if (this->direccion != nullptr) {
+    /*if (this->direccion != nullptr) {
         return this->direccion->toDT();
     }
     return nullptr;
+    */
+    return this->direccion;
 }

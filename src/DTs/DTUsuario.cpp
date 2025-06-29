@@ -17,7 +17,7 @@ DTUsuario::DTUsuario(string nick, string pass, DTFecha *fechaNac) {
     this->fechaNac = fechaNac;
 }
 
-string DTUsuario::getNick() {
+string DTUsuario::getNick() const{
     return this->nick;
 }
 

@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = @CMakeFiles/Dis_EjemploArquitecturaLogin.dir/includes_CXX.rsp
 
-CXX_FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+CXX_FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
 
