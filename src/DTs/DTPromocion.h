@@ -7,7 +7,6 @@
 #include "DTFecha.h"
 #include "DTProdPromocion.h"
 
-class DTProdPromocion;
 
 class DTPromocion {
 public:

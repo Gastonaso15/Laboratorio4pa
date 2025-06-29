@@ -1,4 +1,6 @@
 #include "Producto.h"
+#include "Comentario.h"
+#include "ProdComprado.h"
 #include "../../DTs/DTProducto.h"
 #include <iostream>
 using namespace std;
@@ -7,6 +9,14 @@ Producto::Producto(){
 }
 
 Producto::~Producto(){
+  for (auto& par : comentarios) {
+    delete par.second;
+  }
+  comentarios.clear();
+  for (auto& pc : prodscom) {
+    delete pc;
+  }
+  prodscom.clear();
 
 }
 
@@ -28,7 +38,16 @@ Producto::getPrecio(){
 }
 
 DTProducto Producto::retornarDTProducto(){
-  DTVendedor* dtVen = dynamic_cast<DTVendedor*>(this->vendedor->retornarDTUsuario());
+  DTVendedor* dtVen = nullptr;
+  if (this->vendedor != nullptr) {
+    DTUsuario* dtUsuarioBase = this->vendedor->retornarDTUsuario();
+    DTVendedor* tempDtVenPtr = dynamic_cast<DTVendedor*>(dtUsuarioBase);
+    if (tempDtVenPtr != nullptr) {
+      dtVen = new DTVendedor(*tempDtVenPtr);
+    }
+    delete dtUsuarioBase;
+    dtUsuarioBase = nullptr;
+  }
   return DTProducto(this->codigo, this->nombre, this->precio, this->stock, this->descripcion, this->categoria,dtVen);
 }
 
@@ -47,4 +66,8 @@ bool Producto::productoEnPromo() {
     }
   }
   return false;
+}
+
+void Producto::agregarProdPromocion(ProdPromocion* pp) { //
+  this->prodsprom.insert(pp);
 }

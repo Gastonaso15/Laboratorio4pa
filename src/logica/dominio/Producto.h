@@ -2,19 +2,18 @@
 #define PRODUCTO_H
 
 #include "../../DTs/Definiciones.h"
+#include "../../DTs/DTProducto.h"
 #include "Vendedor.h"
 #include "Promocion.h"
+#include "ProdPromocion.h"
 #include <set>
 #include <map>
 #include <string>
 using namespace std;
 
-
-class DTProducto;
 class Vendedor;
 class Comentario;
 class ProdComprado;
-class ProdPromocion;
 
 class Producto {
   private:
@@ -37,6 +36,7 @@ class Producto {
     DTProducto retornarDTProducto();
     void asociarProdVendedor(Vendedor* vendedor);
     bool productoEnPromo();
+    void agregarProdPromocion(ProdPromocion* pp);
 };
 
 

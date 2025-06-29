@@ -34,12 +34,12 @@ public:
 	set<DTUsuario*> listarUsuarios();
 	set<string> listarNickVendedor();
 	string selectVendedor(string nick);
-	bool ingProducto(DTProducto producto);
+	bool ingProducto(const DTProducto& producto);
 	set<DTProducto> listarProd();
 	DTProducto* selectProd(int codigo);
 	set<string> ingDatos(DTPromocion prom);
 	set<DTProducto> seleccionarVendedor(string nick);
-	string agregarProdProm(set<DTProducto> productosDT);
+	string agregarProdProm(set<DTProdPromocion> productosDT);
 	set<DTPromocion*> listarPromociones();
 	set<DTProdPromocion*> selectPromo(string nombre);
 };

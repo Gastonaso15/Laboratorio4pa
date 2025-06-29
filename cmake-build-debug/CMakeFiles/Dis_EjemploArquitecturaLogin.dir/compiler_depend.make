@@ -294,7 +294,6 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTCompra.cpp.obj: C:/Users/a
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cpp_type_traits.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_forced.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_init_exception.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/erase_if.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_defines.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_ptr.h \
@@ -328,16 +327,10 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTCompra.cpp.obj: C:/Users/a
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator_base_funcs.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator_base_types.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_map.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multimap.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multiset.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_pair.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_set.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tree.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/streambuf.tcc \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/streambuf_iterator.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stringfwd.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/utility.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cctype \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno \
@@ -349,7 +342,6 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTCompra.cpp.obj: C:/Users/a
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/assertions.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/debug.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/exception \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/aligned_buffer.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/alloc_traits.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/atomicity.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/numeric_traits.h \
@@ -360,16 +352,13 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTCompra.cpp.obj: C:/Users/a
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iosfwd \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/map \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/new \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdexcept \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdlib.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/streambuf \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/system_error \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tuple \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/typeinfo \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
@@ -425,17 +414,7 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTCompra.cpp.obj: C:/Users/a
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTFecha.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProdPromocion.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProducto.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTPromocion.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTUsuario.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/Definiciones.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/ProdPromocion.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Producto.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Promocion.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Usuario.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Vendedor.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTCompra.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTFecha.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProducto.h \
@@ -735,7 +714,6 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProdPromocion.cpp.obj: C:/
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cpp_type_traits.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_forced.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_init_exception.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/erase_if.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_defines.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_ptr.h \
@@ -769,16 +747,10 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProdPromocion.cpp.obj: C:/
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator_base_funcs.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator_base_types.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_map.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multimap.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multiset.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_pair.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_set.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tree.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/streambuf.tcc \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/streambuf_iterator.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stringfwd.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/utility.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cctype \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno \
@@ -790,7 +762,6 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProdPromocion.cpp.obj: C:/
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/assertions.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/debug.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/exception \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/aligned_buffer.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/alloc_traits.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/atomicity.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/numeric_traits.h \
@@ -801,16 +772,13 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProdPromocion.cpp.obj: C:/
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iosfwd \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/map \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/new \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdexcept \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdlib.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/streambuf \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/system_error \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tuple \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/typeinfo \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
@@ -866,20 +834,12 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProdPromocion.cpp.obj: C:/
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
+  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/Definiciones.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTFecha.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProdPromocion.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProducto.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTPromocion.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTUsuario.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTVendedor.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/Definiciones.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/ProdPromocion.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Producto.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Promocion.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Usuario.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Vendedor.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProdPromocion.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProducto.h
+  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTVendedor.h
 
 CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProducto.cpp.obj: C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProducto.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward/binders.h \
@@ -896,7 +856,6 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProducto.cpp.obj: C:/Users
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cpp_type_traits.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_forced.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_init_exception.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/erase_if.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_defines.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_ptr.h \
@@ -930,16 +889,10 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProducto.cpp.obj: C:/Users
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator_base_funcs.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator_base_types.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_map.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multimap.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multiset.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_pair.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_set.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tree.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/streambuf.tcc \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/streambuf_iterator.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stringfwd.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/utility.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cctype \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno \
@@ -951,7 +904,6 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProducto.cpp.obj: C:/Users
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/assertions.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/debug.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/exception \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/aligned_buffer.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/alloc_traits.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/atomicity.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/numeric_traits.h \
@@ -962,16 +914,13 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProducto.cpp.obj: C:/Users
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iosfwd \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/map \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/new \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdexcept \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdlib.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/streambuf \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/system_error \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tuple \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/typeinfo \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
@@ -1027,17 +976,7 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTProducto.cpp.obj: C:/Users
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTFecha.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProdPromocion.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProducto.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTPromocion.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTUsuario.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/Definiciones.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/ProdPromocion.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Producto.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Promocion.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Usuario.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Vendedor.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTFecha.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProducto.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTUsuario.h \
@@ -1092,8 +1031,6 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTPromocion.cpp.obj: C:/User
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator_base_funcs.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator_base_types.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_map.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multimap.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multiset.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_pair.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_set.h \
@@ -1101,7 +1038,6 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTPromocion.cpp.obj: C:/User
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/streambuf.tcc \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/streambuf_iterator.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stringfwd.h \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/utility.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cctype \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno \
@@ -1124,7 +1060,6 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTPromocion.cpp.obj: C:/User
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iosfwd \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/map \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/new \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set \
@@ -1133,7 +1068,6 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTPromocion.cpp.obj: C:/User
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/streambuf \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/system_error \
-  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tuple \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/typeinfo \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
@@ -1189,22 +1123,13 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTPromocion.cpp.obj: C:/User
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
+  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/Definiciones.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTFecha.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProdPromocion.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProducto.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTPromocion.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTUsuario.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTVendedor.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/Definiciones.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/ProdPromocion.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Producto.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Promocion.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Usuario.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Vendedor.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTFecha.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProdPromocion.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProducto.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTPromocion.h
+  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTVendedor.h
 
 CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/DTs/DTUsuario.cpp.obj: C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTUsuario.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward/binders.h \
@@ -2117,9 +2042,7 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/ProdPromocion.cpp
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Producto.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Promocion.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Usuario.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Vendedor.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/ProdPromocion.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Promocion.h
+  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Vendedor.h
 
 CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Producto.cpp.obj: C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Producto.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward/binders.h \
@@ -2274,9 +2197,8 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Producto.cpp.obj:
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTUsuario.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTVendedor.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/Definiciones.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/ProdPromocion.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Producto.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Promocion.h \
+  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Comentario.h \
+  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/ProdComprado.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/ProdPromocion.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Producto.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Promocion.h \
@@ -2440,9 +2362,7 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Promocion.cpp.obj
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Producto.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Promocion.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Usuario.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Vendedor.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/ProdPromocion.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Promocion.h
+  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Vendedor.h
 
 CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Usuario.cpp.obj: C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Usuario.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward/binders.h \
@@ -2748,7 +2668,6 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Vendedor.cpp.obj:
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/ProdPromocion.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Producto.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Promocion.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Vendedor.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Usuario.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Vendedor.h
 
@@ -4207,39 +4126,9 @@ C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTFecha.h:
 
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTUsuario.h:
 
-C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/erase_if.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_map.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multimap.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multiset.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_set.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tree.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/aligned_buffer.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/map:
-
-C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set:
-
-C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tuple:
-
-C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProdPromocion.h:
+C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTCompra.h:
 
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProducto.h:
-
-C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTPromocion.h:
-
-C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Producto.h:
-
-C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Promocion.h:
-
-C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Vendedor.h:
-
-C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTCompra.h:
 
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTVendedor.h:
 
@@ -4259,15 +4148,45 @@ C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProdComprado.h:
 
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProdPromocion.cpp:
 
+C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProdPromocion.h:
+
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProducto.cpp:
 
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTPromocion.cpp:
+
+C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/erase_if.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multiset.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_set.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tree.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/aligned_buffer.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set:
+
+C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTPromocion.h:
 
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTVendedor.cpp:
 
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/Principal.cpp:
 
+C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_map.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multimap.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/map:
+
+C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tuple:
+
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/controlador/SistemaControlador.h:
+
+C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Producto.h:
+
+C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Promocion.h:
+
+C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Vendedor.h:
 
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/Menu.h:
 
@@ -4276,6 +4195,10 @@ C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/controlador/SistemaContro
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/ProdPromocion.cpp:
 
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Producto.cpp:
+
+C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/Comentario.h:
+
+C:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/dominio/ProdComprado.h:
 
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/CrearPromocion.h:
 

@@ -31,18 +31,27 @@ string ConsultarPromocion::consultarPromocion() {
     if(continuar=="Si" || continuar=="SI" || continuar=="si") {
         cout << "Ingrese nombre de Promocion: ";
         cin >> nombre;
-        set<DTProdPromocion*> prodprom=controlador.selectPromo(nombre);
+        set<DTProdPromocion*> prodprom = controlador.selectPromo(nombre);
         if (prodprom.empty()) {
             respuesta="Error: No hay Promociones registradas con ese nombre.";
-        }else {
+        } else {
             for (DTProdPromocion* p : prodprom) {
-                DTProducto* dtprod = p->producto;
-                cout << "Cantidad Minima: " << p->cantMinima << endl << "Descuento: " << p->descuento << endl;
-                cout << "Precio: " << dtprod->precio << endl << "Stock: " << dtprod->stock << endl
-            << "Descripcion: " << dtprod->descripcion << endl << "Categoria: " << DTProducto::catToString(dtprod->categoria) << endl
-            << "Vendedor: " << dtprod->vendedor->nick << endl;
-                respuesta="Informacion de Promocion mostrada con exito";
+                cout << "Cantidad Minima: " << p->cantMinima << endl
+                     << "Descuento: " << p->descuento << endl;
+                cout << "Codigo: " << p->producto.codigo << endl
+                         << "Nombre: " << p->producto.nombre << endl
+                         << "Precio: " << p->producto.precio << endl
+                         << "Stock: " << p->producto.stock << endl
+                         << "Descripcion: " << p->producto.descripcion << endl
+                         << "Categoria: " << DTProducto::catToString(p->producto.categoria) << endl;
+                if (p->producto.vendedor != nullptr) {
+                    cout << "Vendedor: " << p->producto.vendedor->nick << endl;
+                } else {
+                    cout << "Vendedor: No especificado" << endl;
+                }
+                delete p;
             }
+            respuesta="Informacion de Promocion mostrada con exito";
         }
     }
     return respuesta;

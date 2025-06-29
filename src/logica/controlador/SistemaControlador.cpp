@@ -16,7 +16,6 @@
 
 using namespace std;
 set<Vendedor*> vendedores;
-set<Promocion*> promociones;
 Promocion* promocionActual = nullptr;
 
 SistemaControlador::SistemaControlador() {}
@@ -27,6 +26,14 @@ SistemaControlador::~SistemaControlador() {
         delete par.second;
     }
     usuarios.clear();
+    for (auto& par : productos) {
+        delete par.second;
+    }
+    productos.clear();
+    for (auto& par : promociones) { // Esto es para el set global
+        delete par.second;
+    }
+    promociones.clear();
 }
 
 string SistemaControlador::altaUsuario(DTUsuario* usuario) { //cambiar a string
@@ -66,7 +73,7 @@ string SistemaControlador::altaUsuario(DTUsuario* usuario) { //cambiar a string
     } else {
         respuesta="Tipo de usuario desconocido.";
     }
-    return respuesta;  // <<--- esto te faltaba
+    return respuesta;
 }
 
 set<string> SistemaControlador::listarNickVendedor() {
@@ -106,7 +113,7 @@ string SistemaControlador::selectVendedor(string nick) {
 }
 
 
-bool SistemaControlador::ingProducto(DTProducto producto) {
+bool SistemaControlador::ingProducto(const DTProducto& producto) {
     int cod = ++ultimoCodigoProducto;
     Producto * prod = new Producto(cod, producto.nombre, producto.precio, producto.stock, producto.descripcion, producto.categoria);
     //dynamic_cast<Producto*>(vendedorSeleccionado)->asociarProdVendedor(vendedorSeleccionado); Por que el cast?
@@ -143,13 +150,9 @@ DTProducto* SistemaControlador::selectProd(int codigo) {
 set<string> SistemaControlador::ingDatos(DTPromocion prom) {
     Promocion* nuevaPromo = new Promocion(prom.nom, prom.desc, prom.fecVencimiento);
     promocionActual = nuevaPromo;
-    promociones.insert({nuevaPromo->getNom(), nuevaPromo});
+    this->promociones[nuevaPromo->getNom()] = nuevaPromo;
+    //promociones.insert({nuevaPromo->getNom(), nuevaPromo});
     set<string> nicks=listarNickVendedor();
-    /* vendedores esta vacio, los vendedores solo se guardan en el map de usuario
-    for (const auto& v : vendedores) {
-        nicks.insert(v.second->getNick());
-    }
-    */
     return nicks;
 }
 
@@ -169,13 +172,13 @@ set<DTProducto> SistemaControlador::seleccionarVendedor(string nick) {
     return set<DTProducto>();  // Retorna set vacío si no encuentra el vendedor
 }
 
-string SistemaControlador::agregarProdProm(set<DTProducto> productosDT) {
-    for (const DTProducto& dt : productosDT) {
-        auto it = productos.find(dt.codigo);
+string SistemaControlador::agregarProdProm(set<DTProdPromocion> productosDT) {
+    for (const DTProdPromocion& dtPromo : productosDT) {
+        auto it = productos.find(dtPromo.producto.codigo);
         if (it != productos.end()) {
             Producto* prod = it->second;
             if (!prod->productoEnPromo()) {
-                promocionActual->agregarProdProm(dt);
+                promocionActual->agregarProdProm(prod, dtPromo.cantMinima, dtPromo.descuento);
             }else {
                 return "Error: El producto ya se encuentra en otra Promocion";
             }
@@ -188,9 +191,11 @@ string SistemaControlador::agregarProdProm(set<DTProducto> productosDT) {
 
 set<DTPromocion*> SistemaControlador::listarPromociones() {
     set<DTPromocion*> resultado;
-    for (auto const& par : promociones) {
+    for (auto const& par : this->promociones) {
         Promocion* p = par.second;
-        resultado.insert(p->retornarDTPromocion());
+        if (p->estaVigente()) {
+            resultado.insert(p->retornarDTPromocion());
+        }
     }
     return resultado;
 }
@@ -199,9 +204,7 @@ set<DTProdPromocion*> SistemaControlador::selectPromo(string nombre) {
     auto it = promociones.find(nombre);
     if (it != promociones.end()) {
         Promocion* prom = it->second;
-        //DTPromocion *promo = prom->retornarDTPromocionConProd();
-        set<DTProdPromocion*> prodprom =prom->retornarDTProdPromocion();
-        return prodprom;
+        return prom->retornarDTProdPromocion();
     } else {
         return {};
     }

@@ -1,7 +1,6 @@
 
 #ifndef DTPRODUCTO_H
 #define DTPRODUCTO_H
-#include "dominio/Producto.h"
 #include "DTVendedor.h"
 #include "../../DTs/Definiciones.h"
 #include <iostream>
@@ -25,6 +24,9 @@ public:
     DTProducto getCodDTProd();
     DTProducto getNombreDTProd();
     static string catToString(cat categoria);
+
+    DTProducto(const DTProducto& other);
+    DTProducto& operator=(const DTProducto& other);
 };
 
 

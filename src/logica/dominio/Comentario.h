@@ -16,7 +16,7 @@ class Comentario {
   public:
     Comentario();
     Comentario(int id, string texto, DTFecha * fecEscrito);
-    ~Comentario();
+    virtual ~Comentario();
 };
 
 

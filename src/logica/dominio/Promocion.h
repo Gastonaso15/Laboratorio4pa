@@ -4,17 +4,15 @@
 #include <set>
 #include "string"
 using namespace std;
-#include "../../DTs/DTProdPromocion.h"
-#include "../../DTs/DTPromocion.h"
-#include "../../DTs/DTProducto.h"
 #include "../DTs/DTFecha.h"
-#include "ProdPromocion.h"
+#include "../../DTs/DTPromocion.h"
+#include "../../DTs/DTProdPromocion.h"
+
 
 class Vendedor;
+class Producto;
 class ProdPromocion;
-class DTProducto;
-class DTProdPromocion;
-class DTPromocion;
+
 
 class Promocion {
 private:
@@ -28,7 +26,7 @@ public:
     Promocion(string nom, string desc, DTFecha *fecVencimiento);
     virtual ~Promocion();
     string getNom();
-    void agregarProdProm(const DTProducto& p);
+    void agregarProdProm(Producto* p, int cantMinima, int descuento);
     DTPromocion * retornarDTPromocion();
     DTPromocion * retornarDTPromocionConProd();
     set<DTProdPromocion*> retornarDTProdPromocion();

@@ -5,6 +5,7 @@
 #include "../DTs/DTPromocion.h"
 #include "../DTs/DTFecha.h"
 #include "../DTs/DTProducto.h"
+#include "../DTs/DTProdPromocion.h"
 using namespace std;
 
 CrearPromocion::CrearPromocion(SistemaControlador& controlador):controlador(controlador) {}
@@ -28,7 +29,7 @@ string CrearPromocion::crearPromocion() {
   cin >> mes;
   cout << "Anio: ";
   cin >> anio;
-  DTFecha* fecha = new DTFecha(dia, mes, anio);
+  DTFecha* fecha = new DTFecha(anio, mes, dia);
   DTPromocion * promocion = new DTPromocion(nombre,descripcion,fecha);
   set<string> vendedores=controlador.ingDatos(*promocion);
   if (vendedores.empty()) {
@@ -56,22 +57,34 @@ string CrearPromocion::crearPromocion() {
     }
   }
   //agregarProdProm
-  set<DTProducto> prodprom;
-  string continuar="Si";
-  int codigo,cantidad,descuento;
+  set<DTProdPromocion> productosParaPromo;
+  string continuar = "Si";
+  int codigo, cantidad, descuento;
   cout << endl << "** Ingresar Datos **" << endl;
   while(continuar=="Si" || continuar=="SI" || continuar=="si") {
     cout << "Ingrese codigo del Producto: ";
     cin >> codigo;
+    DTProducto dtProdEncontrado;
+    bool encontrado = false;
+    for (const DTProducto& p : productos) {
+      if (p.codigo == codigo) {
+        dtProdEncontrado = p;
+        encontrado = true;
+        break;
+      }
+    }
+    if (!encontrado) {
+      cout << "Error: Producto con codigo " << codigo << " no encontrado." << endl;
+      continue;
+    }
     cout << "Ingrese cantidad minima para la Promocion: ";
     cin >> cantidad;
     cout << "Ingrese el porcentaje de descuento: ";
     cin >> descuento;
+    productosParaPromo.insert(DTProdPromocion(cantidad, descuento, dtProdEncontrado));
     cout << "Desea agregar mas Productos?: ";
     cin >> continuar;
-    DTProducto * prod = new DTProducto(codigo,descuento,cantidad);
-    prodprom.insert(*prod);
     }
-    respuesta=controlador.agregarProdProm(prodprom);
+    respuesta=controlador.agregarProdProm(productosParaPromo);
     return respuesta;
 }

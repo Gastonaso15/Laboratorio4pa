@@ -4,7 +4,9 @@ using namespace std;
 
 Comentario::Comentario(){}
 
-Comentario::~Comentario(){}
+Comentario::~Comentario(){
+
+}
 
 Comentario::Comentario(int id, string texto, DTFecha * fecEscrito){
   this->id = id;
