@@ -1,7 +1,6 @@
 #include "EnviarProducto.h"
 #include <iostream>
-#include <limits> // Necesario para numeric_limits
-
+#include <limits>
 using namespace std;
 
 EnviarProducto::EnviarProducto(SistemaControlador& controlador)

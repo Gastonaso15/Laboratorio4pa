@@ -2,8 +2,6 @@
 #include "Comentario.h"
 #include "ProdComprado.h"
 #include "../../DTs/DTProducto.h"
-#include <iostream>
-using namespace std;
 
 Producto::Producto(){
 }

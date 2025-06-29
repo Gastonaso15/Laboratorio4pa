@@ -1,14 +1,9 @@
 #include "Compra.h"
 #include "../DTs/DTFecha.h"
-#include "../DTs/DTProducto.h"
-#include "../DTs/DTUsuario.h"
-#include <iostream>
-#include <string>
 #include "../DTs/DTCompra.h"
 #include "../DTs/DTCliente.h"
 #include "../dominio/ProdComprado.h"
 #include "../dominio/Cliente.h"
-using namespace std;
 
 Compra::Compra(int id, int cantProd, DTFecha *fecCompra, Cliente* cliente){
   this->id = id;

@@ -10,12 +10,15 @@ class ProdPromocion {
     private:
         int cantMininima;
         int descuento;
+
         Producto * producto;
         Promocion * promocion;
     public:
         ProdPromocion();
         ProdPromocion(int cantMininima, int descuento, Producto* prod, Promocion* promo);
+
         virtual ~ProdPromocion();
+
         Promocion* retornarPromocion();
         DTProdPromocion retornarDTProdPromocion();
 };

@@ -1,9 +1,5 @@
-#include "SistemaControlador.h"
-#include <iostream>
 #include <stdexcept>
 #include <string>
-using namespace std;
-
 #include "../dominio/Producto.h"
 #include "../DTs/DTFecha.h"
 #include "../DTs/DTProducto.h"
@@ -17,8 +13,10 @@ using namespace std;
 #include "../dominio/Compra.h"
 #include "../dominio/Comentario.h"
 #include "../dominio/ProdComprado.h"
+#include "SistemaControlador.h"
 #include <map>
-#include "../presentacion/EnviarProducto.h"
+#include <iostream>
+using namespace std;
 
 
 

@@ -5,16 +5,16 @@
 #include "DTFecha.h"
 #include "DTProducto.h"
 #include "DTCliente.h"
-#include <set>
-
 
 class DTCompra {
 
   public:
-  int cantProd;
-  DTFecha fecCompra;
-  float montoTotal;
+  int cantProd
   int id;
+
+    float montoTotal;
+
+    DTFecha fecCompra;
   DTCliente * cliente;
 
     DTCompra();
@@ -23,15 +23,19 @@ class DTCompra {
 
     void agregarProd(DTProducto* producto);
 
+    int getCantidadProductos() const;
     int getIdCompra() const;
+
     DTFecha getFecha() const;
     DTCliente * getCliente() const;
+
     float getMontoTotal() const;
-    int getCantidadProductos() const;
+
 
     bool operator<(const DTCompra& other) const {
         return this->id < other.id;
     }
+
 };
 
 

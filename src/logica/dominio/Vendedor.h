@@ -14,16 +14,21 @@ class Promocion;
 class Vendedor: public Usuario {
 protected:
     string rut;
+
     map<int, Producto*> productos;
     map<string,Promocion*> promociones;
+
 public:
     Vendedor();
     Vendedor(string nick, string pass, DTFecha *  fechaNac,string rut);
     ~Vendedor();
-    string getNickname() const;
+
     void aniadirProdListaVendedor(Producto * producto);
-    set<DTProducto> retornarProductos();
+
+    string getNickname() const;
+
     DTUsuario* retornarDTUsuario() const override;
 
+    set<DTProducto> retornarProductos();
 };
 #endif //VENDEDOR_H

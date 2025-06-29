@@ -7,6 +7,7 @@ private:
     SistemaControlador& controlador;
 public:
     Menu(SistemaControlador& controlador);
+
     void mostrarMenu();
 };
 

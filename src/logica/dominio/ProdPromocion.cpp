@@ -1,11 +1,6 @@
 #include "ProdPromocion.h"
 #include "Producto.h"
-#include "Promocion.h"
 #include "../../DTs/DTProdPromocion.h"
-
-#include <iostream>
-using namespace std;
-
 
 ProdPromocion::ProdPromocion(){}
 
