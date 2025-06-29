@@ -3,6 +3,7 @@
 #include "Usuario.h"
 #include "Producto.h"
 #include "../DTs/DTProducto.h"
+#include "../DTs/DTPromocion.h"
 #include <map>
 #include <set>
 
@@ -24,6 +25,7 @@ public:
     void aniadirProdListaVendedor(Producto * producto);
     set<DTProducto> retornarProductos();
     DTUsuario* retornarDTUsuario() const override;
+    set<DTPromocion> getPromocion();
 
 };
 #endif //VENDEDOR_H

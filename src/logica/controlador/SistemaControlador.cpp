@@ -410,3 +410,95 @@ set<DTProducto> SistemaControlador::obtenerProductosPendientesPorVendedor(string
     set<DTProducto> resultado;
     return resultado;
 }
+
+/*DTUsuario* SistemaControlador::seleccionarNickname(const std::string& nick) {
+    // Buscar el usuario en el mapa
+    auto it = usuarios.find(nick);
+    Usuario* usuario = it->second;
+
+    // Crear copia de la fecha de nacimiento
+    DTFecha* fechaNacCopy = new DTFecha(*usuario->getFechaNac());
+
+    // Determinar si es vendedor o cliente
+    if (Vendedor* vendedor = dynamic_cast<Vendedor*>(usuario)) {
+        set<DTProducto> productosSet;
+        for (Producto* prod : vendedor->retornarProductos()) {
+            productosSet.insert(DTProducto{
+                prod->getCodigo(),
+                prod->getNombre(),
+                prod->getDescripcion(),
+                prod->getPrecio(),
+                prod->getStock(),
+                prod->catToString()
+            });
+        }
+
+        std::set<DTPromocion> promocionesSet;
+        time_t ahora = time(nullptr);
+        for (Promocion* promo : vendedor->getPromociones()) {
+            if (promo->getFechaVencimiento() > ahora) {
+                std::set<DTProductoPromo> productosPromoSet;
+                for (ProdPromocion* pp : promo->getProductos()) {
+                    Producto* prod = pp->getProducto();
+                    productosPromoSet.insert(DTProductoPromo{
+                        prod->getCodigo(),
+                        prod->getNombre(),
+                        prod->getPrecio(),
+                        pp->getDescuentoAplicado()
+                    });
+                }
+
+                promocionesSet.insert(DTPromocion{
+                    promo->getNombre(),
+                    promo->getDescripcion(),
+                    promo->getFechaVencimientoAsString(),
+                    promo->getDescuento(),
+                    productosPromoSet
+                });
+            }
+        }
+
+        return new DTVendedorCompleto(
+            nick,
+            usuario->getPassword(),
+            fechaNacCopy,
+            vendedor->getRUT(),
+            productosSet,
+            promocionesSet
+        );
+    }
+    else if (Cliente* cliente = dynamic_cast<Cliente*>(usuario)) {
+        std::set<DTCompra> comprasSet;
+        for (Compra* compra : cliente->getCompras()) {
+            std::set<DTProductoCompra> productosCompraSet;
+            for (ProdComprado* item : compra->getProductos()) {
+                Producto* prod = item->getProducto();
+                productosCompraSet.insert(DTProductoCompra{
+                    prod->getCodigo(),
+                    prod->getNombre(),
+                    item->getCantidad(),
+                    item->getPrecioUnitario(),
+                    item->isEnviado()
+                });
+            }
+
+            comprasSet.insert(DTCompra{
+                compra->getId(),
+                compra->getMontoTotal(),
+                compra->getFechaAsString(),
+                productosCompraSet
+            });
+        }
+
+        return new DTClienteCompleto(
+            nick,
+            usuario->getPassword(),
+            fechaNacCopy,
+            comprasSet
+        );
+    }
+    else {
+        delete fechaNacCopy;
+        throw std::runtime_error("Tipo de usuario desconocido");
+    }
+}*/
