@@ -78,6 +78,8 @@ add_executable(Dis_EjemploArquitecturaLogin
         src/presentacion/DejarComentario.h
         src/presentacion/EliminarComentario.cpp
         src/presentacion/EliminarComentario.h
+        src/presentacion/ExpedienteUsuario.cpp
+        src/presentacion/ExpedienteUsuario.h
 
 )
 

@@ -19,7 +19,7 @@ class ProdComprado {
   bool getEnviado() const { return enviado; }
   void setEnviado(bool valor) { enviado = valor; }
 };
-
+10
 
 
 #endif //PRODCOMPRADO_H
