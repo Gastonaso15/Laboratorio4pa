@@ -35,5 +35,5 @@ DTFecha DTFecha::obtenerFechaActual() {
     int dia = tiempo->tm_mday;
     int mes = tiempo->tm_mon + 1;
     int anio = tiempo->tm_year + 1900;
-    return DTFecha(dia, mes, anio);
+    return DTFecha(anio, mes, dia);
 }

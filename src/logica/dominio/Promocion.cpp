@@ -1,9 +1,21 @@
 #include "Promocion.h"
+#include "ProdPromocion.h"
+#include "Producto.h"
+#include "../../DTs/DTPromocion.h"
+#include "../../DTs/DTProdPromocion.h"
+#include "../../DTs/DTFecha.h"
+
 
 Promocion::Promocion() {
 }
 
-Promocion::~Promocion() {}
+Promocion::~Promocion() {
+    delete fecVencimiento;
+    for (auto& pp : prodsprom) {
+        delete pp;
+    }
+    prodsprom.clear();
+}
 
 Promocion::Promocion(string nom, string desc, DTFecha * fecVencimiento) {
     this->nom = nom;
@@ -14,10 +26,13 @@ Promocion::Promocion(string nom, string desc, DTFecha * fecVencimiento) {
 string Promocion::getNom() {
     return nom;
 }
-void Promocion::agregarProdProm(const DTProducto& p) {
-    ProdPromocion * prodprom = new ProdPromocion(p.precio,p.stock);
-    prodsprom.insert(prodprom);
+
+void Promocion::agregarProdProm(Producto* p, int cantMinima, int descuento) {
+    ProdPromocion * prodprom = new ProdPromocion(cantMinima, descuento, p, this);
+    this->prodsprom.insert(prodprom);
+    p->agregarProdPromocion(prodprom);
 }
+
 
 bool Promocion::estaVigente() {
     DTFecha hoy =  DTFecha::obtenerFechaActual();
@@ -28,10 +43,24 @@ bool Promocion::estaVigente() {
     }
 }
 
-DTPromocion Promocion::retornarDTPromocion() {
-   return DTPromocion(this->nom,this->desc,this->fecVencimiento);
+DTPromocion * Promocion::retornarDTPromocion() {
+   return new DTPromocion(this->nom,this->desc,this->fecVencimiento);
 }
 
-// set<DTPromocion> Promocion::retornarDTProdPromocion(DTProdPromocion d) {
-// //to do
-// }
+DTPromocion * Promocion::retornarDTPromocionConProd() {
+    set<DTProdPromocion*> dtprods;
+    for (ProdPromocion* p : this->prodsprom) {
+        dtprods.insert(new DTProdPromocion(p->retornarDTProdPromocion()));
+    }
+    return new DTPromocion(this->nom,this->desc,this->fecVencimiento,dtprods);
+}
+
+set<DTProdPromocion*> Promocion::retornarDTProdPromocion() {
+    set<DTProdPromocion*> dtprods;
+    for (ProdPromocion* p : this->prodsprom) {
+        dtprods.insert(new DTProdPromocion(p->retornarDTProdPromocion()));
+    }
+    return dtprods;
+}
+
+

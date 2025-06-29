@@ -22,8 +22,8 @@ string Vendedor::getNick() const {
     return this->nick;
 }
 
-DTUsuario* Vendedor::retornarDTUsuario()const{
-    return new DTVendedor(this->nick,"", this->fechaNac, this->rut);
+DTUsuario* Vendedor::retornarDTUsuario() const {
+    return new DTVendedor(this->nick, "", this->fechaNac, this->rut);
 }
 
 void Vendedor::aniadirProdListaVendedor(Producto* producto) {

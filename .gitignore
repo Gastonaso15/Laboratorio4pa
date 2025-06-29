@@ -1,0 +1,11 @@
+# Directorios de construccion de CMake
+cmake-build-debug/
+cmake-build-release/
+
+# Archivos generados por Make/Compilador
+*.make
+*.exe
+*.obj
+*.o
+*.lib
+*.dll

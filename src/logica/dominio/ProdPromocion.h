@@ -1,8 +1,7 @@
 #ifndef PRODPROMOCION_H
 #define PRODPROMOCION_H
 
-#include "../DTs/DTPromocion.h"
-#include "Promocion.h"
+#include "../DTs/DTProdPromocion.h"
 
 class Producto;
 class Promocion;
@@ -15,9 +14,10 @@ class ProdPromocion {
         Promocion * promocion;
     public:
         ProdPromocion();
-        ProdPromocion(int cantMininima,int descuento);
+        ProdPromocion(int cantMininima, int descuento, Producto* prod, Promocion* promo);
         virtual ~ProdPromocion();
         Promocion* retornarPromocion();
+        DTProdPromocion retornarDTProdPromocion();
 };
 
 
