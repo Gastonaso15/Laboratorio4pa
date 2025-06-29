@@ -3998,8 +3998,11 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/Menu.cpp.obj: C:/Us
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/ConsultarProducto.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/ConsultarPromocion.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/CrearPromocion.h \
+  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/DejarComentario.h \
+  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/EliminarComentario.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/ListadoUsuarios.h \
-  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/Menu.h
+  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/Menu.h \
+  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/RealizarCompra.h
 
 
 C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/move.h:
@@ -4260,6 +4263,8 @@ C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/x86_64-w64-mingw32/include
 
 C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/x86_64-w64-mingw32/include/malloc.h:
 
+C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/RealizarCompra.h:
+
 C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/x86_64-w64-mingw32/include/process.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/x86_64-w64-mingw32/include/pthread.h:
@@ -4405,3 +4410,7 @@ C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/CrearPromocion.cpp:
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/ListadoUsuarios.cpp:
 
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/Menu.cpp:
+
+C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/DejarComentario.h:
+
+C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/EliminarComentario.h:

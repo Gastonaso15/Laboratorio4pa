@@ -728,6 +728,54 @@ src/presentacion/CrearPromocion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/CrearPromocion.cpp.s
 .PHONY : src/presentacion/CrearPromocion.cpp.s
 
+src/presentacion/DejarComentario.obj: src/presentacion/DejarComentario.cpp.obj
+.PHONY : src/presentacion/DejarComentario.obj
+
+# target to build an object file
+src/presentacion/DejarComentario.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/DejarComentario.cpp.obj
+.PHONY : src/presentacion/DejarComentario.cpp.obj
+
+src/presentacion/DejarComentario.i: src/presentacion/DejarComentario.cpp.i
+.PHONY : src/presentacion/DejarComentario.i
+
+# target to preprocess a source file
+src/presentacion/DejarComentario.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/DejarComentario.cpp.i
+.PHONY : src/presentacion/DejarComentario.cpp.i
+
+src/presentacion/DejarComentario.s: src/presentacion/DejarComentario.cpp.s
+.PHONY : src/presentacion/DejarComentario.s
+
+# target to generate assembly for a file
+src/presentacion/DejarComentario.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/DejarComentario.cpp.s
+.PHONY : src/presentacion/DejarComentario.cpp.s
+
+src/presentacion/EliminarComentario.obj: src/presentacion/EliminarComentario.cpp.obj
+.PHONY : src/presentacion/EliminarComentario.obj
+
+# target to build an object file
+src/presentacion/EliminarComentario.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EliminarComentario.cpp.obj
+.PHONY : src/presentacion/EliminarComentario.cpp.obj
+
+src/presentacion/EliminarComentario.i: src/presentacion/EliminarComentario.cpp.i
+.PHONY : src/presentacion/EliminarComentario.i
+
+# target to preprocess a source file
+src/presentacion/EliminarComentario.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EliminarComentario.cpp.i
+.PHONY : src/presentacion/EliminarComentario.cpp.i
+
+src/presentacion/EliminarComentario.s: src/presentacion/EliminarComentario.cpp.s
+.PHONY : src/presentacion/EliminarComentario.s
+
+# target to generate assembly for a file
+src/presentacion/EliminarComentario.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EliminarComentario.cpp.s
+.PHONY : src/presentacion/EliminarComentario.cpp.s
+
 src/presentacion/ListadoUsuarios.obj: src/presentacion/ListadoUsuarios.cpp.obj
 .PHONY : src/presentacion/ListadoUsuarios.obj
 
@@ -775,6 +823,30 @@ src/presentacion/Menu.s: src/presentacion/Menu.cpp.s
 src/presentacion/Menu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/Menu.cpp.s
 .PHONY : src/presentacion/Menu.cpp.s
+
+src/presentacion/RealizarCompra.obj: src/presentacion/RealizarCompra.cpp.obj
+.PHONY : src/presentacion/RealizarCompra.obj
+
+# target to build an object file
+src/presentacion/RealizarCompra.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/RealizarCompra.cpp.obj
+.PHONY : src/presentacion/RealizarCompra.cpp.obj
+
+src/presentacion/RealizarCompra.i: src/presentacion/RealizarCompra.cpp.i
+.PHONY : src/presentacion/RealizarCompra.i
+
+# target to preprocess a source file
+src/presentacion/RealizarCompra.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/RealizarCompra.cpp.i
+.PHONY : src/presentacion/RealizarCompra.cpp.i
+
+src/presentacion/RealizarCompra.s: src/presentacion/RealizarCompra.cpp.s
+.PHONY : src/presentacion/RealizarCompra.s
+
+# target to generate assembly for a file
+src/presentacion/RealizarCompra.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/RealizarCompra.cpp.s
+.PHONY : src/presentacion/RealizarCompra.cpp.s
 
 # Help Target
 help:
@@ -860,12 +932,21 @@ help:
 	@echo ... src/presentacion/CrearPromocion.obj
 	@echo ... src/presentacion/CrearPromocion.i
 	@echo ... src/presentacion/CrearPromocion.s
+	@echo ... src/presentacion/DejarComentario.obj
+	@echo ... src/presentacion/DejarComentario.i
+	@echo ... src/presentacion/DejarComentario.s
+	@echo ... src/presentacion/EliminarComentario.obj
+	@echo ... src/presentacion/EliminarComentario.i
+	@echo ... src/presentacion/EliminarComentario.s
 	@echo ... src/presentacion/ListadoUsuarios.obj
 	@echo ... src/presentacion/ListadoUsuarios.i
 	@echo ... src/presentacion/ListadoUsuarios.s
 	@echo ... src/presentacion/Menu.obj
 	@echo ... src/presentacion/Menu.i
 	@echo ... src/presentacion/Menu.s
+	@echo ... src/presentacion/RealizarCompra.obj
+	@echo ... src/presentacion/RealizarCompra.i
+	@echo ... src/presentacion/RealizarCompra.s
 .PHONY : help
 
 
