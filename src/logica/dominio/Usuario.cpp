@@ -35,3 +35,14 @@ set<DTComentario*> Usuario::getComentarios() {
 	}
 	return dtComentarios;
 }
+
+Comentario* Usuario::obtenerComentario(int id) {
+	auto it = comentarios.find(id);
+	if (it != comentarios.end())
+		return it->second;
+	return nullptr;
+}
+
+void Usuario::eliminarComentario(int id) {
+	comentarios.erase(id);
+}

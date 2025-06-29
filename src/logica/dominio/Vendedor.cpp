@@ -21,6 +21,14 @@ DTUsuario* Vendedor::retornarDTUsuario() const {
     return new DTVendedor(this->nick, "", this->fechaNac, this->rut);
 }
 
+set<DTPromocion> Vendedor::getPromocion() {
+    set<DTPromocion> retorno;
+    for (auto const promos : promociones) {
+        retorno.insert(promos.second->retornarDTPromocionConProd());
+    }
+    return retorno;
+}
+
 void Vendedor::aniadirProdListaVendedor(Producto* producto) {
     int codigo = producto->getCodigo();
     productos.insert({codigo, producto});

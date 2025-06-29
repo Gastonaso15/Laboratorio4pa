@@ -3,6 +3,7 @@
 #include "Usuario.h"
 #include "Producto.h"
 #include "../DTs/DTProducto.h"
+#include "../DTs/DTPromocion.h"
 #include <map>
 #include <set>
 
@@ -28,6 +29,7 @@ public:
     string getNickname() const;
 
     DTUsuario* retornarDTUsuario() const override;
+    set<DTPromocion> getPromocion();
 
     set<DTProducto> retornarProductos();
 };

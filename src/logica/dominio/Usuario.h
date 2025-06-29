@@ -33,6 +33,8 @@ public:
 	DTFecha* getFechaNac() const;
 
 	set<DTComentario*> getComentarios();
+	Comentario* obtenerComentario(int id);
+	void eliminarComentario(int id);
 
 };
 

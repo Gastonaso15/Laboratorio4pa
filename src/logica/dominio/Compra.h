@@ -1,38 +1,38 @@
 #ifndef COMPRA_H
 #define COMPRA_H
 #include "../DTs/DTFecha.h"
+#include "../DTs/DTCliente.h"
 #include "../dominio/ProdComprado.h"
 #include "../DTs/DTCompra.h"
 #include "../dominio/Cliente.h"
-
+class DTCompra;
 class Cliente;
 class Compra {
     private:
         int id;
         int cantProd;
-        float montoTotal;
-
-        set<ProdComprado*> productosComprados;
-
         DTFecha * fecCompra;
+        set<ProdComprado*> productosComprados;
         Cliente * cliente;
-
+    float montoTotal;
     public:
         Compra();
-        Compra(int id,int cantProd,DTFecha *fecCompra, Cliente* cliente);
+        Compra(int id,int cantProd,DTFecha *fecCompra,set<ProdComprado*> productosComprados);
+
+        Compra(int id,int cantProd,DTFecha *fecCompra,set<ProdComprado*> productosComprados, Cliente* cliente);
         ~Compra();
 
-        int getId() const;
-        int getCantProd() const;
-
-        float getMontoTotal() const;
-
-        void agregarProdComprado(ProdComprado* pc);
-
         set<ProdComprado*> getProdComprado() const;
-
+        float getMontoTotal() const;
+         int getId() const;
+        int getCantProd() const;
         DTFecha* getFecCompra() const;
         Cliente* getCliente() const;
+        DTCompra getCompra();
+        void agregarProdComprado(ProdComprado* pc);
+
+        bool agregoProd(DTProducto p);
+
         DTCompra toDT() const;
 };
 

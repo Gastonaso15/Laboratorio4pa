@@ -9,27 +9,24 @@ using namespace std;
 class DTProducto {
 public:
     int codigo;
+    string nombre;
     int precio;
     int stock;
-
-    bool operator<(const DTProducto& other) const;
-
     string descripcion;
-    string nombre;
-
     cat categoria;
     DTVendedor * vendedor;
-
     DTProducto();
-    virtual ~DTProducto();
     DTProducto(int codigo, string nombre, int precio,int stock, string descripcion, cat categoria);
     DTProducto(int codigo, string nombre, int precio, int stock, string descripcion, cat categoria,DTVendedor * vendedor);
     DTProducto(int codigo, int descuento, int cantidad);
     DTProducto(const DTProducto& other);
-    DTProducto& operator=(const DTProducto& other);
-    DTProducto getCodDTProd();
-    DTProducto getNombreDTProd();
 
+    friend ostream& operator<<(ostream& os, const DTProducto& dtProducto);
+    DTProducto& operator=(const DTProducto& other);
+    virtual ~DTProducto();
+    bool operator<(const DTProducto& other) const;
+    DTProducto getCodDTProd();
+    string getNombreDTProd();
     static string catToString(cat categoria);
 };
 
