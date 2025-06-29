@@ -42,6 +42,11 @@ DTProducto::DTProducto(int codigo, string nombre, int precio, int stock, string 
 }
 
 
+string DTProducto::getNombreDTProd() {
+    return this->nombre;
+}
+
+
 string DTProducto::catToString(cat categoria) {
     switch (categoria) {
         case Electrodomestico: return "Electrodomestico";

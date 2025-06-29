@@ -265,15 +265,10 @@ void SistemaControlador::agregarProducto(DTProducto p) {
     compraActual->agregoProd(p);
 }
 
-// DTCompra SistemaControlador::verDetalleCompra(int idCompra) {
-//     DTCompra detalle;
-//
-//     // Buscar la compra
-//     auto it = compraActual.find()
-//     if (compraIt == compras.end()) {
-//         throw std::runtime_error("Compra no encontrada");
-//     }
-// }
+DTCompra SistemaControlador::verDetalleCompra() {
+    DTCompra detalle = compraActual->getCompra();
+    return detalle;
+}
 
 set<string> SistemaControlador::listarNicknamesUsuario() {
     set<string> resultado;

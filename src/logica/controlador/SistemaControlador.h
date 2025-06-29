@@ -61,7 +61,7 @@ public:
 	set<DTProducto> seleccionarCliente(string nick);
 	void agregarProducto(DTProducto p);
 
-	DTCompra verDetalleCompra(int idCompra);
+	DTCompra verDetalleCompra();
 
 	set<string> listarNicknamesUsuario();
 	set<DTProducto> seleccionarUsuario(string nick);

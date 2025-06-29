@@ -5,7 +5,7 @@
 #include "../dominio/ProdComprado.h"
 #include "../DTs/DTCompra.h"
 #include "../dominio/Cliente.h"
-
+class DTCompra;
 class Cliente;
 class Compra {
     private:
@@ -17,6 +17,8 @@ class Compra {
     float montoTotal;
     public:
         Compra();
+        Compra(int id,int cantProd,DTFecha *fecCompra,set<ProdComprado*> productosComprados);
+
         Compra(int id,int cantProd,DTFecha *fecCompra,set<ProdComprado*> productosComprados, Cliente* cliente);
         ~Compra();
 
@@ -26,7 +28,7 @@ class Compra {
         int getCantProd() const;
         DTFecha* getFecCompra() const;
         Cliente* getCliente() const;
-
+        DTCompra getCompra();
         void agregarProdComprado(ProdComprado* pc);
 
         bool agregoProd(DTProducto p);

@@ -37,6 +37,33 @@ int Producto::getPrecio()const{
   return this->precio;
 }
 
+string Producto::getNombre() {
+  return this->nombre;
+}
+
+int Producto::getStock() {
+  return this->stock;
+}
+
+string Producto::getDescripcion() {
+  return this->descripcion;
+}
+
+cat Producto::getCategoria() {
+  return this->categoria;
+}
+
+string Producto::catToString(cat categoria) {
+    switch (categoria) {
+      case Electrodomestico: return "Electrodomestico";
+      case Ropa: return "Ropa";
+      case Otro: return "Otro";
+      default: return "Categoria desconocida";
+    }
+ }
+
+
+
 DTProducto Producto::retornarDTProducto(){
   DTVendedor* dtVen = nullptr;
   if (this->vendedor != nullptr) {

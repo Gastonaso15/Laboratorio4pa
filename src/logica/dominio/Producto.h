@@ -34,6 +34,11 @@ class Producto {
     virtual ~Producto();
     int getCodigo()const;
     int getPrecio()const;
+    string getNombre();
+    int getStock();
+    string getDescripcion();
+    cat getCategoria();
+    string catToString(cat categoria);
     set<DTComentario*> getComentarios();
     Comentario* getComentario(int id);
     DTProducto retornarDTProducto();
