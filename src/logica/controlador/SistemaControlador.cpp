@@ -11,6 +11,7 @@
 #include "../dominio/Cliente.h"
 #include "../dominio/Vendedor.h"
 #include "../dominio/Promocion.h"
+#include "../dominio/Compra.h"
 #include <map>
 #include <stdexcept>
 
@@ -186,25 +187,41 @@ string SistemaControlador::agregarProdProm(set<DTProducto> productosDT) {
     return "Promocion creada con exito";
 }
 
-/*bool SistemaControlador::agregarProdProm(const set<DTProducto>& productosDT) {
-    for (const auto& p : productosDT) {}
-    auto it = productos.find(nick);
-    bool todosAgregados = true;
-
-    // Recorrer cada producto a agregar
-    for (const auto& dtProd : productosDT) {
-        // Buscar el producto real en el vendedor
-        Producto* producto = vendedorSeleccionado->buscarProducto(dtProd.codigo);
-
-        if (producto != nullptr) {
-            // Intentar agregar a la promoción (asumiendo cantidad mínima y descuento por defecto)
-            if (!promocionActual->agregarProducto(producto, 1, 0.0f)) { // 1 unidad mínima, 0% descuento por defecto
-                todosAgregados = false;
-            }
-        } else {
-            todosAgregados = false;
+set<string> SistemaControlador::listarClientes() {
+    set<string> nicksClientes;
+    for (const auto& par : usuarios) {
+        if (dynamic_cast<Cliente*>(par.second) != nullptr) {
+            nicksClientes.insert(par.first);
         }
     }
+    return nicksClientes;
+}
 
-    return todosAgregados;
-}*/
+set<DTProducto> SistemaControlador::seleccionarCliente(DTCliente cliente) {
+    // Limpiar seleccion previa
+    clienteSeleccionado = nullptr;
+    delete compraActual;
+    compraActual = nullptr;
+
+    auto it = usuarios.find(cliente.nick);
+    if (it == usuarios.end()) {
+        throw runtime_error("Usuario no encontrado");
+    }
+    set<DTProducto> productosDisponibles;
+    for (const auto& prod : productos) {
+        Producto* p = prod.second;
+        productosDisponibles.insert(p->retornarDTProducto());
+    }
+    return productosDisponibles;
+}
+
+// void SistemaControlador::agregarProducto(DTProducto p) {
+//     if (clienteSeleccionado == nullptr) {
+//         throw runtime_error("No hay cliente seleccionado");
+//     }
+//     auto it = productos.find(p.codigo);
+//     if (compraActual == nullptr) {
+//         compraActual = new Compra();
+//     }
+//     compraActual->agregoProd(p);
+// }

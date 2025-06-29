@@ -1,6 +1,7 @@
 #ifndef PRODCOMPRADO_H
 #define PRODCOMPRADO_H
-
+#include "../DTs/DTProducto.h"
+#include "../DTs/DTUsuario.h"
 
 class Producto;
 class Compra;
@@ -13,10 +14,12 @@ class ProdComprado {
     Compra * compra;
   public:
   ProdComprado();
-  ProdComprado(int cantidad,bool enviado);
+  ProdComprado(Producto* producto,  Compra* compra, int cantidad, bool enviado);
   virtual ~ProdComprado();
+  bool tieneArt(DTProducto p);
 
 };
+
 
 
 
