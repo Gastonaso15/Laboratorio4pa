@@ -58,7 +58,7 @@ public:
 	set<DTPromocion*> listarPromociones();
 	set<DTProdPromocion*> selectPromo(string nombre);
 	set<string> listarClientes();
-	set<DTProducto> seleccionarCliente(DTCliente cliente);
+	set<DTProducto> seleccionarCliente(string nick);
 	void agregarProducto(DTProducto p);
 
 	DTCompra verDetalleCompra(int idCompra);

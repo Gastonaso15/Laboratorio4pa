@@ -239,13 +239,13 @@ set<DTProdPromocion*> SistemaControlador::selectPromo(string nombre) {
     }
 }
 
-set<DTProducto> SistemaControlador::seleccionarCliente(DTCliente cliente) {
+set<DTProducto> SistemaControlador::seleccionarCliente(string nick) {
     // Limpiar seleccion previa
     clienteSeleccionado = nullptr;
     delete compraActual;
     compraActual = nullptr;
 
-    auto it = usuarios.find(cliente.nick);
+    auto it = usuarios.find(nick);
     if (it == usuarios.end()) {
         throw runtime_error("Usuario no encontrado");
     }
@@ -258,9 +258,6 @@ set<DTProducto> SistemaControlador::seleccionarCliente(DTCliente cliente) {
 }
 
 void SistemaControlador::agregarProducto(DTProducto p) {
-    if (clienteSeleccionado == nullptr) {
-        throw runtime_error("No hay cliente seleccionado");
-    }
     auto it = productos.find(p.codigo);
     if (compraActual == nullptr) {
         compraActual = new Compra();

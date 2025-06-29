@@ -20,6 +20,14 @@ DTProducto::DTProducto(int codigo, string nombre, int precio, int stock, string 
     this->categoria = categoria;
 }
 
+ostream& operator<<(std::ostream& os, const DTProducto& dtProducto) {
+    os  << "Codigo: " << dtProducto.codigo << endl
+        << "Nombre: " << dtProducto.nombre << endl
+        << "Descripcion: " << dtProducto.descripcion << endl
+        << "Precio Unitario: " << dtProducto.precio << endl;
+    return os; // Return the ostream reference to allow chaining (e.g., cout << dt1 << dt2;)
+}
+
 bool DTProducto::operator<(const DTProducto& other) const {
     return codigo < other.codigo;
 }
