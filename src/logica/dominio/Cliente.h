@@ -2,9 +2,7 @@
 #define CLIENTE_H
 #include "Usuario.h"
 #include "../../DTs/DTCliente.h"
-
-
-class Compra;
+#include "../dominio/Compra.h"
 
 class Cliente: public Usuario{
 
@@ -20,6 +18,9 @@ public:
     void asociarProd();
     DTCliente getCliente() const;
     DTUsuario* retornarDTUsuario() const override;
+    std::string getCiudad() const;
+    DTDireccion* getDireccion() const;
+    DTCliente* toDT();
 };
 
 

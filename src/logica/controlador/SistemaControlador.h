@@ -1,19 +1,21 @@
 #ifndef LOGICA_CONTROLADOR_SISTEMACONTROLADOR_H_
 #define LOGICA_CONTROLADOR_SISTEMACONTROLADOR_H_
+
 #include <iostream>
-#include "dominio/Producto.h"
+#include "../dominio/Producto.h"
 #include "../DTs/DTFecha.h"
 #include "../DTs/DTProducto.h"
 #include "../DTs/DTUsuario.h"
 #include "../DTs/DTComentario.h"
 #include "../dominio/Usuario.h"
 #include "../dominio/Cliente.h"
+#include "../DTs/DTCompra.h"
 #include "../dominio/Vendedor.h"
 #include "../dominio/Promocion.h"
 #include "../dominio/Compra.h"
+#include "../dominio/ProdComprado.h"
 #include <map>
 #include <set>
-
 #include "../../DTs/DTPromocion.h"
 using namespace std;
 
@@ -21,6 +23,7 @@ using namespace std;
 
 class SistemaControlador{
 protected:
+	static SistemaControlador* instancia;
 	map<int,Producto*> productos;
 	map<int,DTProducto*> carrito;
 	map<string,Usuario*> usuarios;
@@ -60,6 +63,10 @@ public:
 	set<DTComentario*> listarComentario();
 	bool seleccionarComentario(int id);
 	string agregarRespuesta(string texto);
+	set<DTProducto> obtenerProductosPendientesPorVendedor(string nickVendedor);
+	set<DTCompra> seleccionarProducto(int codigoProducto);
+	string marcarProductoComoEnviado(int codigoProducto, int idCompra);
+
 };
 
 

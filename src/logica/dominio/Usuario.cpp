@@ -5,9 +5,9 @@
 #include <iostream>
 
 
-Usuario::Usuario(string nick, string pass, DTFecha * fechaNac) {
+Usuario::Usuario(string nick, string contrasenia, DTFecha * fechaNac) {
 	this->nick = nick;
-	this->pass = pass;
+	this->contrasenia = contrasenia;
 	this->fechaNac= fechaNac;
 }
 
@@ -15,10 +15,17 @@ Usuario::~Usuario() {
 
 }
 
-string Usuario::getNick() {
-	return this->nick;
+std::string Usuario::getNickname() const {
+	return nick;
+}
+
+std::string Usuario::getContrasenia() const {
+	return contrasenia;
 }
 
 void Usuario::asociarComentarioUsuario(Comentario *com) {
 	this->comentarios[com->getId()] = com;
 }
+
+DTFecha* Usuario::getFechaNac() const {
+	return fechaNac;

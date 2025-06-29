@@ -11,16 +11,21 @@ class DTCliente:public DTUsuario {
 public:
     string ciudad;
     DTDireccion * direccion;
+
     DTCliente();
     virtual ~DTCliente();
     DTCliente(string nick, string pass, DTFecha * fecha, string ciudad, DTDireccion * direccion);
-    string getCiudad();
-    DTDireccion getDireccion();//no es necesario porque esta en publico
-    void asociarProd();
+    DTCliente(string nick, string pass, DTFecha * fecha);
+
+    string getCiudad() const;
+    DTDireccion getDireccion() const;
+    string getNickname() const;
     string getTipo() const override;
     string obtenerInfo() const override;
-};
 
+
+    void asociarProd();
+};
 
 
 #endif //DTCLIENTE_H

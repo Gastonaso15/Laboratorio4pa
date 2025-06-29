@@ -1,1 +1,1 @@
--IC:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica -IC:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/controlador -IC:/Users/agusm/CLionProjects/Laboratorio4pa/src/logica/interfaceSistema -IC:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion
+-IC:/Laboratorio4pa/src -IC:/Laboratorio4pa/src/DTs -IC:/Laboratorio4pa/src/logica/controlador -IC:/Laboratorio4pa/src/logica/dominio -IC:/Laboratorio4pa/src/presentacion

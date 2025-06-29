@@ -29,11 +29,11 @@ Producto::Producto(int codigo, string nombre, int precio,int stock, string descr
   this->categoria = categoria;
 }
 
-Producto::getCodigo(){
+int Producto::getCodigo()const{
   return this->codigo;
 }
 
-Producto::getPrecio(){
+int Producto::getPrecio()const{
   return this->precio;
 }
 
@@ -63,6 +63,7 @@ DTProducto Producto::retornarDTProducto(){
 void Producto::asociarProdVendedor(Vendedor* vendedor) {
   this->vendedor=vendedor;
 }
+
 
 bool Producto::productoEnPromo() {
   //Cambios respecto al Diagrama de Clase; asi es mas eficiente
