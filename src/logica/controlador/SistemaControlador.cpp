@@ -268,6 +268,16 @@ void SistemaControlador::agregarProducto(DTProducto p) {
     compraActual->agregoProd(p);
 }
 
+// DTCompra SistemaControlador::verDetalleCompra(int idCompra) {
+//     DTCompra detalle;
+//
+//     // Buscar la compra
+//     auto it = compraActual.find()
+//     if (compraIt == compras.end()) {
+//         throw std::runtime_error("Compra no encontrada");
+//     }
+// }
+
 set<string> SistemaControlador::listarNicknamesUsuario() {
     set<string> resultado;
     for (auto const& par: usuarios){
@@ -276,6 +286,7 @@ set<string> SistemaControlador::listarNicknamesUsuario() {
     }
     return resultado;
 }
+
 set<DTProducto> SistemaControlador::seleccionarUsuario(string nick) {
     set<DTProducto> prods;
     auto it = usuarios.find(nick);
@@ -360,8 +371,6 @@ string SistemaControlador::borrarComentario(int id) {
     //usuarioSeleccionado->borrarComentario(id);
     return respuesta;
 }
-
-
 
 set<DTCompra> SistemaControlador::seleccionarProductoC(int codigoProducto) {
     set<DTCompra> resultado;

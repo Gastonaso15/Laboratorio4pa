@@ -60,6 +60,9 @@ public:
 	set<string> listarClientes();
 	set<DTProducto> seleccionarCliente(DTCliente cliente);
 	void agregarProducto(DTProducto p);
+
+	DTCompra verDetalleCompra(int idCompra);
+
 	set<string> listarNicknamesUsuario();
 	set<DTProducto> seleccionarUsuario(string nick);
 	bool seleccionarProducto(int codigo);
