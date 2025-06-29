@@ -2,8 +2,10 @@
 #define LOGICA_USUARIO_H_
 #include "../DTs/DTFecha.h"
 #include "../DTs/DTUsuario.h"
+#include "../DTs/DTComentario.h"
 #include <map>
 #include <iostream>
+#include <set>
 using namespace std;
 
 class Comentario;
@@ -24,6 +26,9 @@ public:
 	string getNickname() const;
 	string getContrasenia() const;
 	DTFecha* getFechaNac() const;
+	set<DTComentario*> getComentarios();
+
 };
+
 
 #endif

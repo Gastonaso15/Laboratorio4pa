@@ -5,5 +5,38 @@ EliminarComentario::EliminarComentario(SistemaControlador& controlador):controla
 EliminarComentario::~EliminarComentario() {}
 
 string EliminarComentario::eliminarComentario() {
-  return "to do";
+  string respuesta;
+  //listarNicknamesUsuario
+  set<string> usuarios =controlador.listarNicknamesUsuario();
+  if(usuarios.empty()){
+    return respuesta="Error: No hay usuarios registrados.";
+  } else {
+    cout << "--- Usuarios registrados ---" << endl;
+    for (string nick : usuarios) {
+      cout << nick << endl;
+      cout << "---------------------------" << endl;
+    }
+  }
+  //seleccionarUsuario
+  string nick;
+  cout << endl << "--- Seleccionar Usuario ---" << endl;
+  cout << "Ingrese nickname: ";
+  cin >> nick;
+  set<DTComentario*> comentarios = controlador.seleccionarUsuarioComentario(nick);
+  if (comentarios.empty()) {
+    respuesta= "Error: No hay comentarios registrados.";
+    return respuesta;
+  } else {
+    cout << "--- Comentarios registrados ---" << endl;
+    for (const DTComentario* com : comentarios) {
+      cout << "Id: " << com->id << " Comentario: " << com->texto << endl << "Fecha Escrito: " << com->fecEscrito->toString() << endl;
+    }
+  }
+  //borrarComentario
+  int id;
+  cout << endl << "** Eliminar Comentario **" << endl;
+  cout << "Ingrese id del Comentario: ";
+  cin >> id;
+  respuesta=controlador.borrarComentario(id);
+  return respuesta;
 }

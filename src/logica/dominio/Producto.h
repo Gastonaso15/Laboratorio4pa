@@ -41,6 +41,7 @@ class Producto {
     bool productoEnPromo();
     void agregarProdPromocion(ProdPromocion* pp);
     void asociarComentarioProducto(Comentario *com);
+
 };
 
 

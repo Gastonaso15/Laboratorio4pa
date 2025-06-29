@@ -30,3 +30,11 @@ void Usuario::asociarComentarioUsuario(Comentario *com) {
 DTFecha* Usuario::getFechaNac() const {
 	return fechaNac;
 }
+
+set<DTComentario*> Usuario::getComentarios() {
+	set<DTComentario*> dtComentarios;
+	for (auto const& [id, comentarioPtr] : this->comentarios) {
+		dtComentarios.insert(comentarioPtr->retornarDTComentario());
+	}
+	return dtComentarios;
+}

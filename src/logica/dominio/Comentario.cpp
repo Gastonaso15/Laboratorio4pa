@@ -27,3 +27,12 @@ DTComentario * Comentario::retornarDTComentario(){
 void Comentario::agregarRespuesta(Comentario * com){
   this->respuestas[com->getId()] = com;
 }
+
+bool Comentario::tieneRespuestas() {
+  if (respuestas.empty()) {
+    return false;
+  }else {
+    return true;
+  }
+}
+

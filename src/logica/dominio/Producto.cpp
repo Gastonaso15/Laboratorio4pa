@@ -101,5 +101,3 @@ Comentario* Producto::getComentario(int id) {
   }
   return nullptr;
 }
-
-

@@ -336,6 +336,25 @@ string SistemaControlador::agregarRespuesta(string texto) {
     return "Respuesta creada con exito";
 }
 
+set<DTComentario*> SistemaControlador::seleccionarUsuarioComentario(string nick) {
+    set<DTComentario*> resultado;
+    auto it = usuarios.find(nick);
+    if (it != usuarios.end()) {
+        usuarioSeleccionado= it->second;
+        resultado=usuarioSeleccionado->getComentarios();
+        return resultado;
+    }
+    return resultado;  // Retorna set vacío si no encuentra al usuario
+}
+
+string SistemaControlador::borrarComentario(int id) {
+    string respuesta;
+    //usuarioSeleccionado->borrarComentario(id);
+    return respuesta;
+}
+
+
+
 set<DTCompra> SistemaControlador::seleccionarProductoC(int codigoProducto) {
     set<DTCompra> resultado;
 
