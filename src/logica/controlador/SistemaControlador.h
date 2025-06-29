@@ -9,6 +9,7 @@
 #include "../dominio/Cliente.h"
 #include "../dominio/Vendedor.h"
 #include "../dominio/Promocion.h"
+#include "../dominio/Compra.h"
 #include <map>
 #include <set>
 
@@ -26,6 +27,8 @@ protected:
 	map<int, Compra*> compras;
 	map<string, Vendedor*> vendedores;
 	Vendedor* vendedorSeleccionado = nullptr;
+	Cliente* clienteSeleccionado = nullptr;
+	Compra* compraActual;
 	int ultimoCodigoProducto = 0;
 public:
 	SistemaControlador();
@@ -42,6 +45,9 @@ public:
 	string agregarProdProm(set<DTProdPromocion> productosDT);
 	set<DTPromocion*> listarPromociones();
 	set<DTProdPromocion*> selectPromo(string nombre);
+	set<string> listarClientes();
+	set<DTProducto> seleccionarCliente(DTCliente cliente);
+	void agregarProducto(DTProducto p);
 };
 
 

@@ -1,6 +1,7 @@
 #ifndef COMPRA_H
 #define COMPRA_H
-
+#include "../dominio/ProdComprado.h"
+#include "../dominio/Cliente.h"
 
 class Cliente;
 class ProdComprado;
@@ -17,6 +18,7 @@ class Compra {
         Compra(int id,int cantProd,DTFecha *fecCompra);
         virtual ~Compra();
         float getMontoTotal() const;
+        bool agregoProd(DTProducto p);
 
 };
 

@@ -6,8 +6,13 @@ ProdComprado::ProdComprado(){}
 
 ProdComprado::~ProdComprado(){}
 
-ProdComprado::ProdComprado(int cantidad,bool enviado){
+ProdComprado::ProdComprado(Producto* producto,  Compra* compra, int cantidad,bool enviado){
+  this->producto = producto;
+  this->compra = compra
   this->cantidad=cantidad;
   this->enviado=enviado;
 }
 
+bool ProdComprado::tieneArt(DTProducto p) {
+  return producto->getCodigo() == p.codigo;
+}
