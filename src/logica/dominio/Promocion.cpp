@@ -28,10 +28,24 @@ bool Promocion::estaVigente() {
     }
 }
 
-DTPromocion Promocion::retornarDTPromocion() {
-   return DTPromocion(this->nom,this->desc,this->fecVencimiento);
+DTPromocion * Promocion::retornarDTPromocion() {
+   return new DTPromocion(this->nom,this->desc,this->fecVencimiento);
 }
 
-// set<DTPromocion> Promocion::retornarDTProdPromocion(DTProdPromocion d) {
-// //to do
-// }
+DTPromocion * Promocion::retornarDTPromocionConProd() {
+    set<DTProdPromocion*> dtprods;
+    for (ProdPromocion* p : this->prodsprom) {
+        dtprods.insert(new DTProdPromocion(p->retornarDTProdPromocion()));
+    }
+    return new DTPromocion(this->nom,this->desc,this->fecVencimiento,dtprods);
+}
+
+set<DTProdPromocion*> Promocion::retornarDTProdPromocion() {
+    set<DTProdPromocion*> dtprods;
+    for (ProdPromocion* p : this->prodsprom) {
+        dtprods.insert(new DTProdPromocion(p->retornarDTProdPromocion()));
+    }
+    return dtprods;
+}
+
+

@@ -49,6 +49,8 @@ public:
 	void agregarProducto(DTProducto p);
 
 	void agregarProducto(const DTProducto &dtProd);
+	set<DTPromocion*> listarPromociones();
+	set<DTProdPromocion*> selectPromo(string nombre);
 };
 
 

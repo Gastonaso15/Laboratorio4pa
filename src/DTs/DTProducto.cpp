@@ -7,7 +7,6 @@ using namespace std;
 DTProducto::~DTProducto(){}
 DTProducto::DTProducto(){}
 DTProducto::DTProducto(int codigo, string nombre, int precio, int stock, string descripcion, cat categoria){
-
     this->codigo = codigo;
     this->nombre = nombre;
     this->precio = precio;
@@ -17,7 +16,7 @@ DTProducto::DTProducto(int codigo, string nombre, int precio, int stock, string 
 }
 
 bool DTProducto::operator<(const DTProducto& other) const {
-    return codigo < other.codigo; // o lo que uses como clave única
+    return codigo < other.codigo;
 }
 
 DTProducto::DTProducto(int codigo, string nombre, int precio, int stock, string descripcion, cat categoria,DTVendedor * vendedor) {
