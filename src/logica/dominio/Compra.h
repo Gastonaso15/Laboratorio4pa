@@ -17,7 +17,7 @@ class Compra {
     float montoTotal;
     public:
         Compra();
-        Compra(int id,int cantProd,DTFecha *fecCompra, Cliente* cliente);
+        Compra(int id,int cantProd,DTFecha *fecCompra,set<ProdComprado*> productosComprados, Cliente* cliente);
         ~Compra();
 
         set<ProdComprado*> getProdComprado() const;
@@ -28,6 +28,8 @@ class Compra {
         Cliente* getCliente() const;
 
         void agregarProdComprado(ProdComprado* pc);
+
+        bool agregoProd(DTProducto p);
 
         DTCompra toDT() const;
 };

@@ -4,15 +4,24 @@
 #include "../DTs/DTUsuario.h"
 #include <iostream>
 #include <string>
+
+#include "Producto.h"
+#include "../logica/controlador/SistemaControlador.h"
 #include "../DTs/DTCompra.h"
 #include "../DTs/DTCliente.h"
 #include "../dominio/ProdComprado.h"
 #include "../dominio/Cliente.h"
+
 using namespace std;
 
-Compra::Compra(int id, int cantProd, DTFecha *fecCompra, Cliente* cliente){
+
+Compra::Compra() {
+}
+
+Compra::Compra(int id,int cantProd,DTFecha *fecCompra,set<ProdComprado*> productosComprados, Cliente* cliente){
   this->id = id;
   this->cantProd = cantProd;
+  this->productosComprados = productosComprados;
   this->fecCompra = new DTFecha(*fecCompra); // Se recomienda una copia profunda
   this->cliente = cliente; // Asignar el cliente
 }
@@ -65,16 +74,18 @@ void Compra::agregarProdComprado(ProdComprado* pc) {
 
 }
 
-/*bool Compra::agregoProd(DTProducto p){
-  for(auto* prodComp : prodscom){
+bool Compra::agregoProd(DTProducto p){
+  for(auto* prodComp : productosComprados){
     bool b = prodComp->tieneArt(p);
-    if(b){
-      Producto* prod = buscarProductoPorDT(p);
+    if(!b){
+      SistemaControlador* sistemaGlobal;
+      Producto* prod = sistemaGlobal->buscarProductoPorDT(p);
       ProdComprado * cp = new ProdComprado(prod, this, 1, false);
-      prodscom.insert(cp);
+      productosComprados.insert(cp);
+      delete sistemaGlobal;
       return true;
     }
 
   }
   return false;
-}*/
+}

@@ -488,6 +488,30 @@ src/logica/dominio/Compra.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Compra.cpp.s
 .PHONY : src/logica/dominio/Compra.cpp.s
 
+src/logica/dominio/ProdComprado.obj: src/logica/dominio/ProdComprado.cpp.obj
+.PHONY : src/logica/dominio/ProdComprado.obj
+
+# target to build an object file
+src/logica/dominio/ProdComprado.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/ProdComprado.cpp.obj
+.PHONY : src/logica/dominio/ProdComprado.cpp.obj
+
+src/logica/dominio/ProdComprado.i: src/logica/dominio/ProdComprado.cpp.i
+.PHONY : src/logica/dominio/ProdComprado.i
+
+# target to preprocess a source file
+src/logica/dominio/ProdComprado.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/ProdComprado.cpp.i
+.PHONY : src/logica/dominio/ProdComprado.cpp.i
+
+src/logica/dominio/ProdComprado.s: src/logica/dominio/ProdComprado.cpp.s
+.PHONY : src/logica/dominio/ProdComprado.s
+
+# target to generate assembly for a file
+src/logica/dominio/ProdComprado.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/ProdComprado.cpp.s
+.PHONY : src/logica/dominio/ProdComprado.cpp.s
+
 src/logica/dominio/ProdPromocion.obj: src/logica/dominio/ProdPromocion.cpp.obj
 .PHONY : src/logica/dominio/ProdPromocion.obj
 
@@ -950,6 +974,9 @@ help:
 	@echo ... src/logica/dominio/Compra.obj
 	@echo ... src/logica/dominio/Compra.i
 	@echo ... src/logica/dominio/Compra.s
+	@echo ... src/logica/dominio/ProdComprado.obj
+	@echo ... src/logica/dominio/ProdComprado.i
+	@echo ... src/logica/dominio/ProdComprado.s
 	@echo ... src/logica/dominio/ProdPromocion.obj
 	@echo ... src/logica/dominio/ProdPromocion.i
 	@echo ... src/logica/dominio/ProdPromocion.s

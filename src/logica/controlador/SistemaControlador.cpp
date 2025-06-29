@@ -126,6 +126,14 @@ string SistemaControlador::selectVendedor(string nick) {
     }
 }
 
+Producto* SistemaControlador::buscarProductoPorDT(const DTProducto dtp) {
+    auto it = productos.find(dtp.codigo);
+    if (it != productos.end()) {
+        return it->second;
+    } else {
+        return nullptr;
+    }
+}
 
 bool SistemaControlador::ingProducto(const DTProducto& producto) {
     int cod = ++ultimoCodigoProducto;
@@ -249,16 +257,16 @@ set<DTProducto> SistemaControlador::seleccionarCliente(DTCliente cliente) {
     return productosDisponibles;
 }
 
-// void SistemaControlador::agregarProducto(DTProducto p) {
-//     if (clienteSeleccionado == nullptr) {
-//         throw runtime_error("No hay cliente seleccionado");
-//     }
-//     auto it = productos.find(p.codigo);
-//     if (compraActual == nullptr) {
-//         compraActual = new Compra();
-//     }
-//     compraActual->agregoProd(p);
-// }
+void SistemaControlador::agregarProducto(DTProducto p) {
+    if (clienteSeleccionado == nullptr) {
+        throw runtime_error("No hay cliente seleccionado");
+    }
+    auto it = productos.find(p.codigo);
+    if (compraActual == nullptr) {
+        compraActual = new Compra();
+    }
+    compraActual->agregoProd(p);
+}
 
 set<string> SistemaControlador::listarNicknamesUsuario() {
     set<string> resultado;

@@ -46,6 +46,9 @@ public:
 	set<DTUsuario*> listarUsuarios();
 	set<string> listarNickVendedor();
 	string selectVendedor(string nick);
+
+	Producto *buscarProductoPorDT(DTProducto dtp);
+
 	bool ingProducto(const DTProducto& producto);
 	set<DTProducto> listarProd();
 	DTProducto* selectProd(int codigo);
