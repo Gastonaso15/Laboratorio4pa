@@ -20,6 +20,7 @@ public:
 	virtual ~Usuario();
 	string getNick();
 	virtual DTUsuario* retornarDTUsuario()const=0;
+	void asociarComentarioUsuario(Comentario * com);
 };
 
 #endif

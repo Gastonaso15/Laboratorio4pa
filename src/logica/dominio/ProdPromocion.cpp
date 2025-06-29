@@ -23,6 +23,5 @@ Promocion* ProdPromocion::retornarPromocion() {
 }
 
 DTProdPromocion ProdPromocion::retornarDTProdPromocion(){
-  //DTProducto* dto = new DTProducto(producto->retornarDTProducto());
   return DTProdPromocion(this->cantMininima, this->descuento, producto->retornarDTProducto());
 }

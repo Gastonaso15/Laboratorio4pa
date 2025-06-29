@@ -16,7 +16,7 @@ Cliente::Cliente(string nick, string pass, DTFecha* fechaNac, DTDireccion* direc
     this->ciudad=ciudad;
 }
 Cliente::~Cliente() {
-    // TODO Auto-generated destructor stub
+
 }
 void Cliente::asociarProd() {
 

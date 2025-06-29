@@ -5,17 +5,14 @@
 using namespace std;
 
 class DTComentario {
-  private:
-    int id;
-    string texto;
-    DTFecha fecEscrito;
-
-  public:
-
-    DTComentario();
-    ~DTComentario();
-    DTComentario(int id, string texto, DTFecha fecEscrito);
-    void borrarRespuesta();
+    public:
+        int id;
+        string texto;
+        DTFecha *fecEscrito;
+        DTComentario();
+        ~DTComentario();
+        DTComentario(int id, string texto, DTFecha *fecEscrito);
+        void borrarRespuesta();
 
 };
 

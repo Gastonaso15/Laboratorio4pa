@@ -5,6 +5,7 @@
 #include "../DTs/DTFecha.h"
 #include "../DTs/DTProducto.h"
 #include "../DTs/DTUsuario.h"
+#include "../DTs/DTComentario.h"
 #include "../dominio/Usuario.h"
 #include "../dominio/Cliente.h"
 #include "../dominio/Vendedor.h"
@@ -28,8 +29,12 @@ protected:
 	map<string, Vendedor*> vendedores;
 	Vendedor* vendedorSeleccionado = nullptr;
 	Cliente* clienteSeleccionado = nullptr;
+	Usuario* usuarioSeleccionado = nullptr;
+	Producto* productoSeleccionado = nullptr;
+	Comentario* comentarioSeleccionado = nullptr;
 	Compra* compraActual;
 	int ultimoCodigoProducto = 0;
+	int ultimoCodigoComentario = 0;
 public:
 	SistemaControlador();
 	virtual ~SistemaControlador();
@@ -48,6 +53,13 @@ public:
 	set<string> listarClientes();
 	set<DTProducto> seleccionarCliente(DTCliente cliente);
 	void agregarProducto(DTProducto p);
+	set<string> listarNicknamesUsuario();
+	set<DTProducto> seleccionarUsuario(string nick);
+	bool seleccionarProducto(int codigo);
+	string agregarComentario(string texto);
+	set<DTComentario*> listarComentario();
+	bool seleccionarComentario(int id);
+	string agregarRespuesta(string texto);
 };
 
 

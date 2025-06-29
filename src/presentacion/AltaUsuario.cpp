@@ -35,7 +35,7 @@ string AltaUsuario::altaUsuario() {
     cout << "Anio: ";
     cin >> anio;
 
-    DTFecha* fechaNac = new DTFecha(dia, mes, anio);
+    DTFecha* fechaNac = new DTFecha(anio, mes, dia);
 
     int tipoUsuario;
     cout << "Seleccione el tipo de usuario:" << endl;
@@ -50,10 +50,12 @@ string AltaUsuario::altaUsuario() {
         string ciudad, calle;
         int numero;
         cout << "Ingrese ciudad: ";
-        cin >> ciudad;
+        cin.ignore();
+        getline(cin, ciudad);
         cout << "Ingrese calle: ";
-        cin >> calle;
-        cout << "Ingrese numero: ";
+        cin.ignore();
+        getline(cin, calle);
+        cout << "Ingrese numero de puerta: ";
         cin >> numero;
 
         DTDireccion* direccion = new DTDireccion(calle, numero);

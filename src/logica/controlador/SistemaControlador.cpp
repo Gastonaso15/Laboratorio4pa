@@ -12,6 +12,7 @@
 #include "../dominio/Vendedor.h"
 #include "../dominio/Promocion.h"
 #include "../dominio/Compra.h"
+#include "../dominio/Comentario.h"
 #include <map>
 #include <stdexcept>
 
@@ -22,7 +23,6 @@ Promocion* promocionActual = nullptr;
 SistemaControlador::SistemaControlador() {}
 
 SistemaControlador::~SistemaControlador() {
-    // Liberar memoria de los usuarios
     for (auto& par : usuarios) {
         delete par.second;
     }
@@ -31,13 +31,13 @@ SistemaControlador::~SistemaControlador() {
         delete par.second;
     }
     productos.clear();
-    for (auto& par : promociones) { // Esto es para el set global
+    for (auto& par : promociones) {
         delete par.second;
     }
     promociones.clear();
 }
 
-string SistemaControlador::altaUsuario(DTUsuario* usuario) { //cambiar a string
+string SistemaControlador::altaUsuario(DTUsuario* usuario) {
     Usuario* nuevoUsuario = nullptr;
     string respuesta;
     if (DTCliente* dtoCli = dynamic_cast<DTCliente*>(usuario)) {
@@ -117,7 +117,6 @@ string SistemaControlador::selectVendedor(string nick) {
 bool SistemaControlador::ingProducto(const DTProducto& producto) {
     int cod = ++ultimoCodigoProducto;
     Producto * prod = new Producto(cod, producto.nombre, producto.precio, producto.stock, producto.descripcion, producto.categoria);
-    //dynamic_cast<Producto*>(vendedorSeleccionado)->asociarProdVendedor(vendedorSeleccionado); Por que el cast?
     prod->asociarProdVendedor(vendedorSeleccionado);
     //En los diagramas se pasa solo el nick, pero es mejor pasarle el puntero para evitar porblemas
     vendedorSeleccionado->aniadirProdListaVendedor(prod);
@@ -152,7 +151,6 @@ set<string> SistemaControlador::ingDatos(DTPromocion prom) {
     Promocion* nuevaPromo = new Promocion(prom.nom, prom.desc, prom.fecVencimiento);
     promocionActual = nuevaPromo;
     this->promociones[nuevaPromo->getNom()] = nuevaPromo;
-    //promociones.insert({nuevaPromo->getNom(), nuevaPromo});
     set<string> nicks=listarNickVendedor();
     return nicks;
 }
@@ -248,3 +246,79 @@ set<DTProducto> SistemaControlador::seleccionarCliente(DTCliente cliente) {
 //     }
 //     compraActual->agregoProd(p);
 // }
+
+set<string> SistemaControlador::listarNicknamesUsuario() {
+    set<string> resultado;
+    for (auto const& par: usuarios){
+        Usuario* usuario = par.second;
+        resultado.insert(usuario->getNick());
+    }
+    return resultado;
+}
+set<DTProducto> SistemaControlador::seleccionarUsuario(string nick) {
+    set<DTProducto> prods;
+    auto it = usuarios.find(nick);
+    if (it != usuarios.end()) {
+        usuarioSeleccionado= it->second;
+        for (const auto& prod : productos) {
+            Producto* p = prod.second;
+            prods.insert(p->retornarDTProducto());
+        }
+        return prods;
+    }
+    return prods;  // Retorna set vacío si no encuentra al usuario
+}
+
+bool SistemaControlador::seleccionarProducto(int codigo) {
+    auto it = productos.find(codigo);
+    if (it != productos.end()) {
+        productoSeleccionado = it->second;
+        return true;
+    }
+    return false;
+}
+
+string SistemaControlador::agregarComentario(string texto) {
+    if (this->usuarioSeleccionado == nullptr) {
+        return "Error: No hay usuario seleccionado.";
+    }
+    if (this->productoSeleccionado == nullptr) {
+        return "Error: No hay producto seleccionado.";
+    }
+    int id = ++ultimoCodigoComentario;
+    DTFecha* fechaActual = new DTFecha(DTFecha::obtenerFechaActual());
+    Comentario * com = new Comentario(id,texto,fechaActual,productoSeleccionado);
+    usuarioSeleccionado->asociarComentarioUsuario(com);
+    productoSeleccionado->asociarComentarioProducto(com);
+    return "Comentario creado con exito";
+}
+
+set<DTComentario*> SistemaControlador::listarComentario() {
+    set<DTComentario*> resultado;
+    if (this->productoSeleccionado == nullptr) {
+        return resultado;
+    }
+    resultado=productoSeleccionado->getComentarios();
+    return resultado;
+}
+
+bool SistemaControlador::seleccionarComentario(int id) {
+    comentarioSeleccionado = this->productoSeleccionado->getComentario(id);
+    if (this->comentarioSeleccionado == nullptr) {
+        return false;
+    }
+    return true;
+}
+
+string SistemaControlador::agregarRespuesta(string texto) {
+    if (this->productoSeleccionado == nullptr) {
+        return "Error: No hay producto seleccionado.";
+    }
+    int id = ++ultimoCodigoComentario;
+    DTFecha* fechaActual = new DTFecha(DTFecha::obtenerFechaActual());
+    Comentario * com = new Comentario(id,texto,fechaActual,productoSeleccionado);
+    comentarioSeleccionado->agregarRespuesta(com);
+    usuarioSeleccionado->asociarComentarioUsuario(com);
+    productoSeleccionado->asociarComentarioProducto(com);
+    return "Respuesta creada con exito";
+}

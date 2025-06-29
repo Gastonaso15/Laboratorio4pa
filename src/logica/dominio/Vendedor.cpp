@@ -15,7 +15,7 @@ Vendedor::Vendedor(string nick, string pass, DTFecha* fechaNac, string rut)
     this->rut=rut;
 }
 Vendedor::~Vendedor() {
-    // TODO Auto-generated destructor stub
+
 }
 
 string Vendedor::getNick() const {

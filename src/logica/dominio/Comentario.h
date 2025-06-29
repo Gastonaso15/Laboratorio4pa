@@ -3,6 +3,7 @@
 #include <string>
 #include <map>
 #include "../DTs/DTFecha.h"
+#include "../DTs/DTComentario.h"
 using namespace std;
 
 class Producto;
@@ -12,11 +13,15 @@ class Comentario {
     int id;
     string texto;
     DTFecha * fecEscrito;
-    map<string,Comentario*> respuestas;
+    map<int,Comentario*> respuestas;
+    Producto * producto;
   public:
     Comentario();
-    Comentario(int id, string texto, DTFecha * fecEscrito);
+    Comentario(int id, string texto, DTFecha * fecEscrito,Producto * producto);
     virtual ~Comentario();
+    int getId();
+    DTComentario* retornarDTComentario();
+    void agregarRespuesta(Comentario * com);
 };
 
 

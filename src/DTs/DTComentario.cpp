@@ -8,11 +8,11 @@ DTComentario::DTComentario(){
 }
 
 
-DTComentario::DTComentario(int id, string texto, DTFecha fecEscrito){
+DTComentario::DTComentario(int id, string texto, DTFecha* fecEscrito){
   this->id=id;
   this->texto=texto;
   this->fecEscrito=fecEscrito;
-  }
+}
 DTComentario::~DTComentario() {
 
 }

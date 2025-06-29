@@ -464,6 +464,30 @@ src/logica/dominio/Cliente.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.s
 .PHONY : src/logica/dominio/Cliente.cpp.s
 
+src/logica/dominio/Comentario.obj: src/logica/dominio/Comentario.cpp.obj
+.PHONY : src/logica/dominio/Comentario.obj
+
+# target to build an object file
+src/logica/dominio/Comentario.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Comentario.cpp.obj
+.PHONY : src/logica/dominio/Comentario.cpp.obj
+
+src/logica/dominio/Comentario.i: src/logica/dominio/Comentario.cpp.i
+.PHONY : src/logica/dominio/Comentario.i
+
+# target to preprocess a source file
+src/logica/dominio/Comentario.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Comentario.cpp.i
+.PHONY : src/logica/dominio/Comentario.cpp.i
+
+src/logica/dominio/Comentario.s: src/logica/dominio/Comentario.cpp.s
+.PHONY : src/logica/dominio/Comentario.s
+
+# target to generate assembly for a file
+src/logica/dominio/Comentario.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dis_EjemploArquitecturaLogin.dir\build.make CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Comentario.cpp.s
+.PHONY : src/logica/dominio/Comentario.cpp.s
+
 src/logica/dominio/Compra.obj: src/logica/dominio/Compra.cpp.obj
 .PHONY : src/logica/dominio/Compra.obj
 
@@ -899,6 +923,9 @@ help:
 	@echo ... src/logica/dominio/Cliente.obj
 	@echo ... src/logica/dominio/Cliente.i
 	@echo ... src/logica/dominio/Cliente.s
+	@echo ... src/logica/dominio/Comentario.obj
+	@echo ... src/logica/dominio/Comentario.i
+	@echo ... src/logica/dominio/Comentario.s
 	@echo ... src/logica/dominio/Compra.obj
 	@echo ... src/logica/dominio/Compra.i
 	@echo ... src/logica/dominio/Compra.s

@@ -1,6 +1,7 @@
 
 #include "Usuario.h"
 #include "../DTs/DTFecha.h"
+#include "Comentario.h"
 #include <iostream>
 
 
@@ -11,9 +12,13 @@ Usuario::Usuario(string nick, string pass, DTFecha * fechaNac) {
 }
 
 Usuario::~Usuario() {
-	// TODO Auto-generated destructor stub
+
 }
 
 string Usuario::getNick() {
 	return this->nick;
+}
+
+void Usuario::asociarComentarioUsuario(Comentario *com) {
+	this->comentarios[com->getId()] = com;
 }

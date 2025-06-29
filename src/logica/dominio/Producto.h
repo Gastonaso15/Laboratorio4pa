@@ -3,6 +3,7 @@
 
 #include "../../DTs/Definiciones.h"
 #include "../../DTs/DTProducto.h"
+#include "../../DTs/DTComentario.h"
 #include "Vendedor.h"
 #include "Promocion.h"
 #include "ProdPromocion.h"
@@ -33,10 +34,13 @@ class Producto {
     virtual ~Producto();
     int getCodigo();
     int getPrecio();
+    set<DTComentario*> getComentarios();
+    Comentario* getComentario(int id);
     DTProducto retornarDTProducto();
     void asociarProdVendedor(Vendedor* vendedor);
     bool productoEnPromo();
     void agregarProdPromocion(ProdPromocion* pp);
+    void asociarComentarioProducto(Comentario *com);
 };
 
 
