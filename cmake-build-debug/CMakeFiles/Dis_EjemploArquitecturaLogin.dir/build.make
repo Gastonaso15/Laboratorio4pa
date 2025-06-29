@@ -503,6 +503,51 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EnviarProducto.cpp.
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EnviarProducto.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\agusm\CLionProjects\Laboratorio4pa\src\presentacion\EnviarProducto.cpp -o CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\presentacion\EnviarProducto.cpp.s
 
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/RealizarCompra.cpp.obj: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/flags.make
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/RealizarCompra.cpp.obj: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/includes_CXX.rsp
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/RealizarCompra.cpp.obj: C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/RealizarCompra.cpp
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/RealizarCompra.cpp.obj: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/RealizarCompra.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/RealizarCompra.cpp.obj -MF CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\presentacion\RealizarCompra.cpp.obj.d -o CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\presentacion\RealizarCompra.cpp.obj -c C:\Users\agusm\CLionProjects\Laboratorio4pa\src\presentacion\RealizarCompra.cpp
+
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/RealizarCompra.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/RealizarCompra.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\agusm\CLionProjects\Laboratorio4pa\src\presentacion\RealizarCompra.cpp > CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\presentacion\RealizarCompra.cpp.i
+
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/RealizarCompra.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/RealizarCompra.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\agusm\CLionProjects\Laboratorio4pa\src\presentacion\RealizarCompra.cpp -o CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\presentacion\RealizarCompra.cpp.s
+
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/DejarComentario.cpp.obj: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/flags.make
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/DejarComentario.cpp.obj: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/includes_CXX.rsp
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/DejarComentario.cpp.obj: C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/DejarComentario.cpp
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/DejarComentario.cpp.obj: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/DejarComentario.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/DejarComentario.cpp.obj -MF CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\presentacion\DejarComentario.cpp.obj.d -o CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\presentacion\DejarComentario.cpp.obj -c C:\Users\agusm\CLionProjects\Laboratorio4pa\src\presentacion\DejarComentario.cpp
+
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/DejarComentario.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/DejarComentario.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\agusm\CLionProjects\Laboratorio4pa\src\presentacion\DejarComentario.cpp > CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\presentacion\DejarComentario.cpp.i
+
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/DejarComentario.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/DejarComentario.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\agusm\CLionProjects\Laboratorio4pa\src\presentacion\DejarComentario.cpp -o CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\presentacion\DejarComentario.cpp.s
+
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EliminarComentario.cpp.obj: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/flags.make
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EliminarComentario.cpp.obj: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/includes_CXX.rsp
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EliminarComentario.cpp.obj: C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/EliminarComentario.cpp
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EliminarComentario.cpp.obj: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EliminarComentario.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EliminarComentario.cpp.obj -MF CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\presentacion\EliminarComentario.cpp.obj.d -o CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\presentacion\EliminarComentario.cpp.obj -c C:\Users\agusm\CLionProjects\Laboratorio4pa\src\presentacion\EliminarComentario.cpp
+
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EliminarComentario.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EliminarComentario.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\agusm\CLionProjects\Laboratorio4pa\src\presentacion\EliminarComentario.cpp > CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\presentacion\EliminarComentario.cpp.i
+
+CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EliminarComentario.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EliminarComentario.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\agusm\CLionProjects\Laboratorio4pa\src\presentacion\EliminarComentario.cpp -o CMakeFiles\Dis_EjemploArquitecturaLogin.dir\src\presentacion\EliminarComentario.cpp.s
+
 # Object files for target Dis_EjemploArquitecturaLogin
 Dis_EjemploArquitecturaLogin_OBJECTS = \
 "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/main.cpp.obj" \
@@ -533,7 +578,10 @@ Dis_EjemploArquitecturaLogin_OBJECTS = \
 "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/ProdPromocion.cpp.obj" \
 "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Comentario.cpp.obj" \
 "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Promocion.cpp.obj" \
-"CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EnviarProducto.cpp.obj"
+"CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EnviarProducto.cpp.obj" \
+"CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/RealizarCompra.cpp.obj" \
+"CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/DejarComentario.cpp.obj" \
+"CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EliminarComentario.cpp.obj"
 
 # External object files for target Dis_EjemploArquitecturaLogin
 Dis_EjemploArquitecturaLogin_EXTERNAL_OBJECTS =
@@ -567,11 +615,14 @@ Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/sr
 Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Comentario.cpp.obj
 Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Promocion.cpp.obj
 Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EnviarProducto.cpp.obj
+Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/RealizarCompra.cpp.obj
+Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/DejarComentario.cpp.obj
+Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EliminarComentario.cpp.obj
 Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/build.make
 Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/linkLibs.rsp
 Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/objects1.rsp
 Dis_EjemploArquitecturaLogin.exe: CMakeFiles/Dis_EjemploArquitecturaLogin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX executable Dis_EjemploArquitecturaLogin.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\agusm\CLionProjects\Laboratorio4pa\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking CXX executable Dis_EjemploArquitecturaLogin.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Dis_EjemploArquitecturaLogin.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -72,6 +72,13 @@ add_executable(Dis_EjemploArquitecturaLogin
         src/logica/dominio/Promocion.h
         src/presentacion/EnviarProducto.cpp
         src/presentacion/EnviarProducto.h
+        src/presentacion/RealizarCompra.cpp
+        src/presentacion/RealizarCompra.h
+        src/presentacion/DejarComentario.cpp
+        src/presentacion/DejarComentario.h
+        src/presentacion/EliminarComentario.cpp
+        src/presentacion/EliminarComentario.h
 
 )
+
 

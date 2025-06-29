@@ -34,9 +34,12 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/ConsultarProducto.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ConsultarProducto.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ConsultarProducto.cpp.obj.d"
   "C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/ConsultarPromocion.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ConsultarPromocion.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ConsultarPromocion.cpp.obj.d"
   "C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/CrearPromocion.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/CrearPromocion.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/CrearPromocion.cpp.obj.d"
+  "C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/DejarComentario.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/DejarComentario.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/DejarComentario.cpp.obj.d"
+  "C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/EliminarComentario.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EliminarComentario.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EliminarComentario.cpp.obj.d"
   "C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/EnviarProducto.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EnviarProducto.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/EnviarProducto.cpp.obj.d"
   "C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/ListadoUsuarios.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ListadoUsuarios.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/ListadoUsuarios.cpp.obj.d"
   "C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/Menu.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/Menu.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/Menu.cpp.obj.d"
+  "C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/RealizarCompra.cpp" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/RealizarCompra.cpp.obj" "gcc" "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/RealizarCompra.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

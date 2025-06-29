@@ -5,6 +5,9 @@
 #include "ConsultarProducto.h"
 #include "CrearPromocion.h"
 #include "ConsultarPromocion.h"
+#include "RealizarCompra.h"
+#include "DejarComentario.h"
+#include "EliminarComentario.h"
 #include "EnviarProducto.h"
 #include <iostream>
 
@@ -24,6 +27,9 @@ void Menu::mostrarMenu() {
     ConsultarProducto consultarProducto(controlador);
     CrearPromocion crearPromocion(controlador);
     ConsultarPromocion consultarPromocion(controlador);
+    RealizarCompra realizarCompra(controlador);
+    DejarComentario dejarComentario(controlador);
+    EliminarComentario eliminarComentario(controlador);
     EnviarProducto enviarProductoInstancia(controlador);
 
     do {
@@ -74,12 +80,18 @@ void Menu::mostrarMenu() {
                 break;
             }
             case 7: {
+                respuesta = realizarCompra.realizarCompra();
+                cout << respuesta << endl;
                 break;
             }
             case 8: {
+                respuesta = dejarComentario.dejarComentario();
+                cout << respuesta << endl;
                 break;
             }
             case 9: {
+                respuesta = eliminarComentario.eliminarComentario();
+                cout << respuesta << endl;
                 break;
             }
             case 10: {
