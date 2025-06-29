@@ -76,7 +76,7 @@ public:
 	set<DTProducto> obtenerProductosPendientesPorVendedor(string nickVendedor);
 	set<DTCompra> seleccionarProductoC(int codigoProducto);
 	string marcarProductoComoEnviado(int codigoProducto, int idCompra);
-
+	//void cargarDatosPrueba();
 };
 
 

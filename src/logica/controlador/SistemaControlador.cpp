@@ -411,6 +411,131 @@ set<DTProducto> SistemaControlador::obtenerProductosPendientesPorVendedor(string
     return resultado;
 }
 
+/*void SistemaControlador::cargarDatosPrueba() {
+    string resultado;
+    DTFecha *fechaNac1 = new DTFecha(2000, 6, 22);
+    DTVendedor* dtVendedor1 = new DTVendedor("Agustin", "abc123",fechaNac1, "12345");
+    altaUsuario(dtVendedor1);
+    delete dtVendedor1,fechaNac1;
+    DTFecha *fechaNac2 = new DTFecha(2000, 6, 22);
+    DTVendedor* dtVendedor2 = new DTVendedor("Gaston", "ghi789",fechaNac2, "54321");
+    altaUsuario(dtVendedor2);
+    delete dtVendedor2,fechaNac2;
+    DTFecha *fechaNac3 = new DTFecha(2003, 10, 7);
+    DTVendedor* dtVendedor3 = new DTVendedor("Luca", "jkl012",fechaNac3, "74923");
+    altaUsuario(dtVendedor3);
+    delete dtVendedor3,fechaNac3;
+    DTFecha *fechaNac4 = new DTFecha(2005, 5, 13);
+    DTDireccion * direccion1 = new DTDireccion("Alvariza", 1498);
+    DTCliente* dtCliente1 = new DTCliente("Martin", "def456", fechaNac4, "San Carlos", direccion1);
+    altaUsuario(dtCliente1);
+    delete dtCliente1;
+    delete fechaNac4;
+    delete direccion1;
+    DTFecha *fechaNac5 = new DTFecha(1914, 1, 6);
+    DTDireccion * direccion2 = new DTDireccion("Calle 7", 1692);
+    DTCliente* dtCliente2 = new DTCliente("Juan", "mno345", fechaNac5, "Maldonado", direccion2);
+    altaUsuario(dtCliente2);
+    delete dtCliente2;
+    delete fechaNac5;
+    delete direccion2;
+    DTFecha *fechaNac6 = new DTFecha(1998, 11, 30);
+    DTDireccion * direccion3 = new DTDireccion("Gorlero", 1133);
+    DTCliente* dtCliente3 = new DTCliente("Santiago", "pqr678", fechaNac6, "Punta del Este", direccion3);
+    altaUsuario(dtCliente3);
+    delete dtCliente3;
+    delete fechaNac6;
+    delete direccion3;
+
+    DTProducto * prod;
+    selectVendedor("Agustin");
+    prod = new DTProducto(0,"Pico",777,64,"Pica piedra",static_cast<cat>(2));
+    ingProducto(*prod);
+    delete prod;
+    selectVendedor("Gaston");
+    prod = new DTProducto(0,"Heladera",16200,30,"Enfria cosas",static_cast<cat>(0));
+    resultado=ingProducto(*prod);
+    delete prod;
+    selectVendedor("Gaston");
+    prod = new DTProducto(0,"Campera",1300,120,"Protege del frio",static_cast<cat>(1));
+    resultado=ingProducto(*prod);
+    delete prod;
+    selectVendedor("Luca");
+    prod = new DTProducto(0,"Ropero",2500,25,"Guarda ropa",static_cast<cat>(2));
+    ingProducto(*prod);
+    delete prod;
+
+
+    DTPromocion promo1("Picos 2x1", "2 picos por el valor de 1", new DTFecha(2025, 8, 25));
+    set<string> vendedores = ingDatos(promo1);
+    set<DTProducto> productosVend = seleccionarVendedor("Agustin");
+    set<DTProdPromocion> productosParaPromo;
+    DTProducto producto;
+    bool encontrado = false;
+    for (const DTProducto& prod : productosVend) {
+        if (prod.codigo == 1) {
+            producto = prod;
+            encontrado = true;
+            break;
+        }
+    }
+    productosParaPromo.insert(DTProdPromocion(2, 50, producto));
+    agregarProdProm(productosParaPromo);
+
+    DTPromocion promo3("Mucha Ropa?", "Roperos para toda la familia", new DTFecha(2025, 9, 21));
+    vendedores = ingDatos(promo3);
+    productosVend = seleccionarVendedor("Luca");
+    set<DTProdPromocion> productosParaPromo3;
+    encontrado = false;
+    for (const DTProducto& prod : productosVend) {
+        if (prod.codigo == 4) {
+            producto = prod;
+            encontrado = true;
+            break;
+        }
+    }
+    productosParaPromo.insert(DTProdPromocion(3, 20, producto));
+    agregarProdProm(productosParaPromo);
+
+
+    seleccionarUsuario("Martin");
+    seleccionarProducto(1);
+    agregarComentario("Pica mucho");
+
+    seleccionarUsuario("Gaston");
+    seleccionarProducto(1);
+    agregarComentario("Hay mejores");
+
+    seleccionarUsuario("Juan");
+    seleccionarProducto(2);
+    agregarComentario("Enfria mucho");
+
+    seleccionarUsuario("Agustin");
+    seleccionarProducto(3);
+    agregarComentario("Abriga mucho");
+
+    seleccionarUsuario("Santiago");
+    seleccionarProducto(1);
+    seleccionarComentario(1);
+    agregarRespuesta("Mentira, no pica nada");
+
+    seleccionarUsuario("Martin");
+    seleccionarProducto(1);
+    seleccionarComentario(5);
+    agregarRespuesta("Si pica");
+
+    seleccionarUsuario("Luca");
+    seleccionarProducto(1);
+    seleccionarComentario(5);
+    agregarRespuesta("Toda la razon");
+
+    seleccionarUsuario("Gaston");
+    seleccionarProducto(2);
+    seleccionarComentario(2);
+    agregarRespuesta("La mia calienta");
+
+}*/
+
 /*DTUsuario* SistemaControlador::seleccionarNickname(const std::string& nick) {
     // Buscar el usuario en el mapa
     auto it = usuarios.find(nick);
