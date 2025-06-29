@@ -42,15 +42,13 @@ public:
 	DTProducto* selectProd(int codigo);
 	set<string> ingDatos(DTPromocion prom);
 	set<DTProducto> seleccionarVendedor(string nick);
-	string agregarProdProm(set<DTProducto> productosDT);
 	set<string> listarClientes();
 	set<DTProducto> seleccionarCliente(DTCliente cliente);
-
 	void agregarProducto(DTProducto p);
-
-	void agregarProducto(const DTProducto &dtProd);
 	set<DTPromocion*> listarPromociones();
 	set<DTProdPromocion*> selectPromo(string nombre);
+
+	string agregarProdProm(set<DTProducto> productosDT);
 };
 
 

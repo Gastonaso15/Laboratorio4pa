@@ -15,15 +15,16 @@ Compra::Compra(int id,int cantProd,DTFecha *fecCompra){
   this->fecCompra = fecCompra;
 }
 
-/* bool Compra::agregoProd(DTProducto p){
+/*bool Compra::agregoProd(DTProducto p){
   for(auto* prodComp : prodscom){
     bool b = prodComp->tieneArt(p);
     if(b){
-      ProdComprado * cp = new ProdComprado(p, this, 1, false);
+      Producto* prod = buscarProductoPorDT(p);
+      ProdComprado * cp = new ProdComprado(prod, this, 1, false);
       prodscom.insert(cp);
       return true;
     }
-    return false;
+
   }
-}
-*/
+  return false;
+}*/

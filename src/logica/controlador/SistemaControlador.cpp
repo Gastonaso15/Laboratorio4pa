@@ -170,22 +170,7 @@ set<DTProducto> SistemaControlador::seleccionarVendedor(string nick) {
     return set<DTProducto>();  // Retorna set vacío si no encuentra el vendedor
 }
 
-string SistemaControlador::agregarProdProm(set<DTProducto> productosDT) {
-    for (const DTProducto& dt : productosDT) {
-        auto it = productos.find(dt.codigo);
-        if (it != productos.end()) {
-            Producto* prod = it->second;
-            if (!prod->productoEnPromo()) {
-                promocionActual->agregarProdProm(dt);
-            }else {
-                return "Error: El producto ya se encuentra en otra Promocion";
-            }
-        } else {
-            return "Error: No existe el Producto seleccionado";
-        }
-    }
-    return "Promocion creada con exito";
-}
+
 
 set<string> SistemaControlador::listarClientes() {
     set<string> nicksClientes;
@@ -218,10 +203,22 @@ set<DTProdPromocion*> SistemaControlador::selectPromo(string nombre) {
 }
 
 
-/*bool SistemaControlador::agregarProdProm(const set<DTProducto>& productosDT) {
-    for (const auto& p : productosDT) {}
-    auto it = productos.find(nick);
-    bool todosAgregados = true;
+string SistemaControlador::agregarProdProm(set<DTProducto> productosDT) {
+    for (const DTProducto& dt : productosDT) {
+        auto it = productos.find(dt.codigo);
+        if (it != productos.end()) {
+            Producto* prod = it->second;
+            if (!prod->productoEnPromo()) {
+                promocionActual->agregarProdProm(dt);
+            }else {
+                return "Error: El producto ya se encuentra en otra Promocion";
+            }
+        } else {
+            return "Error: No existe el Producto seleccionado";
+        }
+    }
+    return "Promocion creada con exito";
+}
 
 set<DTProducto> SistemaControlador::seleccionarCliente(DTCliente cliente) {
     // Limpiar seleccion previa

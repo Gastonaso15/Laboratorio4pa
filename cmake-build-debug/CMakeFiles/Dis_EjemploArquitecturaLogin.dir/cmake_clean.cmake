@@ -27,6 +27,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/controlador/SistemaControlador.cpp.obj.d"
   "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.obj"
   "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Cliente.cpp.obj.d"
+  "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Compra.cpp.obj"
+  "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Compra.cpp.obj.d"
   "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/ProdPromocion.cpp.obj"
   "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/ProdPromocion.cpp.obj.d"
   "CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Producto.cpp.obj"
