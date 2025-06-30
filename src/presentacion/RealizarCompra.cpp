@@ -59,16 +59,18 @@ string RealizarCompra::realizarCompra() {
         //verDetalleCompra
         DTCompra*  compra=controlador.verDetalleCompra();
         if (compra != nullptr) {
-            set<DTProdComprado*> productos = compra->getProductosComprados();
-            cout << "Precio: " << compra->montoTotal << endl << "Fecha de Compra: " << compra->fecCompra.toString() << endl;
+            set<DTProdComprado*> productoscom = compra->getProductosComprados();
+            cout << "Precio total $: " << compra->montoTotal << endl << "Fecha de Compra: " << compra->fecCompra->toString() << endl;
             cout << "--- Productos Comprados ---" << endl;
-            for (DTProdComprado* prodComprado : productos){
+            for (DTProdComprado* prodComprado : productoscom){
                 cout << "Nombre: " << prodComprado->producto->nombre << endl;
                 cout << "Precio: $" << prodComprado->producto->precio << endl;
                 cout << "Descripcion: " << prodComprado->producto->descripcion << endl;
                 cout << "Cantidad: " << prodComprado->cantidad << endl;
                 cout << endl;
             }
+        }else {
+            return "Error: No se pudo obtener el detalle de la compra";
         }
         //confirmarCompra
         string respuesta;

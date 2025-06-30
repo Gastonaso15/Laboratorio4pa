@@ -7,15 +7,9 @@ Producto::Producto(){
 }
 
 Producto::~Producto(){
-  for (auto& par : comentarios) {
-    delete par.second;
+  for (auto const& [key, val] : comentarios) {
+    delete val;
   }
-  comentarios.clear();
-  for (auto& pc : prodscom) {
-    delete pc;
-  }
-  prodscom.clear();
-
 }
 
 Producto::Producto(int codigo, string nombre, int precio,int stock, string descripcion, cat categoria){
@@ -127,4 +121,16 @@ Comentario* Producto::getComentario(int id) {
 
 void Producto::eliminarComentario(int id) {
   comentarios.erase(id);
+}
+
+void Producto::restarStock(int cantidad) {
+  if (this->stock >= cantidad) {
+    this->stock -= cantidad;
+  } else {
+    this->stock = 0;
+  }
+}
+
+const set<ProdPromocion*>& Producto::getProdPromociones() const {
+  return prodsprom;
 }

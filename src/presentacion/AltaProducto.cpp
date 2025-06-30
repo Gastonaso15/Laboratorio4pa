@@ -4,6 +4,7 @@
 #include "../DTs/DTProducto.h"
 #include "../DTs/Definiciones.h"
 #include "AltaProducto.h"
+#include <limits>
 using namespace std;
 
 AltaProducto::AltaProducto(SistemaControlador& controlador):controlador(controlador) {}
@@ -38,12 +39,14 @@ string AltaProducto::altaProducto() {
     bool resp;
     string nombre,descripcion;
     int codigo=0,precio,stock,categoria;
+    //cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     cout << endl << "** Alta de Producto **" << endl;
     cout << "Ingrese nombre: ";
     cin >> nombre;
     cout << "Ingrese descripcion: ";
     cin.ignore();
     getline(cin, descripcion);
+
     cout << "Ingrese precio: ";
     cin >> precio;
     cout << "Ingrese stock: ";

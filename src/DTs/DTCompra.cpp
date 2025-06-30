@@ -1,28 +1,37 @@
 #include "DTCompra.h"
 
-// Constructor vacío
 DTCompra::DTCompra() {}
 
-// Constructor con parámetros
-DTCompra::DTCompra(int id, int cantProd, DTFecha fecCompra, float montoTotal, DTCliente* clienteParam)
+DTCompra::DTCompra(int id, int cantProd, DTFecha * fecCompra, float montoTotal, DTCliente* clienteParam)
   : id(id), cantProd(cantProd), fecCompra(fecCompra), montoTotal(montoTotal), cliente(clienteParam) {
 
 }
-// Destructor
-DTCompra::~DTCompra() {}
 
-DTCompra::DTCompra(int id, int cantProd, const DTFecha fecCompra, float montoTotal, set<DTProducto> productos) {
+DTCompra::~DTCompra() {
+
+}
+
+DTCompra::DTCompra(int id, int cantProd, DTFecha * fecCompra, float montoTotal, set<DTProdComprado*> productos) {
     this->id = id;
     this->cantProd = cantProd;
     this->fecCompra = fecCompra;
     this->montoTotal = montoTotal;
-    this->productos = productos;
+    this->productosComprados = productos;
     this->cliente = nullptr;
+}
+
+DTCompra::DTCompra(int id, int cantProd, DTFecha * fecCompra, float montoTotal, set<DTProdComprado*> productos,DTCliente * cliente) {
+    this->id = id;
+    this->cantProd = cantProd;
+    this->fecCompra = fecCompra;
+    this->montoTotal = montoTotal;
+    this->productosComprados = productos;
+    this->cliente = cliente;
 }
 
 
 
-DTCompra::DTCompra(int id, int cantProd, DTFecha fecCompra, float montoTotal) {
+DTCompra::DTCompra(int id, int cantProd, DTFecha *fecCompra, float montoTotal) {
     this->id = id;
     this->cantProd = cantProd;
     this->fecCompra = fecCompra;
@@ -35,7 +44,7 @@ int DTCompra::getIdCompra() const {
     return id;
 }
 
-DTFecha DTCompra::getFecha() const {
+DTFecha *DTCompra::getFecha() const {
     return fecCompra;
 }
 
@@ -52,5 +61,9 @@ float DTCompra::getMontoTotal() const {
 }
 
 set<DTProdComprado*> DTCompra::getProductosComprados() {
-    return this->productosComprados;
+    set<DTProdComprado*> dtsProductos;
+    for (DTProdComprado *pc : this->productosComprados) {
+        dtsProductos.insert(pc);
+    }
+    return dtsProductos;
 }

@@ -14,31 +14,24 @@ class DTCompra {
 
   public:
   int cantProd;
-  DTFecha fecCompra;
+  DTFecha *fecCompra;
   float montoTotal;
   set<DTProdComprado*> productosComprados;
   int id;
-    set<DTProducto> productos;
+  //set<DTProducto> productos;
   DTCliente * cliente;
   set<DTProdComprado*> getProductosComprados();
 
-
-    DTCompra();
-
-  DTCompra(int id, int cantProd, DTFecha fecCompra, float montoTotal, DTCliente *clienteParam);
-
-
-
+  DTCompra();
+  DTCompra(int id, int cantProd, DTFecha *fecCompra, float montoTotal, DTCliente *clienteParam);
   ~DTCompra();
-
-  DTCompra(int id, int cantProd, DTFecha fecCompra, float montoTotal, set<DTProducto> productos);
-
-
-  DTCompra(int id, int cantProd, DTFecha fecCompra, float montoTotal);
+  DTCompra(int id, int cantProd, DTFecha *fecCompra, float montoTotal, set<DTProdComprado*> productos);
+    DTCompra(int id, int cantProd, DTFecha *fecCompra, float montoTotal, set<DTProdComprado*> productos,DTCliente * cliente);
+  DTCompra(int id, int cantProd, DTFecha *fecCompra, float montoTotal);
 
   void agregarProd(DTProducto* producto);
     int getIdCompra() const;
-    DTFecha getFecha() const;
+    DTFecha * getFecha() const;
     DTCliente * getCliente() const;
     float getMontoTotal() const;
     int getCantidadProductos() const;

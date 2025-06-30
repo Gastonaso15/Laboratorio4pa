@@ -84,5 +84,3 @@ add_executable(Dis_EjemploArquitecturaLogin
         src/presentacion/ExpedienteUsuario.h
 
 )
-
-

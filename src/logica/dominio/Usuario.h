@@ -14,7 +14,6 @@ class Usuario {
 protected:
 	string nick;
 	string contrasenia;
-
 	DTFecha * fechaNac;
 
 	map<int,Comentario*> comentarios;

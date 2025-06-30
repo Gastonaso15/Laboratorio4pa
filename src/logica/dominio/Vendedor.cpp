@@ -10,7 +10,7 @@ Vendedor::Vendedor(string nick, string pass, DTFecha* fechaNac, string rut)
     this->rut=rut;
 }
 Vendedor::~Vendedor() {
-
+    delete fechaNac;
 }
 
 string Vendedor::getNickname() const {

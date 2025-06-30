@@ -21,6 +21,9 @@ class ProdPromocion {
 
         Promocion* retornarPromocion();
         DTProdPromocion retornarDTProdPromocion();
+
+        int getCantMinima() const;
+        int getDescuento() const;
 };
 
 

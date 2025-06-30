@@ -77,7 +77,7 @@ string EnviarProducto::enviarProducto() {
        for (const auto& compra : comprasPendientesParaProducto) {
             cout << i++ << ". ID Compra: " << compra.getIdCompra()
                  << ", Cliente: " << compra.getCliente()->getNickname()
-                 << ", Fecha: " << compra.getFecha().toString() << endl;
+                 << ", Fecha: " << compra.getFecha()->toString() << endl;
         }
 
     int idCompraSeleccionada;

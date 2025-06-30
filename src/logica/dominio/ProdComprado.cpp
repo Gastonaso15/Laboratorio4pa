@@ -6,8 +6,7 @@ ProdComprado::ProdComprado() : cantidad(0), enviado(false), producto(nullptr), c
 }
 
 ProdComprado::~ProdComprado(){
-  producto = nullptr;
-  compra = nullptr;
+
 }
 
 ProdComprado::ProdComprado(Producto* producto,  Compra* compra, int cantidad,bool enviado){
@@ -36,4 +35,13 @@ DTProducto ProdComprado::getProductos() {
 }
 void ProdComprado::setEnviado(bool valor) {
   this->enviado = valor;
+}
+
+void ProdComprado::aumentarCantidad(int cantidadAAgregar) {
+  this->cantidad += cantidadAAgregar;
+}
+
+DTProdComprado* ProdComprado::getDTProdComprado() {
+  DTProducto* dtProd = this->producto->retornarDTProducto();
+  return new DTProdComprado(dtProd, this->cantidad);
 }

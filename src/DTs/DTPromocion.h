@@ -13,12 +13,10 @@ public:
     string obtenerInfo() const;
 
     bool operator<(const DTPromocion& other) const;
-
     DTFecha *fecVencimiento;
-
     set<DTProdPromocion*> prodsprom;
-
     DTPromocion();
+    ~DTPromocion();
     DTPromocion(string nom, string desc, DTFecha *fecVencimiento);
     DTPromocion(string nom, string desc, DTFecha *fecVencimiento, set<DTProdPromocion*> prodsprom);
     DTPromocion getPromocion();

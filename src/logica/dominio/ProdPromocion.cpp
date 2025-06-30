@@ -17,7 +17,6 @@ Promocion* ProdPromocion::retornarPromocion() {
   return this->promocion;
 }
 
-
 DTProdPromocion ProdPromocion::retornarDTProdPromocion() {
   DTProducto* dtProdPuntero = producto->retornarDTProducto();
   DTProducto dtProdCopia = *dtProdPuntero;
@@ -25,3 +24,12 @@ DTProdPromocion ProdPromocion::retornarDTProdPromocion() {
   dtProdPuntero = nullptr;
   return DTProdPromocion(this->cantMininima, this->descuento, dtProdCopia);
 }
+
+int ProdPromocion::getDescuento() const {
+  return this->descuento;
+}
+
+int ProdPromocion::getCantMinima() const {
+  return this->cantMininima;
+}
+

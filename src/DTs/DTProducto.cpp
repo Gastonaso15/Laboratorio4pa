@@ -4,7 +4,7 @@
 using namespace std;
 
 DTProducto::~DTProducto() {
-    delete this->vendedor;
+
 }
 DTProducto::DTProducto() {
     this->vendedor = nullptr;
@@ -26,7 +26,7 @@ ostream& operator<<(std::ostream& os, const DTProducto& dtProducto) {
         << "Nombre: " << dtProducto.nombre << endl
         << "Descripcion: " << dtProducto.descripcion << endl
         << "Precio Unitario: " << dtProducto.precio << endl;
-    return os; // Return the ostream reference to allow chaining (e.g., cout << dt1 << dt2;)
+    return os;
 }
 
 bool DTProducto::operator<(const DTProducto& other) const {
@@ -36,7 +36,7 @@ bool DTProducto::operator<(const DTProducto& other) const {
 DTProducto::DTProducto(int codigo, string nombre, int precio, int stock, string descripcion, cat categoria, DTVendedor * vendedor)
     : codigo(codigo), nombre(nombre), precio(precio), stock(stock), descripcion(descripcion), categoria(categoria) {
     if (vendedor != nullptr) {
-        this->vendedor = new DTVendedor(*vendedor); // Copia profunda del DTVendedor
+        this->vendedor = new DTVendedor(*vendedor);
     } else {
         this->vendedor = nullptr;
     }
@@ -74,17 +74,14 @@ DTProducto::DTProducto(const DTProducto& other)
 }
 
 DTProducto& DTProducto::operator=(const DTProducto& other) {
-    if (this != &other) { // Evitar auto-asignación (p.ej., DTProducto a = a;)
-        // 1. Liberar los recursos actuales
+    if (this != &other) {
         delete this->vendedor;
-        // 2. Copiar los miembros de datos simples
         this->codigo = other.codigo;
         this->nombre = other.nombre;
         this->precio = other.precio;
         this->stock = other.stock;
         this->descripcion = other.descripcion;
         this->categoria = other.categoria;
-        // 3. Realizar una copia profunda del puntero (si existe)
         if (other.vendedor != nullptr) {
             this->vendedor = new DTVendedor(*other.vendedor);
         } else {

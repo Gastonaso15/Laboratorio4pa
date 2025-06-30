@@ -1,7 +1,10 @@
 #include "DTPromocion.h"
 
 DTPromocion::DTPromocion() {
+
 }
+
+DTPromocion::~DTPromocion(){}
 
 DTPromocion::DTPromocion(string nom, string desc, DTFecha *fecVencimiento) {
     this->nom = nom;

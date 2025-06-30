@@ -34,11 +34,12 @@ protected:
 	Usuario* usuarioSeleccionado = nullptr;
 	Producto* productoSeleccionado = nullptr;
 	Comentario* comentarioSeleccionado = nullptr;
-	Compra* compraActual;
+	Compra* compraActual=nullptr;
 	Promocion* promocionActual = nullptr;
 
 	int ultimoCodigoProducto = 0;
 	int ultimoCodigoComentario = 0;
+	int ultimoCodigoCompra=0;
 public:
 	virtual ~SistemaControlador();
 	static SistemaControlador& getInstancia();

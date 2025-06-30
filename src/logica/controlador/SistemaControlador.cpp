@@ -40,6 +40,10 @@ SistemaControlador::~SistemaControlador() {
         delete par.second;
     }
     promociones.clear();
+    for (auto& par : compras) {
+        delete par.second;
+    }
+    compras.clear();
 }
 
 SistemaControlador& SistemaControlador::getInstancia() {
@@ -237,15 +241,14 @@ set<DTProdPromocion*> SistemaControlador::selectPromo(string nombre) {
 }
 
 set<DTProducto> SistemaControlador::seleccionarCliente(string nick) {
-    // Limpiar seleccion previa
     clienteSeleccionado = nullptr;
     delete compraActual;
     compraActual = nullptr;
-
     auto it = usuarios.find(nick);
     if (it == usuarios.end()) {
         throw runtime_error("Usuario no encontrado");
     }
+    clienteSeleccionado=dynamic_cast<Cliente*>(it->second);
     set<DTProducto> productosDisponibles;
     for (const auto& par : productos) {
         Producto* p = par.second;
@@ -258,16 +261,59 @@ set<DTProducto> SistemaControlador::seleccionarCliente(string nick) {
 }
 
 void SistemaControlador::agregarProducto(DTProdComprado p) {
-    auto it = productos.find(p.producto->codigo);
     if (compraActual == nullptr) {
-        compraActual = new Compra();
+        compraActual = new Compra(-1,0,nullptr,0,nullptr);
     }
     compraActual->agregoProd(p);
 }
 
 DTCompra* SistemaControlador::verDetalleCompra() {
+    if (clienteSeleccionado == nullptr) {
+        throw runtime_error("Error: No hay cliente seleccionado para confirmar la compra.");
+    }
+    if (compraActual == nullptr || compraActual->getProdComprado().empty()) {
+        throw runtime_error("Error: No hay productos en el carrito de compra para confirmar.");
+    }
+    float montoTotalCalculado = 0;
+    for (ProdComprado* pc : compraActual->getProdComprado()) {
+        Producto* prod = pc->getProducto();
+        int cantidadDeseada = pc->getCantidad();
+
+        if (prod->getStock() < cantidadDeseada) {
+            throw runtime_error("Error: Stock insuficiente para el producto " + prod->getNombre() + ". Stock disponible: " + to_string(prod->getStock()));
+        }
+        float precioUnitarioProducto = prod->getPrecio();
+        float precioConDescuento = precioUnitarioProducto;
+        for (ProdPromocion* pp : prod->getProdPromociones()) {
+            if (pp->retornarPromocion()->estaVigente()) {
+                if (cantidadDeseada >= pp->getCantMinima()) {
+                    precioConDescuento = precioUnitarioProducto * (100.0 - pp->getDescuento()) / 100.0;
+                    break;
+                }
+            }
+        }
+        montoTotalCalculado += precioConDescuento * cantidadDeseada;
+    }
+    for (ProdComprado* pc : compraActual->getProdComprado()) {
+        Producto* prod = pc->getProducto();
+        int cantidadDeseada = pc->getCantidad();
+        prod->restarStock(cantidadDeseada);
+    }
+    compraActual->setId(++ultimoCodigoCompra);
+    compraActual->setFecCompra(new DTFecha(DTFecha::obtenerFechaActual()));
+    compraActual->setMontoTotal(montoTotalCalculado);
+    compraActual->setCliente(clienteSeleccionado);
+
     DTCompra * detalle = compraActual->getCompra();
     return detalle;
+}
+
+string SistemaControlador::confirmarCompra(){
+    clienteSeleccionado->agregarCompra(compraActual);
+    this->compras[compraActual->getId()] = compraActual;
+    compraActual = nullptr;
+    return "Compra confirmada con exito";
+
 }
 
 set<string> SistemaControlador::listarNicknamesUsuario() {
@@ -387,7 +433,7 @@ set<DTCompra> SistemaControlador::seleccionarProductoC(int codigoProducto) {
         Compra* compra = par.second;
         for (ProdComprado* pc : compra->getProdComprado()) {
             if (pc->getProducto()->getCodigo() == codigoProducto && !pc->getEnviado()) {
-                resultado.insert(compra->toDT()); // Asume que Compra tiene un método toDT()
+                resultado.insert(compra->toDT());
             }
         }
     }
@@ -414,9 +460,6 @@ set<DTProducto> SistemaControlador::obtenerProductosPendientesPorVendedor(string
     return resultado;
 }
 
-string SistemaControlador::confirmarCompra(){
-    return "Compra confirmada";
-}
 /*
 void SistemaControlador::cargarDatosPrueba() {
     string resultado;

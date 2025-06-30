@@ -15,7 +15,8 @@ Cliente::Cliente(string nick, string pass, DTFecha* fechaNac, DTDireccion* direc
 }
 
 Cliente::~Cliente() {
-
+    delete fechaNac;
+    delete direccion;
 }
 
 void Cliente::asociarProd() {}
@@ -62,4 +63,10 @@ DTDireccion* Cliente::getDireccion() const {
     return nullptr;
     */
     return this->direccion;
+}
+
+void Cliente::agregarCompra(Compra* compra) {
+    if (compra != nullptr) {
+        this->compras[compra->getId()] = compra;
+    }
 }

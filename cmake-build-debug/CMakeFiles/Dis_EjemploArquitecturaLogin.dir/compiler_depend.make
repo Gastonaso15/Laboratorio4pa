@@ -2508,6 +2508,7 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/ProdComprado.cpp.
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTComentario.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTFecha.h \
+  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProdComprado.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProdPromocion.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProducto.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTPromocion.h \
@@ -2843,6 +2844,7 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/logica/dominio/Producto.cpp.obj:
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTComentario.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTFecha.h \
+  C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProdComprado.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProdPromocion.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTProducto.h \
   C:/Users/agusm/CLionProjects/Laboratorio4pa/src/DTs/DTPromocion.h \
@@ -3613,6 +3615,7 @@ CMakeFiles/Dis_EjemploArquitecturaLogin.dir/src/presentacion/AltaProducto.cpp.ob
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iosfwd \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
+  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/limits \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/map \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/new \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
@@ -6066,6 +6069,8 @@ C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/Menu.h:
 
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/AltaProducto.cpp:
 
+C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/limits:
+
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/AltaUsuario.cpp:
 
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/AltaUsuario.h:
@@ -6085,8 +6090,6 @@ C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/EliminarComentario.
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/EliminarComentario.h:
 
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/EnviarProducto.cpp:
-
-C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/limits:
 
 C:/Users/agusm/CLionProjects/Laboratorio4pa/src/presentacion/ExpedienteUsuario.cpp:
 

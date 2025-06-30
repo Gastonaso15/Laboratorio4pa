@@ -2,6 +2,7 @@
 #define PRODCOMPRADO_H
 #include "Producto.h"
 #include "../DTs/DTProducto.h"
+#include "../DTs/DTProdComprado.h"
 
 
 class Producto;
@@ -23,6 +24,8 @@ class ProdComprado {
   DTProducto getProductos();
   bool getEnviado() const;
   void setEnviado(bool valor);
+  void aumentarCantidad(int cantidadAAgregar);
+  DTProdComprado * getDTProdComprado();
 };
 
 

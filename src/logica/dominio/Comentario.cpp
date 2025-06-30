@@ -5,7 +5,7 @@ using namespace std;
 Comentario::Comentario(){}
 
 Comentario::~Comentario(){
-
+  delete fecEscrito;
 }
 
 Comentario::Comentario(int id, string texto, DTFecha * fecEscrito,Producto * producto){

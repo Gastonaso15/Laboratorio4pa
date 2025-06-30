@@ -54,6 +54,8 @@ class Producto {
     void agregarProdPromocion(ProdPromocion* pp);
     void asociarComentarioProducto(Comentario *com);
     void eliminarComentario(int id);
+    void restarStock(int cantidad);
+    const set<ProdPromocion*>& getProdPromociones() const;
 
 };
 

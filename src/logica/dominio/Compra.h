@@ -15,13 +15,17 @@ class Compra {
         DTFecha * fecCompra;
         set<ProdComprado*> productosComprados;
         Cliente * cliente;
-    float montoTotal;
+        float montoTotal;
     public:
         Compra();
         Compra(int id,int cantProd,DTFecha *fecCompra,set<ProdComprado*> productosComprados);
-
+        Compra(int id,int cantProd,DTFecha *fecCompra,float montoTotal,Cliente* cliente);
         Compra(int id,int cantProd,DTFecha *fecCompra,set<ProdComprado*> productosComprados, Cliente* cliente);
         ~Compra();
+        void setId(int id);
+        void setFecCompra(DTFecha* fecha);
+        void setMontoTotal(float monto);
+        void setCliente(Cliente* cliente);
 
         set<ProdComprado*> getProdComprado() const;
         float getMontoTotal() const;

@@ -15,7 +15,7 @@ protected:
 
 public:
     Cliente(string nick, string pass, DTFecha *  fechaNac,DTDireccion* direccion, string ciudad);
-    Cliente getCliente();
+    //Cliente getCliente();
     Cliente();
     ~Cliente();
 
@@ -27,6 +27,8 @@ public:
     DTUsuario* retornarDTUsuario() const override;
     DTDireccion* getDireccion() const;
     DTCliente* toDT();
+    void agregarCompra(Compra* compra);
+
 };
 
 

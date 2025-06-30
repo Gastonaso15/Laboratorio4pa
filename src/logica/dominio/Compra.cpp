@@ -17,24 +17,31 @@ Compra::Compra(int id, int cantProd, DTFecha *fecCompra, set<ProdComprado *> pro
   this->id = id;
   this->cantProd = cantProd;
   this->productosComprados = productosComprados;
-  this->fecCompra = new DTFecha(*fecCompra); //
+  this->fecCompra = fecCompra;
 }
 
 Compra::Compra(int id,int cantProd,DTFecha *fecCompra,set<ProdComprado*> productosComprados, Cliente* cliente){
   this->id = id;
   this->cantProd = cantProd;
   this->productosComprados = productosComprados;
-  this->fecCompra = new DTFecha(*fecCompra);
+  this->fecCompra = fecCompra;
   this->cliente = cliente;
 }
 
+Compra::Compra(int id,int cantProd,DTFecha *fecCompra,float montoTotal,Cliente * cliente){
+  this->id = id;
+  this->cantProd = cantProd;
+  this->fecCompra = fecCompra;
+  this->montoTotal = montoTotal;
+  this->cliente = cliente;
+}
+
+
 Compra::~Compra(){
-    delete fecCompra;
-    fecCompra = nullptr;
-    for (ProdComprado* pc : productosComprados) {
-        delete pc;
-    }
-    productosComprados.clear();
+  for (ProdComprado* pc : productosComprados) {
+    delete pc;
+  }
+  delete fecCompra;
 }
 
 int Compra::getId() const {
@@ -47,12 +54,14 @@ Cliente* Compra::getCliente() const {
   return cliente; }
 
 DTCompra* Compra::getCompra() {
-  set<DTProducto> productos ;
+  set<DTProdComprado*> productos ;
   for (auto producto : productosComprados) {
-    productos.insert(producto->getProductos());
+    productos.insert(producto->getDTProdComprado());
   }
-  DTFecha fecha = *(this->getFecCompra());
-  DTCompra*  carrito = new DTCompra(this->getId(), this->getCantProd(), fecha, this->getMontoTotal(), productos);
+  DTFecha * fecha = (this->getFecCompra());
+  DTCliente dtCli = this->cliente->getCliente();
+  DTCliente *cli = new DTCliente(dtCli);
+  DTCompra*  carrito = new DTCompra(this->getId(), this->getCantProd(), fecha, this->getMontoTotal(), productos,cli);
   return carrito;
 }
 
@@ -69,7 +78,7 @@ float Compra::getMontoTotal() const {
 DTCompra Compra::toDT() const {
     DTFecha* dtFechaCopia = new DTFecha(*this->fecCompra);
     DTCliente* dtClienteCopia = this->cliente->toDT();
-    return DTCompra(this->id, this->cantProd, *dtFechaCopia, this->montoTotal, dtClienteCopia);
+    return DTCompra(this->id, this->cantProd, dtFechaCopia, this->montoTotal, dtClienteCopia);
 }
 void Compra::agregarProdComprado(ProdComprado* pc) {
     if (pc != nullptr) {
@@ -78,12 +87,11 @@ void Compra::agregarProdComprado(ProdComprado* pc) {
 
 }
 
-bool Compra::agregoProd(DTProdComprado p){
+/*bool Compra::agregoProd(DTProdComprado p){
   for(auto* prodComp : productosComprados){
     bool b = prodComp->tieneArt(p.producto);
     if(!b){
-      SistemaControlador* sistemaGlobal;
-      Producto* prod = sistemaGlobal->buscarProductoPorDT(p.producto);
+      Producto* prod = controlador.buscarProductoPorDT(p.producto);
       ProdComprado * cp = new ProdComprado(prod, this, p.cantidad, false);
       productosComprados.insert(cp);
       delete sistemaGlobal;
@@ -92,4 +100,31 @@ bool Compra::agregoProd(DTProdComprado p){
 
   }
   return false;
+}*/
+
+bool Compra::agregoProd(DTProdComprado p_dto){
+  for(auto* prodComp : productosComprados){
+    if(prodComp->tieneArt(p_dto.producto)){
+      prodComp->aumentarCantidad(p_dto.cantidad);
+      return true;
+    }
+  }
+  SistemaControlador& sistemaGlobal = SistemaControlador::getInstancia();
+  Producto* prod = sistemaGlobal.buscarProductoPorDT(p_dto.producto);
+  ProdComprado * cp = new ProdComprado(prod, this, p_dto.cantidad, false);
+  productosComprados.insert(cp);
+  return true;
+}
+
+void Compra::setId(int id) {
+  this->id = id;
+}
+void Compra::setFecCompra(DTFecha* fecha) {
+  this->fecCompra = fecha;
+}
+void Compra::setMontoTotal(float monto) {
+  this->montoTotal = monto;
+}
+void Compra::setCliente(Cliente* cliente) {
+  this->cliente=cliente;
 }
