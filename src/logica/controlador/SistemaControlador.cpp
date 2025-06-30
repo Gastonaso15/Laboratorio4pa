@@ -460,6 +460,25 @@ string SistemaControlador::marcarProductoComoEnviado(int codigoProducto, int idC
 
 set<DTProducto> SistemaControlador::obtenerProductosPendientesPorVendedor(string nickVendedor) {
     set<DTProducto> resultado;
+    Vendedor* vendedorEncontrado = nullptr;
+    auto itVendedor = usuarios.find(nickVendedor);
+    if (itVendedor != usuarios.end()) {
+        vendedorEncontrado = dynamic_cast<Vendedor*>(itVendedor->second);
+    }
+    if (vendedorEncontrado == nullptr) {
+        return resultado;
+    }
+    for (const auto& parCompra : compras) {
+        Compra* compra = parCompra.second;
+        for (ProdComprado* pc : compra->getProdComprado()) {
+            Producto* productoComprado = pc->getProducto();
+            if (productoComprado->getVendedor() == vendedorEncontrado && !pc->getEnviado()) {
+                DTProducto* dtProdPtr = productoComprado->retornarDTProducto();
+                resultado.insert(*dtProdPtr);
+                delete dtProdPtr;
+            }
+        }
+    }
     return resultado;
 }
 
@@ -583,6 +602,16 @@ void SistemaControlador::cargarDatosPrueba() {
     seleccionarProducto(2);
     seleccionarComentario(3);
     agregarRespuesta("La mia calienta");
+
+    /*
+    seleccionarCliente("Martin");
+    DTProducto * prodPtr1 = this->productos[0]->retornarDTProducto();
+    DTProdComprado nuevoProd1(7,false,prodPtr1);
+    agregarProducto(nuevoProd1);
+    DTProducto * prodPtr2 = this->productos[2]->retornarDTProducto();
+    DTProdComprado nuevoProd2(5,false,prodPtr2);
+    agregarProducto(nuevoProd2);
+    confirmarCompra();*/
 
 }
 

@@ -48,6 +48,7 @@ class Producto {
     set<DTComentario*> getComentarios();
     Comentario* getComentario(int id);
     DTProducto* retornarDTProducto()const ;
+    Vendedor* getVendedor()const;
 
     bool productoEnPromo();
     void asociarProdVendedor(Vendedor* vendedor);

@@ -134,3 +134,6 @@ void Producto::restarStock(int cantidad) {
 const set<ProdPromocion*>& Producto::getProdPromociones() const {
   return prodsprom;
 }
+Vendedor* Producto::getVendedor() const {
+  return this->vendedor;
+}
