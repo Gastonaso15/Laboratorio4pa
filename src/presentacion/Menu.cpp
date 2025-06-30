@@ -99,7 +99,7 @@ void Menu::mostrarMenu() {
                 break;
             }
             case 10: {
-                respuesta = enviarProductoInstancia.enviarProducto(); //No funciona
+                respuesta = enviarProductoInstancia.enviarProducto();
                 cout << respuesta << endl;
                 break;
             }
