@@ -1,14 +1,10 @@
-
 #include "Cliente.h"
-#include <iostream>
 #include <string>
 #include "Usuario.h"
-#include <iostream>
 #include "../DTs/DTFecha.h"
 #include "../DTs/DTDireccion.h"
 #include "../DTs/DTCliente.h"
 #include "../DTs/DTUsuario.h"
-using namespace std;
 
 
 Cliente::Cliente(string nick, string pass, DTFecha* fechaNac, DTDireccion* direccion, string ciudad)

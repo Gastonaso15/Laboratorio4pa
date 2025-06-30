@@ -10,7 +10,6 @@ ConsultarPromocion::~ConsultarPromocion() {}
 
 string ConsultarPromocion::consultarPromocion() {
     string respuesta;
-    //listarPromos
     set<DTPromocion*> promociones = controlador.listarPromociones();
     if (promociones.empty()) {
         respuesta= "Error: No hay Promociones registradas.";
@@ -23,7 +22,7 @@ string ConsultarPromocion::consultarPromocion() {
             delete promo;
         }
     }
-    //selectPromo
+
     string continuar,nombre;
     cout << endl << "** Consultar Promocion **" << endl;
     cout << "Desea ver los Productos de alguna Promocion?: ";

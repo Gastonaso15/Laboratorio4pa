@@ -4,9 +4,8 @@ DejarComentario::DejarComentario(SistemaControlador& controlador):controlador(co
 
 DejarComentario::~DejarComentario() {}
 
-string DejarComentario::dejarComentario() {
+/*string DejarComentario::dejarComentario() {
   string respuesta;
-  //listarNicknamesUsuario
   set<string> usuarios =controlador.listarNicknamesUsuario();
   if(usuarios.empty()){
     return respuesta="Error: No hay usuarios registrados.";
@@ -17,7 +16,6 @@ string DejarComentario::dejarComentario() {
       cout << "---------------------------" << endl;
     }
   }
-  //seleccionarUsuario
   string nick;
   cout << endl << "--- Seleccionar Usuario ---" << endl;
   cout << "Ingrese nickname: ";
@@ -32,7 +30,6 @@ string DejarComentario::dejarComentario() {
       cout << "Codigo: " << prod.codigo << " Nombre: " << prod.nombre << endl;
     }
   }
-  //seleccionarProducto
   int codigo;
   cout << endl << "--- Seleccionar Producto ---" << endl;
   cout << "Ingrese codigo del Producto: ";
@@ -40,7 +37,6 @@ string DejarComentario::dejarComentario() {
   if(!controlador.seleccionarProducto(codigo)){
     return respuesta="Error: No se encontro el Producto.";
   }
-  //-----
   cout <<endl << "Seleccione opcion deseada: " << endl;
   cout <<endl << "1- Realizar comentario nuevo" << endl;
   cout <<endl << "2- Responder a comentario existente" << endl;
@@ -48,7 +44,6 @@ string DejarComentario::dejarComentario() {
   if(codigo<1 || codigo>2){
     respuesta="Error: Opcion invalida";
   }
-  //agregarComentario
   if(codigo==1){
     string texto;
     cout << endl << "** Dejar Comentario **" << endl;
@@ -58,9 +53,7 @@ string DejarComentario::dejarComentario() {
     respuesta=controlador.agregarComentario(texto);
     return respuesta;
   }
-  //-----
   if(codigo==2){
-    //listarComentario
     set<DTComentario*> comentarios = controlador.listarComentario();
     if (comentarios.empty()) {
       respuesta= "Error: No hay comentarios registrados.";
@@ -75,7 +68,6 @@ string DejarComentario::dejarComentario() {
           cout << "---------------------------" << endl;
       }
     }
-    //seleccionarComentario
     int id;
     cout << endl << "--- Seleccionar Comentario ---" << endl;
     cout << "Ingrese id del Comentario: ";
@@ -83,7 +75,6 @@ string DejarComentario::dejarComentario() {
     if(!controlador.seleccionarComentario(id)){
       return respuesta="Error: No se encontro el Comentario.";
     }
-    //agregarRespuesta
     string texto;
     cout << endl << "** Dejar Respuesta **" << endl;
     cout << "Escriba su respuesta: ";
@@ -93,4 +84,4 @@ string DejarComentario::dejarComentario() {
     return respuesta;
   }
   return respuesta;
-}
+}*/

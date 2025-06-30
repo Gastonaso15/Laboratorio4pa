@@ -41,7 +41,6 @@ string CrearPromocion::crearPromocion() {
       cout << "- " << nick << endl;
     }
   }
-  //seleccionarVendedor
   string nick;
   cout << "--- Seleccionar Vendedor ---" << endl;
   cout << "Ingrese nick del Vendedor: ";
@@ -56,7 +55,6 @@ string CrearPromocion::crearPromocion() {
       cout << "Codigo: " << prod.codigo << " Nombre: " << prod.nombre << endl;
     }
   }
-  //agregarProdProm
   set<DTProdPromocion> productosParaPromo;
   string continuar = "Si";
   int codigo, cantidad, descuento;

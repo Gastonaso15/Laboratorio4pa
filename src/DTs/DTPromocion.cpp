@@ -1,4 +1,3 @@
-
 #include "DTPromocion.h"
 
 DTPromocion::DTPromocion() {

@@ -3,10 +3,9 @@
 EliminarComentario::EliminarComentario(SistemaControlador& controlador):controlador(controlador) {}
 
 EliminarComentario::~EliminarComentario() {}
-
+/*
 string EliminarComentario::eliminarComentario() {
   string respuesta;
-  //listarNicknamesUsuario
   set<string> usuarios =controlador.listarNicknamesUsuario();
   if(usuarios.empty()){
     return respuesta="Error: No hay usuarios registrados.";
@@ -17,7 +16,6 @@ string EliminarComentario::eliminarComentario() {
       cout << "---------------------------" << endl;
     }
   }
-  //seleccionarUsuario
   string nick;
   cout << endl << "--- Seleccionar Usuario ---" << endl;
   cout << "Ingrese nickname: ";
@@ -32,7 +30,6 @@ string EliminarComentario::eliminarComentario() {
       cout << "Id: " << com->id << " Comentario: " << com->texto << endl << "Fecha Escrito: " << com->fecEscrito->toString() << endl;
     }
   }
-  //borrarComentario
   int id;
   cout << endl << "** Eliminar Comentario **" << endl;
   cout << "Ingrese id del Comentario: ";
@@ -40,3 +37,4 @@ string EliminarComentario::eliminarComentario() {
   respuesta=controlador.borrarComentario(id);
   return respuesta;
 }
+*/

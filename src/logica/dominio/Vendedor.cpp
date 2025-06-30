@@ -1,14 +1,9 @@
-
 #include "Vendedor.h"
-#include <iostream>
 #include <string>
 #include "Usuario.h"
-#include <iostream>
 #include "../DTs/DTFecha.h"
 #include "../DTs/DTVendedor.h"
-#include "../DTs/DTDireccion.h"
 #include "../DTs/DTUsuario.h"
-using namespace std;
 
 Vendedor::Vendedor(string nick, string pass, DTFecha* fechaNac, string rut)
    : Usuario(nick, pass, fechaNac){
@@ -41,8 +36,12 @@ void Vendedor::aniadirProdListaVendedor(Producto* producto) {
 
 set<DTProducto> Vendedor::retornarProductos() {
     set<DTProducto> productosVendedor;
-    for (const auto& prod : productos) {
-        productosVendedor.insert(prod.second->retornarDTProducto());
+    for (const auto& par : productos) {
+        Producto* p = par.second;
+        DTProducto* dtProdPuntero = p->retornarDTProducto();
+        DTProducto dto = *dtProdPuntero;
+        delete dtProdPuntero;
+        productosVendedor.insert(dto);
     }
     return productosVendedor;
 }

@@ -1,4 +1,3 @@
-
 #include "DTProducto.h"
 #include "../../DTs/Definiciones.h"
 #include <iostream>
@@ -10,7 +9,9 @@ DTProducto::~DTProducto() {
 DTProducto::DTProducto() {
     this->vendedor = nullptr;
 }
-
+int DTProducto::getCodDTProd() const {
+    return this->codigo;
+}
 DTProducto::DTProducto(int codigo, string nombre, int precio, int stock, string descripcion, cat categoria){
     this->codigo = codigo;
     this->nombre = nombre;

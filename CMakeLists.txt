@@ -15,7 +15,6 @@ add_executable(Dis_EjemploArquitecturaLogin
         src/logica/controlador/SistemaControlador.cpp
         src/logica/controlador/SistemaControlador.h
         src/logica/dominio/Compra.cpp
-        src/logica/dominio/Compra.h
         src/logica/dominio/Usuario.cpp
         src/logica/dominio/Usuario.h
         src/logica/dominio/Cliente.cpp
@@ -24,14 +23,12 @@ add_executable(Dis_EjemploArquitecturaLogin
         src/logica/dominio/Producto.h
         src/logica/dominio/Vendedor.cpp
         src/logica/dominio/Vendedor.h
-        src/logica/dominio/ProdPromocion.cpp
-        src/logica/dominio/ProdPromocion.h
-        src/logica/dominio/ProdComprado.cpp
-        src/logica/dominio/ProdComprado.h
-        src/logica/dominio/Comentario.cpp
-        src/logica/dominio/Comentario.h
-        src/logica/dominio/Promocion.cpp
-        src/logica/dominio/Promocion.h
+        src/presentacion/AltaUsuario.cpp
+        src/presentacion/AltaUsuario.h
+        src/presentacion/ListadoUsuarios.cpp
+        src/presentacion/ListadoUsuarios.h
+        src/presentacion/AltaProducto.cpp
+        src/presentacion/AltaProducto.h
         src/DTs/DTVendedor.h
         src/DTs/DTVendedor.cpp
         src/DTs/DTUsuario.h
@@ -54,21 +51,25 @@ add_executable(Dis_EjemploArquitecturaLogin
         src/DTs/DTComentario.cpp
         src/DTs/DTCliente.cpp
         src/DTs/DTCliente.h
-        src/DTs/Definiciones.h
+        src/logica/dominio/Cliente.cpp
+        src/logica/dominio/Cliente.h
+        src/logica/dominio/Vendedor.cpp
+        src/logica/dominio/Vendedor.h
         src/presentacion/Menu.cpp
         src/presentacion/Menu.h
-        src/presentacion/AltaUsuario.cpp
-        src/presentacion/AltaUsuario.h
-        src/presentacion/ListadoUsuarios.cpp
-        src/presentacion/ListadoUsuarios.h
-        src/presentacion/AltaProducto.cpp
-        src/presentacion/AltaProducto.h
+        src/DTs/Definiciones.h
         src/presentacion/ConsultarProducto.cpp
         src/presentacion/ConsultarProducto.h
         src/presentacion/CrearPromocion.cpp
         src/presentacion/CrearPromocion.h
         src/presentacion/ConsultarPromocion.cpp
         src/presentacion/ConsultarPromocion.h
+        src/logica/dominio/ProdPromocion.cpp
+        src/logica/dominio/ProdPromocion.h
+        src/logica/dominio/Comentario.cpp
+        src/logica/dominio/Comentario.h
+        src/logica/dominio/Promocion.cpp
+        src/logica/dominio/Promocion.h
         src/presentacion/EnviarProducto.cpp
         src/presentacion/EnviarProducto.h
         src/presentacion/RealizarCompra.cpp
@@ -77,6 +78,8 @@ add_executable(Dis_EjemploArquitecturaLogin
         src/presentacion/DejarComentario.h
         src/presentacion/EliminarComentario.cpp
         src/presentacion/EliminarComentario.h
+        src/presentacion/ExpedienteUsuario.cpp
+        src/presentacion/ExpedienteUsuario.h
 
 )
 

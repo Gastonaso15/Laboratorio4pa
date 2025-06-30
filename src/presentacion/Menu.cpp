@@ -86,17 +86,17 @@ void Menu::mostrarMenu() {
                 break;
             }
             case 8: {
-                respuesta = dejarComentario.dejarComentario();
+                //respuesta = dejarComentario.dejarComentario();
                 cout << respuesta << endl;
                 break;
             }
             case 9: {
-                respuesta = eliminarComentario.eliminarComentario();
+               // respuesta = eliminarComentario.eliminarComentario();
                 cout << respuesta << endl;
                 break;
             }
             case 10: {
-                respuesta = enviarProductoInstancia.enviarProducto();
+                //respuesta = enviarProductoInstancia.enviarProducto();
                 cout << respuesta << endl;
                 break;
             }

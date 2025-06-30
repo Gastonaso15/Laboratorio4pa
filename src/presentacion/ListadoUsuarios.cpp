@@ -4,11 +4,6 @@
 #include <string>
 #include "../logica/controlador/SistemaControlador.h"
 #include "../DTs/DTUsuario.h"
-#include "../DTs/DTVendedor.h"
-#include "../DTs/DTCliente.h"
-#include "../dominio/Usuario.h"
-#include "../dominio/Vendedor.h"
-#include "../dominio/Cliente.h"
 using namespace std;
 
 ListadoUsuarios::ListadoUsuarios(SistemaControlador& controlador):controlador(controlador){}

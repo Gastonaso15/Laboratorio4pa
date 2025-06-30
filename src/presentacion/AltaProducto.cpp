@@ -1,13 +1,9 @@
-#include "AltaProducto.h"
 #include <iostream>
 #include <string>
 #include "../logica/controlador/SistemaControlador.h"
 #include "../DTs/DTProducto.h"
-#include "../DTs/DTUsuario.h"
-#include "../DTs/DTVendedor.h"
-#include "../dominio/Usuario.h"
-#include "../dominio/Vendedor.h"
 #include "../DTs/Definiciones.h"
+#include "AltaProducto.h"
 using namespace std;
 
 AltaProducto::AltaProducto(SistemaControlador& controlador):controlador(controlador) {}

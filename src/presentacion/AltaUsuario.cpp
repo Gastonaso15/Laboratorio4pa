@@ -1,14 +1,13 @@
-#include "AltaUsuario.h"
-
 #include <iostream>
 #include <string>
-
 #include "../logica/controlador/SistemaControlador.h"
 #include "../DTs/DTFecha.h"
 #include "../DTs/DTUsuario.h"
 #include "../DTs/DTVendedor.h"
 #include "../DTs/DTCliente.h"
 #include "../DTs/DTDireccion.h"
+#include "AltaUsuario.h"
+
 
 using namespace std;
 

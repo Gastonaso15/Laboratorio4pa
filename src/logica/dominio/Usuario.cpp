@@ -1,9 +1,6 @@
-
 #include "Usuario.h"
 #include "../DTs/DTFecha.h"
 #include "Comentario.h"
-#include <iostream>
-
 
 Usuario::Usuario(string nick, string contrasenia, DTFecha * fechaNac) {
 	this->nick = nick;

@@ -14,18 +14,24 @@ class Usuario {
 protected:
 	string nick;
 	string contrasenia;
+
 	DTFecha * fechaNac;
+
 	map<int,Comentario*> comentarios;
 public:
 	Usuario();
 	Usuario(string nick, string contrasenia, DTFecha * fechaNac);
 	virtual ~Usuario();
-	string getNick();
 	virtual DTUsuario* retornarDTUsuario()const=0;
+
 	void asociarComentarioUsuario(Comentario * com);
+
+	string getNick();
 	string getNickname() const;
 	string getContrasenia() const;
+
 	DTFecha* getFechaNac() const;
+
 	set<DTComentario*> getComentarios();
 	Comentario* obtenerComentario(int id);
 	void eliminarComentario(int id);

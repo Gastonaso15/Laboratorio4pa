@@ -1,11 +1,6 @@
 #include "ProdPromocion.h"
 #include "Producto.h"
-#include "Promocion.h"
 #include "../../DTs/DTProdPromocion.h"
-
-#include <iostream>
-using namespace std;
-
 
 ProdPromocion::ProdPromocion(){}
 
@@ -22,6 +17,11 @@ Promocion* ProdPromocion::retornarPromocion() {
   return this->promocion;
 }
 
-DTProdPromocion ProdPromocion::retornarDTProdPromocion(){
-  return DTProdPromocion(this->cantMininima, this->descuento, producto->retornarDTProducto());
+
+DTProdPromocion ProdPromocion::retornarDTProdPromocion() {
+  DTProducto* dtProdPuntero = producto->retornarDTProducto();
+  DTProducto dtProdCopia = *dtProdPuntero;
+  delete dtProdPuntero;
+  dtProdPuntero = nullptr;
+  return DTProdPromocion(this->cantMininima, this->descuento, dtProdCopia);
 }
