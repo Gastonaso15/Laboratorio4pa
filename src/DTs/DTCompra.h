@@ -16,9 +16,12 @@ class DTCompra {
   int cantProd;
   DTFecha fecCompra;
   float montoTotal;
+  set<DTProdComprado*> productosComprados;
   int id;
     set<DTProducto> productos;
   DTCliente * cliente;
+  set<DTProdComprado*> getProductosComprados();
+
 
     DTCompra();
 

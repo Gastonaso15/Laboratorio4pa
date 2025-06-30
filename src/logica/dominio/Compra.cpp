@@ -55,13 +55,13 @@ DTFecha* Compra::getFecCompra() const {
 Cliente* Compra::getCliente() const {
   return cliente; }
 
-DTCompra Compra::getCompra() {
+DTCompra* Compra::getCompra() {
   set<DTProducto> productos ;
   for (auto producto : productosComprados) {
     productos.insert(producto->getProductos());
   }
   DTFecha fecha = *(this->getFecCompra());
-  DTCompra carrito = DTCompra(this->getId(), this->getCantProd(), fecha, this->getMontoTotal(), productos);
+  DTCompra*  carrito = new DTCompra(this->getId(), this->getCantProd(), fecha, this->getMontoTotal(), productos);
   return carrito;
 }
 
@@ -98,13 +98,13 @@ void Compra::agregarProdComprado(ProdComprado* pc) {
 
 }
 
-bool Compra::agregoProd(DTProducto p){
+bool Compra::agregoProd(DTProdComprado p){
   for(auto* prodComp : productosComprados){
-    bool b = prodComp->tieneArt(p);
+    bool b = prodComp->tieneArt(p.producto);
     if(!b){
       SistemaControlador* sistemaGlobal;
-      Producto* prod = sistemaGlobal->buscarProductoPorDT(p);
-      ProdComprado * cp = new ProdComprado(prod, this, 1, false);
+      Producto* prod = sistemaGlobal->buscarProductoPorDT(p.producto);
+      ProdComprado * cp = new ProdComprado(prod, this, p.cantidad, false);
       productosComprados.insert(cp);
       delete sistemaGlobal;
       return true;

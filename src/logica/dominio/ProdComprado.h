@@ -21,7 +21,7 @@ class ProdComprado {
   ProdComprado(Producto* producto,Compra* compra,int cantidad,bool enviado);
   virtual ~ProdComprado();
   Producto* getProducto() const { return producto; }
-  bool tieneArt(DTProducto p);
+  bool tieneArt(DTProducto * p);
   DTProducto getProductos();
   bool getEnviado() const { return enviado; }
   void setEnviado(bool valor) { enviado = valor; }

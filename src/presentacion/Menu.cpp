@@ -81,7 +81,7 @@ void Menu::mostrarMenu() {
                 break;
             }
             case 7: {
-                respuesta = realizarCompra.realizarCompra();
+                respuesta = realizarCompra.realizarCompra(); //Falta tener en cuenta promocion y stock, hacer confirmarCompra y arreglar verDetalleCompra
                 cout << respuesta << endl;
                 break;
             }

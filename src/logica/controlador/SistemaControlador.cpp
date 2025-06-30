@@ -2,6 +2,8 @@
 #include <iostream>
 #include <stdexcept>
 #include <string>
+
+#include "DTProdComprado.h"
 using namespace std;
 
 #include "../dominio/Producto.h"
@@ -126,8 +128,8 @@ string SistemaControlador::selectVendedor(string nick) {
     }
 }
 
-Producto* SistemaControlador::buscarProductoPorDT(const DTProducto dtp) {
-    auto it = productos.find(dtp.codigo);
+Producto* SistemaControlador::buscarProductoPorDT(const DTProducto* dtp) {
+    auto it = productos.find(dtp->codigo);
     if (it != productos.end()) {
         return it->second;
     } else {
@@ -257,16 +259,16 @@ set<DTProducto> SistemaControlador::seleccionarCliente(string nick) {
     return productosDisponibles;
 }
 
-void SistemaControlador::agregarProducto(DTProducto p) {
-    auto it = productos.find(p.codigo);
+void SistemaControlador::agregarProducto(DTProdComprado p) {
+    auto it = productos.find(p.producto->codigo);
     if (compraActual == nullptr) {
         compraActual = new Compra();
     }
     compraActual->agregoProd(p);
 }
 
-DTCompra SistemaControlador::verDetalleCompra() {
-    DTCompra detalle = compraActual->getCompra();
+DTCompra* SistemaControlador::verDetalleCompra() {
+    DTCompra * detalle = compraActual->getCompra();
     return detalle;
 }
 
@@ -409,6 +411,10 @@ string SistemaControlador::marcarProductoComoEnviado(int codigoProducto, int idC
 set<DTProducto> SistemaControlador::obtenerProductosPendientesPorVendedor(string nickVendedor) {
     set<DTProducto> resultado;
     return resultado;
+}
+
+string SistemaControlador::confirmarCompra(){
+    return "Compra confirmada";
 }
 
 /*void SistemaControlador::cargarDatosPrueba() {

@@ -17,8 +17,8 @@ ProdComprado::ProdComprado(Producto* producto,  Compra* compra, int cantidad,boo
   this->enviado=enviado;
 }
 
-bool ProdComprado::tieneArt(DTProducto p) {
-  return this->producto->getCodigo() == p.codigo;
+bool ProdComprado::tieneArt(DTProducto* p) {
+  return this->producto->getCodigo() == p->codigo;
 }
 
 DTProducto ProdComprado::getProductos() {

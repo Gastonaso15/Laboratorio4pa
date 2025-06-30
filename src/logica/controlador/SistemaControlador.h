@@ -4,6 +4,7 @@
 #include <iostream>
 #include "../dominio/Producto.h"
 #include "../DTs/DTFecha.h"
+#include "../DTs/DTProdComprado.h"
 #include "../DTs/DTProducto.h"
 #include "../DTs/DTUsuario.h"
 #include "../DTs/DTComentario.h"
@@ -47,7 +48,7 @@ public:
 	set<string> listarNickVendedor();
 	string selectVendedor(string nick);
 
-	Producto *buscarProductoPorDT(DTProducto dtp);
+	Producto *buscarProductoPorDT(const DTProducto* dtp);
 
 	bool ingProducto(const DTProducto& producto);
 	set<DTProducto> listarProd();
@@ -59,9 +60,9 @@ public:
 	set<DTProdPromocion*> selectPromo(string nombre);
 	set<string> listarClientes();
 	set<DTProducto> seleccionarCliente(string nick);
-	void agregarProducto(DTProducto p);
+	void agregarProducto(DTProdComprado p);
 
-	DTCompra verDetalleCompra();
+	DTCompra * verDetalleCompra();
 
 	set<string> listarNicknamesUsuario();
 	set<DTProducto> seleccionarUsuario(string nick);
@@ -76,6 +77,7 @@ public:
 	set<DTProducto> obtenerProductosPendientesPorVendedor(string nickVendedor);
 	set<DTCompra> seleccionarProductoC(int codigoProducto);
 	string marcarProductoComoEnviado(int codigoProducto, int idCompra);
+	string confirmarCompra();
 	//void cargarDatosPrueba();
 };
 
