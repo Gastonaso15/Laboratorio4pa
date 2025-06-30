@@ -387,6 +387,9 @@ string SistemaControlador::agregarRespuesta(string texto) {
     if (this->productoSeleccionado == nullptr) {
         return "Error: No hay producto seleccionado.";
     }
+    if (this->comentarioSeleccionado==nullptr) {
+        return "Error: No hay comentario seleccionado.";
+    }
     int id = ++ultimoCodigoComentario;
     DTFecha* fechaActual = new DTFecha(DTFecha::obtenerFechaActual());
     Comentario * com = new Comentario(id,texto,fechaActual,productoSeleccionado,comentarioSeleccionado);
@@ -460,7 +463,7 @@ set<DTProducto> SistemaControlador::obtenerProductosPendientesPorVendedor(string
     return resultado;
 }
 
-/*
+
 void SistemaControlador::cargarDatosPrueba() {
     string resultado;
     DTFecha *fechaNac1 = new DTFecha(2000, 6, 22);
@@ -481,21 +484,18 @@ void SistemaControlador::cargarDatosPrueba() {
     altaUsuario(dtCliente1);
     delete dtCliente1;
     delete fechaNac4;
-    delete direccion1;
     DTFecha *fechaNac5 = new DTFecha(1914, 1, 6);
     DTDireccion * direccion2 = new DTDireccion("Calle 7", 1692);
     DTCliente* dtCliente2 = new DTCliente("Juan", "mno345", fechaNac5, "Maldonado", direccion2);
     altaUsuario(dtCliente2);
     delete dtCliente2;
     delete fechaNac5;
-    delete direccion2;
     DTFecha *fechaNac6 = new DTFecha(1998, 11, 30);
     DTDireccion * direccion3 = new DTDireccion("Gorlero", 1133);
     DTCliente* dtCliente3 = new DTCliente("Santiago", "pqr678", fechaNac6, "Punta del Este", direccion3);
     altaUsuario(dtCliente3);
     delete dtCliente3;
     delete fechaNac6;
-    delete direccion3;
 
     DTProducto * prod;
     selectVendedor("Agustin");
@@ -522,9 +522,9 @@ void SistemaControlador::cargarDatosPrueba() {
     set<DTProdPromocion> productosParaPromo;
     DTProducto producto;
     bool encontrado = false;
-    for (const DTProducto& prod : productosVend) {
-        if (prod.codigo == 1) {
-            producto = prod;
+    for (const DTProducto& produ : productosVend) {
+        if (produ.codigo == 1) {
+            producto = produ;
             encontrado = true;
             break;
         }
@@ -581,10 +581,10 @@ void SistemaControlador::cargarDatosPrueba() {
 
     seleccionarUsuario("Gaston");
     seleccionarProducto(2);
-    seleccionarComentario(2);
+    seleccionarComentario(3);
     agregarRespuesta("La mia calienta");
 
-}*/
+}
 
 /*DTUsuario* SistemaControlador::seleccionarNickname(const std::string& nick) {
     // Buscar el usuario en el mapa

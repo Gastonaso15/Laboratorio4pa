@@ -81,7 +81,7 @@ public:
 	set<DTCompra> seleccionarProductoC(int codigoProducto);
 	set<DTComentario*> seleccionarUsuarioComentario(string nick);
 	string confirmarCompra();
-	//void cargarDatosPrueba();
+	void cargarDatosPrueba();
 };
 
 

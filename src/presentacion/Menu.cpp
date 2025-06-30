@@ -48,7 +48,7 @@ void Menu::mostrarMenu() {
         cout << "9 - Eliminar Comentario" << endl;
         cout << "10 - Enviar Producto" << endl;
         cout << "11 - Expediente Usuario" << endl;
-        //cout << "12 - Cargar Datos de Prueba" << endl;
+        cout << "12 - Cargar Datos de Prueba" << endl;
         cout << "0 - Salir" << endl;
         cout << "Seleccione una opcion: ";
         cin >> opcion;
@@ -84,7 +84,7 @@ void Menu::mostrarMenu() {
                 break;
             }
             case 7: {
-                respuesta = realizarCompra.realizarCompra(); //Falta tener en cuenta promocion y stock, hacer confirmarCompra y arreglar verDetalleCompra
+                respuesta = realizarCompra.realizarCompra();
                 cout << respuesta << endl;
                 break;
             }
@@ -108,10 +108,10 @@ void Menu::mostrarMenu() {
                 cout << respuesta << endl;
                 break;
             }
-            /*case 12: {
+            case 12: {
                 controlador.cargarDatosPrueba();
                 break;
-            }*/
+            }
             case 0:
                 cout << "Saliendo del sistema..." << endl;
             break;

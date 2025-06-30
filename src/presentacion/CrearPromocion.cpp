@@ -18,7 +18,8 @@ string CrearPromocion::crearPromocion() {
   int dia,mes,anio;
   cout << "--- Crear Promocion ---" << endl;
   cout << "Ingrese nombre de la Promocion: ";
-  cin >> nombre;
+  cin.ignore();
+  getline(cin, nombre);
   cout << "Ingrese descripcion: ";
   cin.ignore();
   getline(cin, descripcion);

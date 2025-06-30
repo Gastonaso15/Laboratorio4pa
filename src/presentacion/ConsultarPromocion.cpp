@@ -29,7 +29,8 @@ string ConsultarPromocion::consultarPromocion() {
     cin >> continuar;
     if(continuar=="Si" || continuar=="SI" || continuar=="si") {
         cout << "Ingrese nombre de Promocion: ";
-        cin >> nombre;
+        cin.ignore();
+        getline(cin, nombre);
         set<DTProdPromocion*> prodprom = controlador.selectPromo(nombre);
         if (prodprom.empty()) {
             respuesta="Error: No hay Promociones registradas con ese nombre.";
