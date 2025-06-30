@@ -1,9 +1,6 @@
 #include "SistemaControlador.h"
-#include <iostream>
 #include <stdexcept>
 #include <string>
-using namespace std;
-
 #include "../dominio/Producto.h"
 #include "../DTs/DTFecha.h"
 #include "../DTs/DTProducto.h"
@@ -18,12 +15,7 @@ using namespace std;
 #include "../dominio/Comentario.h"
 #include "../dominio/ProdComprado.h"
 #include <map>
-#include "../presentacion/EnviarProducto.h"
 
-
-
-set<Promocion*> promociones;
-Promocion* promocionActual = nullptr;
 SistemaControlador* SistemaControlador::instancia = nullptr;
 
 SistemaControlador::SistemaControlador() {}
@@ -54,8 +46,7 @@ string SistemaControlador::altaUsuario(DTUsuario* usuario) {
     Usuario* nuevoUsuario = nullptr;
     string respuesta;
     if (DTCliente* dtoCli = dynamic_cast<DTCliente*>(usuario)) {
-        DTFecha* fechaNac = new DTFecha(*dtoCli->fechaNac);  // copia por valor
-
+        DTFecha* fechaNac = new DTFecha(*dtoCli->fechaNac);
         nuevoUsuario = new Cliente(
             dtoCli->nick,
             dtoCli->pass,
@@ -65,7 +56,7 @@ string SistemaControlador::altaUsuario(DTUsuario* usuario) {
         );
 
     } else if (DTVendedor* dtoVen = dynamic_cast<DTVendedor*>(usuario)) {
-        DTFecha* fechaNac = new DTFecha(*dtoVen->fechaNac);  // copia por valor
+        DTFecha* fechaNac = new DTFecha(*dtoVen->fechaNac);
 
         nuevoUsuario = new Vendedor(
             dtoVen->nick,
@@ -139,30 +130,29 @@ bool SistemaControlador::ingProducto(const DTProducto& producto) {
     int cod = ++ultimoCodigoProducto;
     Producto * prod = new Producto(cod, producto.nombre, producto.precio, producto.stock, producto.descripcion, producto.categoria);
     prod->asociarProdVendedor(vendedorSeleccionado);
-    //En los diagramas se pasa solo el nick, pero es mejor pasarle el puntero para evitar porblemas
     vendedorSeleccionado->aniadirProdListaVendedor(prod);
     int codigo = prod->getCodigo();
     auto result = productos.insert({codigo, prod});
-    return result.second; // true si se insertó, false si ya existía --- Siempre va a dar true porque el codigo siempre es diferente
+    return result.second;
 }
 
 set<DTProducto> SistemaControlador::listarProd() {
     set<DTProducto> resultado;
     for (const auto& par : productos) {
         Producto* p = par.second;
-        DTProducto dto = p->retornarDTProducto();
-        resultado.insert(dto);
+        DTProducto* dtProdPuntero = p->retornarDTProducto(); // Obtiene el puntero
+        DTProducto dto = *dtProdPuntero;                   // <--- Desreferencia para obtener la copia del objeto
+        delete dtProdPuntero;                              // <--- ¡IMPORTANTE! Borra el objeto del heap
+        resultado.insert(dto);                             // Inserta la copia en el set
     }
-
     return resultado;
 }
 
 DTProducto* SistemaControlador::selectProd(int codigo) {
-    //En los diagramas ingresa DTProducto, pero es mas comodo con int
     auto it = productos.find(codigo);
     if (it != productos.end()) {
         Producto* prod = it->second;
-        return new DTProducto(prod->retornarDTProducto());
+       return  prod->retornarDTProducto();
     } else {
         return nullptr;
     }
@@ -250,13 +240,16 @@ set<DTProducto> SistemaControlador::seleccionarCliente(string nick) {
         throw runtime_error("Usuario no encontrado");
     }
     set<DTProducto> productosDisponibles;
-    for (const auto& prod : productos) {
-        Producto* p = prod.second;
-        productosDisponibles.insert(p->retornarDTProducto());
+    for (const auto& par : productos) {
+        Producto* p = par.second;
+        DTProducto* dtProdPuntero = p->retornarDTProducto();
+        DTProducto dto = *dtProdPuntero;
+        delete dtProdPuntero;
+        productosDisponibles.insert(dto);
     }
     return productosDisponibles;
 }
-
+/*
 void SistemaControlador::agregarProducto(DTProducto p) {
     auto it = productos.find(p.codigo);
     if (compraActual == nullptr) {
@@ -278,15 +271,18 @@ set<string> SistemaControlador::listarNicknamesUsuario() {
     }
     return resultado;
 }
-
+*/
 set<DTProducto> SistemaControlador::seleccionarUsuario(string nick) {
     set<DTProducto> prods;
     auto it = usuarios.find(nick);
     if (it != usuarios.end()) {
         usuarioSeleccionado= it->second;
-        for (const auto& prod : productos) {
-            Producto* p = prod.second;
-            prods.insert(p->retornarDTProducto());
+        for (const auto& par : productos) {
+            Producto* p = par.second;
+            DTProducto* dtProdPuntero = p->retornarDTProducto();
+            DTProducto dto = *dtProdPuntero;
+            delete dtProdPuntero;
+            prods.insert(dto);
         }
         return prods;
     }
@@ -355,7 +351,7 @@ set<DTComentario*> SistemaControlador::seleccionarUsuarioComentario(string nick)
         resultado=usuarioSeleccionado->getComentarios();
         return resultado;
     }
-    return resultado;  // Retorna set vacío si no encuentra al usuario
+    return resultado;
 }
 
 void SistemaControlador::auxBorrarComentarioRecursivo(Comentario* com, Usuario* usuario, Producto* producto) {
@@ -376,20 +372,21 @@ string SistemaControlador::borrarComentario(int id) {
     auxBorrarComentarioRecursivo(com, usuarioSeleccionado, prod);
     return "Comentario borrado con exito";
 }
-
+/*
 set<DTCompra> SistemaControlador::seleccionarProductoC(int codigoProducto) {
     set<DTCompra> resultado;
 
     for (const auto& par : compras) {
         Compra* compra = par.second;
         for (ProdComprado* pc : compra->getProdComprado()) {
-            if (pc->getProducto()->getCodigo() == codigoProducto && !pc->getEnviado()) {
-                resultado.insert(compra->toDT()); // Asume que Compra tiene un método toDT()
-            }
+            //            if (pc->getProducto()->getCodigo() == codigoProducto && !pc->getEnviado()) {
+            resultado.insert(compra->toDT());
         }
     }
-    return resultado;
 }
+    //}
+   // return resultado;
+//} da error
 
 string SistemaControlador::marcarProductoComoEnviado(int codigoProducto, int idCompra) {
     auto itCompra = compras.find(idCompra);
@@ -404,12 +401,13 @@ string SistemaControlador::marcarProductoComoEnviado(int codigoProducto, int idC
         return "Error: El producto no se encontró pendiente de envío en la compra seleccionada.";
     }
     return "Error: No se encontró la compra con el ID especificado.";
-}
+}*/
+    //da error
 
-set<DTProducto> SistemaControlador::obtenerProductosPendientesPorVendedor(string nickVendedor) {
-    set<DTProducto> resultado;
-    return resultado;
-}
+//set<DTProducto> SistemaControlador::obtenerProductosPendientesPorVendedor(string nickVendedor) {
+ //   set<DTProducto> resultado;
+    //return resultado;
+//}
 
 /*DTUsuario* SistemaControlador::seleccionarNickname(const std::string& nick) {
     // Buscar el usuario en el mapa

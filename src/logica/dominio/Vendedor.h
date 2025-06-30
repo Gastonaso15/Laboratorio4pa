@@ -29,8 +29,8 @@ public:
     string getNickname() const;
 
     DTUsuario* retornarDTUsuario() const override;
-    set<DTPromocion> getPromocion();
 
+    set<DTPromocion*> getPromocion();
     set<DTProducto> retornarProductos();
 };
 #endif //VENDEDOR_H

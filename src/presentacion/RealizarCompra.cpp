@@ -14,7 +14,6 @@ string RealizarCompra::realizarCompra() {
         cout << "No hay clientes registrados." << endl;
     }
 
-    // Mostrar clientes
     cout << "Clientes disponibles:" << endl;
     for (auto const &cliente : clientes) {
         cout << cliente << endl;

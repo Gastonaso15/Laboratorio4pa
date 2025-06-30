@@ -60,9 +60,7 @@ string Producto::catToString(cat categoria) {
     }
  }
 
-
-
-DTProducto Producto::retornarDTProducto(){
+DTProducto* Producto::retornarDTProducto() const {
   DTVendedor* dtVen = nullptr;
   if (this->vendedor != nullptr) {
     DTUsuario* dtUsuarioBase = this->vendedor->retornarDTUsuario();
@@ -73,7 +71,7 @@ DTProducto Producto::retornarDTProducto(){
     delete dtUsuarioBase;
     dtUsuarioBase = nullptr;
   }
-  return DTProducto(this->codigo, this->nombre, this->precio, this->stock, this->descripcion, this->categoria,dtVen);
+  return new DTProducto(this->codigo, this->nombre, this->precio, this->stock, this->descripcion, this->categoria, dtVen);
 }
 
 /*DTProducto Producto::retornarDTProducto() {

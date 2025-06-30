@@ -4,8 +4,6 @@
 #include "../../DTs/DTPromocion.h"
 #include "../../DTs/DTProdPromocion.h"
 #include "../../DTs/DTFecha.h"
-
-
 Promocion::Promocion() {
 }
 

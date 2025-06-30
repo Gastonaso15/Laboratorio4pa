@@ -21,10 +21,13 @@ DTUsuario* Vendedor::retornarDTUsuario() const {
     return new DTVendedor(this->nick, "", this->fechaNac, this->rut);
 }
 
-set<DTPromocion> Vendedor::getPromocion() {
-    set<DTPromocion> retorno;
-    for (auto const promos : promociones) {
-        retorno.insert(promos.second->retornarDTPromocionConProd());
+set<DTPromocion*> Vendedor::getPromocion() {
+    set<DTPromocion*> retorno;
+    for (auto const& pair : promociones) {
+        Promocion* promo = pair.second;
+        if (promo != nullptr) {
+            retorno.insert(promo->retornarDTPromocionConProd());
+        }
     }
     return retorno;
 }
@@ -36,8 +39,12 @@ void Vendedor::aniadirProdListaVendedor(Producto* producto) {
 
 set<DTProducto> Vendedor::retornarProductos() {
     set<DTProducto> productosVendedor;
-    for (const auto& prod : productos) {
-        productosVendedor.insert(prod.second->retornarDTProducto());
+    for (const auto& par : productos) {
+        Producto* p = par.second;
+        DTProducto* dtProdPuntero = p->retornarDTProducto();
+        DTProducto dto = *dtProdPuntero;
+        delete dtProdPuntero;
+        productosVendedor.insert(dto);
     }
     return productosVendedor;
 }

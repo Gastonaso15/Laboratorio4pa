@@ -1,11 +1,8 @@
 #ifndef PRODCOMPRADO_H
 #define PRODCOMPRADO_H
 #include "Producto.h"
-#include "../DTs/DTFecha.h"
 #include "../DTs/DTProducto.h"
-#include "../DTs/DTUsuario.h"
-#include "../DTs/DTVendedor.h"
-#include "../DTs/DTCliente.h"
+
 
 class Producto;
 class Compra;
@@ -20,11 +17,17 @@ class ProdComprado {
   ProdComprado();
   ProdComprado(Producto* producto,Compra* compra,int cantidad,bool enviado);
   virtual ~ProdComprado();
-  Producto* getProducto() const { return producto; }
-  bool tieneArt(DTProducto p);
-  DTProducto getProductos();
-  bool getEnviado() const { return enviado; }
-  void setEnviado(bool valor) { enviado = valor; }
+
+  Producto* getProducto() const;
+  DTProducto* getProductos() const;
+  DTProducto* retornarDTProductoAsociado() const;
+
+  int getCantidad() const;
+
+  bool tieneArt(DTProducto p) const;
+  bool getEnviado() const;
+
+  void setEnviado(bool valor);
 };
 
 

@@ -1,11 +1,9 @@
-
 #ifndef PROMOCION_H
 #define PROMOCION_H
 #include <set>
 #include "string"
 #include "../DTs/DTFecha.h"
 #include "../../DTs/DTProdPromocion.h"
-
 
 class Vendedor;
 class Producto;

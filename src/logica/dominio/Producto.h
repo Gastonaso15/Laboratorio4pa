@@ -19,31 +19,38 @@ class ProdComprado;
 class Producto {
   private:
     int codigo;
-    string nombre;
     int precio;
     int stock;
+
+    string nombre;
     string descripcion;
+
     cat categoria;
     Vendedor * vendedor;
     map<int,Comentario*> comentarios;
+
     set<ProdPromocion*> prodsprom;
     set<ProdComprado*> prodscom;
   public:
     Producto();
     Producto(int codigo, string nombre, int precio,int stock, string descripcion, cat categoria);
     virtual ~Producto();
+
     int getCodigo()const;
     int getPrecio()const;
-    string getNombre();
     int getStock();
+
+    string getNombre();
     string getDescripcion();
-    cat getCategoria();
     string catToString(cat categoria);
+
+    cat getCategoria();
     set<DTComentario*> getComentarios();
     Comentario* getComentario(int id);
-    DTProducto retornarDTProducto();
-    void asociarProdVendedor(Vendedor* vendedor);
+    DTProducto* retornarDTProducto()const ;
+
     bool productoEnPromo();
+    void asociarProdVendedor(Vendedor* vendedor);
     void agregarProdPromocion(ProdPromocion* pp);
     void asociarComentarioProducto(Comentario *com);
     void eliminarComentario(int id);
