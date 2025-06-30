@@ -1,6 +1,7 @@
 #ifndef COMPRA_H
 #define COMPRA_H
 #include "../DTs/DTFecha.h"
+#include "../DTs/DTProdComprado.h"
 #include "../DTs/DTCliente.h"
 #include "../dominio/ProdComprado.h"
 #include "../DTs/DTCompra.h"
@@ -28,10 +29,9 @@ class Compra {
         int getCantProd() const;
         DTFecha* getFecCompra() const;
         Cliente* getCliente() const;
-        DTCompra getCompra();
+        DTCompra * getCompra();
         void agregarProdComprado(ProdComprado* pc);
-
-        bool agregoProd(DTProducto p);
+        bool agregoProd(DTProdComprado p);
 
         DTCompra toDT() const;
 };

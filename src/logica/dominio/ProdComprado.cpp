@@ -19,8 +19,8 @@ ProdComprado::ProdComprado(Producto* producto,  Compra* compra, int cantidad,boo
 int ProdComprado::getCantidad() const {
   return cantidad;
 }
-bool ProdComprado::tieneArt(DTProducto p) const {
-  return this->producto->getCodigo() == p.codigo;
+bool ProdComprado::tieneArt(DTProducto* p) {
+  return this->producto->getCodigo() == p->codigo;
 }
 Producto* ProdComprado::getProducto() const {
   return this->producto;

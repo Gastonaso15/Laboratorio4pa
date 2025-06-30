@@ -50,3 +50,7 @@ int DTCompra::getCantidadProductos() const {
 float DTCompra::getMontoTotal() const {
     return montoTotal;
 }
+
+set<DTProdComprado*> DTCompra::getProductosComprados() {
+    return this->productosComprados;
+}

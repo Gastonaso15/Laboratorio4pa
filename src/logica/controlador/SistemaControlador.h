@@ -1,6 +1,8 @@
 #ifndef LOGICA_CONTROLADOR_SISTEMACONTROLADOR_H_
 #define LOGICA_CONTROLADOR_SISTEMACONTROLADOR_H_
 #include "../dominio/Producto.h"
+#include "../DTs/DTFecha.h"
+#include "../DTs/DTProdComprado.h"
 #include "../DTs/DTProducto.h"
 #include "../DTs/DTUsuario.h"
 #include "../DTs/DTComentario.h"
@@ -14,7 +16,6 @@
 #include <set>
 #include "../../DTs/DTPromocion.h"
 #include <string>
-#include <memory>
 
 class SistemaControlador{
 protected:
@@ -45,6 +46,7 @@ public:
 	bool ingProducto(const DTProducto& producto);
 	bool seleccionarProducto(int codigo);
 	bool seleccionarComentario(int id);
+	bool ingProducto(const DTProducto& producto);
 
 	string altaUsuario(DTUsuario * usuario);
 	string agregarProdProm(set<DTProdPromocion> productosDT);
@@ -56,27 +58,31 @@ public:
 
 	set<DTUsuario*> listarUsuarios();
 	set<string> listarNickVendedor();
+	string selectVendedor(string nick);
+
+	Producto *buscarProductoPorDT(const DTProducto* dtp);
+
 	set<DTProducto> listarProd();
+	DTProducto* selectProd(int codigo);
 	set<string> ingDatos(DTPromocion prom);
 	set<DTProducto> seleccionarVendedor(string nick);
+	string agregarProdProm(set<DTProdPromocion> productosDT);
 	set<DTPromocion*> listarPromociones();
 	set<DTProdPromocion*> selectPromo(string nombre);
 	set<string> listarClientes();
 	set<DTProducto> seleccionarCliente(string nick);
+	void agregarProducto(DTProdComprado p);
+
+	DTCompra * verDetalleCompra();
+
 	set<string> listarNicknamesUsuario();
 	set<DTProducto> seleccionarUsuario(string nick);
 	set<DTComentario*> listarComentario();
 	set<DTProducto> obtenerProductosPendientesPorVendedor(string nickVendedor);
 	set<DTCompra> seleccionarProductoC(int codigoProducto);
-	set<DTComentario*> seleccionarUsuarioComentario(string nick);
-
-	Producto *buscarProductoPorDT(DTProducto dtp);
-	DTProducto* selectProd(int codigo);
-	DTCompra verDetalleCompra();
-
-	void agregarProducto(DTProducto p);
-	void auxBorrarComentarioRecursivo(Comentario* com, Usuario* usuario, Producto* producto);
-
+	string marcarProductoComoEnviado(int codigoProducto, int idCompra);
+	string confirmarCompra();
+	//void cargarDatosPrueba();
 };
 
 

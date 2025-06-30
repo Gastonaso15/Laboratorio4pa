@@ -17,17 +17,12 @@ class ProdComprado {
   ProdComprado();
   ProdComprado(Producto* producto,Compra* compra,int cantidad,bool enviado);
   virtual ~ProdComprado();
-
-  Producto* getProducto() const;
-  DTProducto* getProductos() const;
-  DTProducto* retornarDTProductoAsociado() const;
-
+  Producto* getProducto() const { return producto; }
+  bool tieneArt(DTProducto * p);
   int getCantidad() const;
-
-  bool tieneArt(DTProducto p) const;
-  bool getEnviado() const;
-
-  void setEnviado(bool valor);
+  DTProducto getProductos();
+  bool getEnviado() const { return enviado; }
+  void setEnviado(bool valor) { enviado = valor; }
 };
 
 
