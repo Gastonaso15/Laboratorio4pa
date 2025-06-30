@@ -8,7 +8,7 @@ EnviarProducto::EnviarProducto(SistemaControlador& controlador)
 
 EnviarProducto::~EnviarProducto() {}
 
-/*std::string EnviarProducto::enviarProducto() {
+string EnviarProducto::enviarProducto() {/*
     cout << "--- Iniciar Envio de Producto ---" << endl;
     cout << "Listando vendedores disponibles:" << endl;
     set<string> nicknamesVendedores = controlador.listarNickVendedor();
@@ -107,6 +107,6 @@ EnviarProducto::~EnviarProducto() {}
         return mensaje;
     } catch (const exception& e) {
         return string("Error al marcar como enviado: ") + e.what();
-    }
+    }*/
+    return "Por Terminar";
 }
-*/

@@ -4,7 +4,7 @@ DejarComentario::DejarComentario(SistemaControlador& controlador):controlador(co
 
 DejarComentario::~DejarComentario() {}
 
-/*string DejarComentario::dejarComentario() {
+string DejarComentario::dejarComentario() {
   string respuesta;
   set<string> usuarios =controlador.listarNicknamesUsuario();
   if(usuarios.empty()){
@@ -84,4 +84,4 @@ DejarComentario::~DejarComentario() {}
     return respuesta;
   }
   return respuesta;
-}*/
+}

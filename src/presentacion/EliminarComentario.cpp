@@ -3,7 +3,7 @@
 EliminarComentario::EliminarComentario(SistemaControlador& controlador):controlador(controlador) {}
 
 EliminarComentario::~EliminarComentario() {}
-/*
+
 string EliminarComentario::eliminarComentario() {
   string respuesta;
   set<string> usuarios =controlador.listarNicknamesUsuario();
@@ -37,4 +37,3 @@ string EliminarComentario::eliminarComentario() {
   respuesta=controlador.borrarComentario(id);
   return respuesta;
 }
-*/

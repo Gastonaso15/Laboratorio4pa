@@ -28,17 +28,11 @@ Producto* ProdComprado::getProducto() const {
 bool ProdComprado::getEnviado() const {
   return this->enviado;
 }
-DTProducto * ProdComprado::getProductos() const {
-  if (this->producto != nullptr) {
-    return this->producto->retornarDTProducto();
-  }
-  return nullptr;
-}
-bool ProdComprado::tieneArt(DTProducto p) const {
-  if (this->producto != nullptr) {
-    return this->producto->getCodigo() == p.getCodDTProd();
-  }
-  return false;
+DTProducto ProdComprado::getProductos() {
+  DTProducto prod = DTProducto(producto->getCodigo(),
+      producto->getNombre(),producto->getPrecio(), producto->getStock(),producto->getDescripcion(),
+      producto->getCategoria());
+  return prod;
 }
 void ProdComprado::setEnviado(bool valor) {
   this->enviado = valor;

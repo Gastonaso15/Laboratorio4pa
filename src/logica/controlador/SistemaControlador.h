@@ -46,7 +46,6 @@ public:
 	bool ingProducto(const DTProducto& producto);
 	bool seleccionarProducto(int codigo);
 	bool seleccionarComentario(int id);
-	bool ingProducto(const DTProducto& producto);
 
 	string altaUsuario(DTUsuario * usuario);
 	string agregarProdProm(set<DTProdPromocion> productosDT);
@@ -54,7 +53,6 @@ public:
 	string agregarRespuesta(string texto);
 	string borrarComentario(int id);
 	string marcarProductoComoEnviado(int codigoProducto, int idCompra);
-	string selectVendedor(std::string nick);
 
 	set<DTUsuario*> listarUsuarios();
 	set<string> listarNickVendedor();
@@ -66,12 +64,12 @@ public:
 	DTProducto* selectProd(int codigo);
 	set<string> ingDatos(DTPromocion prom);
 	set<DTProducto> seleccionarVendedor(string nick);
-	string agregarProdProm(set<DTProdPromocion> productosDT);
 	set<DTPromocion*> listarPromociones();
 	set<DTProdPromocion*> selectPromo(string nombre);
 	set<string> listarClientes();
 	set<DTProducto> seleccionarCliente(string nick);
 	void agregarProducto(DTProdComprado p);
+	void auxBorrarComentarioRecursivo(Comentario* com, Usuario* usuario, Producto* producto);
 
 	DTCompra * verDetalleCompra();
 
@@ -80,7 +78,7 @@ public:
 	set<DTComentario*> listarComentario();
 	set<DTProducto> obtenerProductosPendientesPorVendedor(string nickVendedor);
 	set<DTCompra> seleccionarProductoC(int codigoProducto);
-	string marcarProductoComoEnviado(int codigoProducto, int idCompra);
+	set<DTComentario*> seleccionarUsuarioComentario(string nick);
 	string confirmarCompra();
 	//void cargarDatosPrueba();
 };

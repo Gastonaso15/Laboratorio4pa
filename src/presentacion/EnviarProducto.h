@@ -9,8 +9,7 @@ private:
 public:
     EnviarProducto(SistemaControlador& controlador);
     ~EnviarProducto();
-
-    std::string enviarProducto();
+    string enviarProducto();
 };
 
 #endif

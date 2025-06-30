@@ -9,7 +9,9 @@
 #include "DejarComentario.h"
 #include "EliminarComentario.h"
 #include "EnviarProducto.h"
+#include "ExpedienteUsuario.h"
 #include <iostream>
+
 
 using namespace std;
 
@@ -31,6 +33,7 @@ void Menu::mostrarMenu() {
     DejarComentario dejarComentario(controlador);
     EliminarComentario eliminarComentario(controlador);
     EnviarProducto enviarProductoInstancia(controlador);
+    ExpedienteUsuario expedienteUsuario(controlador);
 
     do {
         cout << "------ MENU PRINCIPAL ------" << endl;
@@ -86,21 +89,23 @@ void Menu::mostrarMenu() {
                 break;
             }
             case 8: {
-                //respuesta = dejarComentario.dejarComentario();
+                respuesta = dejarComentario.dejarComentario();
                 cout << respuesta << endl;
                 break;
             }
             case 9: {
-               // respuesta = eliminarComentario.eliminarComentario();
+                respuesta = eliminarComentario.eliminarComentario();
                 cout << respuesta << endl;
                 break;
             }
             case 10: {
-                //respuesta = enviarProductoInstancia.enviarProducto();
+                respuesta = enviarProductoInstancia.enviarProducto(); //No funciona
                 cout << respuesta << endl;
                 break;
             }
             case 11: {
+                respuesta = expedienteUsuario.expedienteUsuario(); // Falta implementar
+                cout << respuesta << endl;
                 break;
             }
             /*case 12: {

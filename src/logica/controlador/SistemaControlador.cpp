@@ -159,7 +159,7 @@ DTProducto* SistemaControlador::selectProd(int codigo) {
     auto it = productos.find(codigo);
     if (it != productos.end()) {
         Producto* prod = it->second;
-        return new DTProducto(prod->retornarDTProducto());
+        return new DTProducto(*prod->retornarDTProducto());
     } else {
         return nullptr;
     }
