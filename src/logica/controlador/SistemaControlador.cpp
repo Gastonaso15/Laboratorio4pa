@@ -603,15 +603,53 @@ void SistemaControlador::cargarDatosPrueba() {
     seleccionarComentario(3);
     agregarRespuesta("La mia calienta");
 
-    /*
+
     seleccionarCliente("Martin");
-    DTProducto * prodPtr1 = this->productos[0]->retornarDTProducto();
+    DTProducto * prodPtr1 = this->productos[1]->retornarDTProducto();
     DTProdComprado nuevoProd1(7,false,prodPtr1);
     agregarProducto(nuevoProd1);
-    DTProducto * prodPtr2 = this->productos[2]->retornarDTProducto();
+    DTProducto * prodPtr2 = this->productos[3]->retornarDTProducto();
     DTProdComprado nuevoProd2(5,false,prodPtr2);
     agregarProducto(nuevoProd2);
-    confirmarCompra();*/
+    verDetalleCompra();
+    confirmarCompra();
+
+    seleccionarCliente("Juan");
+    DTProducto * prodPtr3 = this->productos[1]->retornarDTProducto();
+    DTProdComprado nuevoProd3(1,false,prodPtr3);
+    agregarProducto(nuevoProd3);
+    DTProducto * prodPtr4 = this->productos[3]->retornarDTProducto();
+    DTProdComprado nuevoProd4(1,false,prodPtr4);
+    agregarProducto(nuevoProd4);
+    DTProducto * prodPtr5 = this->productos[2]->retornarDTProducto();
+    DTProdComprado nuevoProd5(1,false,prodPtr5);
+    agregarProducto(nuevoProd5);
+    verDetalleCompra();
+    confirmarCompra();
+
+    seleccionarCliente("Martin");
+    DTProducto * prodPtr6 = this->productos[4]->retornarDTProducto();
+    DTProdComprado nuevoProd6(3,false,prodPtr6);
+    agregarProducto(nuevoProd6);
+    verDetalleCompra();
+    confirmarCompra();
+
+    seleccionarCliente("Santiago");
+    DTProducto * prodPtr7 = this->productos[1]->retornarDTProducto();
+    DTProdComprado nuevoProd7(5,false,prodPtr7);
+    agregarProducto(nuevoProd7);
+    DTProducto * prodPtr8 = this->productos[2]->retornarDTProducto();
+    DTProdComprado nuevoProd8(5,false,prodPtr8);
+    agregarProducto(nuevoProd8);
+    DTProducto * prodPtr9 = this->productos[3]->retornarDTProducto();
+    DTProdComprado nuevoProd9(5,false,prodPtr9);
+    agregarProducto(nuevoProd9);
+    DTProducto * prodPtr10 = this->productos[4]->retornarDTProducto();
+    DTProdComprado nuevoProd10(5,false,prodPtr10);
+    agregarProducto(nuevoProd10);
+    verDetalleCompra();
+    confirmarCompra();
+
 
 }
 

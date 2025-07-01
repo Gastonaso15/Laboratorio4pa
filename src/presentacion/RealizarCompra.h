@@ -12,7 +12,6 @@ class RealizarCompra {
         ~RealizarCompra();
         string realizarCompra();
 };
-//Falta tener en cuenta promocion y stock, hacer confirmarCompra y arreglar verDetalleCompra
 
 
 #endif //REALIZARCOMPRA_H
