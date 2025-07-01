@@ -649,7 +649,16 @@ void SistemaControlador::cargarDatosPrueba() {
     agregarProducto(nuevoProd10);
     verDetalleCompra();
     confirmarCompra();
-
+    delete prodPtr1;
+    delete prodPtr2;
+    delete prodPtr3;
+    delete prodPtr4;
+    delete prodPtr5;
+    delete prodPtr6;
+    delete prodPtr7;
+    delete prodPtr8;
+    delete prodPtr9;
+    delete prodPtr10;
 
 }
 
