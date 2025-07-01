@@ -12,20 +12,25 @@ class ProdComprado {
   private:
     int cantidad;
     bool enviado;
+
     Producto * producto;
     Compra * compra;
   public:
-  ProdComprado();
-  ProdComprado(Producto* producto,Compra* compra,int cantidad,bool enviado);
-  virtual ~ProdComprado();
-  Producto* getProducto() const;
-  bool tieneArt(DTProducto * p);
-  int getCantidad() const;
-  DTProducto getProductos();
-  bool getEnviado() const;
-  void setEnviado(bool valor);
-  void aumentarCantidad(int cantidadAAgregar);
-  DTProdComprado * getDTProdComprado();
+    ProdComprado();
+    ProdComprado(Producto* producto,Compra* compra,int cantidad,bool enviado);
+    virtual ~ProdComprado();
+
+    int getCantidad() const;
+
+    bool getEnviado() const;
+    bool tieneArt(DTProducto * p);
+
+    void setEnviado(bool valor);
+    void aumentarCantidad(int cantidadAAgregar);
+
+    Producto* getProducto() const;
+    DTProducto getProductos();
+    DTProdComprado * getDTProdComprado();
 };
 
 

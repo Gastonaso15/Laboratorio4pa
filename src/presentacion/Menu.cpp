@@ -104,7 +104,7 @@ void Menu::mostrarMenu() {
                 break;
             }
             case 11: {
-                respuesta = expedienteUsuario.expedienteUsuario(); // Falta implementar
+                respuesta = expedienteUsuario.expedienteUsuario();
                 cout << respuesta << endl;
                 break;
             }

@@ -8,7 +8,7 @@ string DejarComentario::dejarComentario() {
   string respuesta;
   set<string> usuarios =controlador.listarNicknamesUsuario();
   if(usuarios.empty()){
-    return respuesta="Error: No hay usuarios registrados.";
+    return "Error: No hay usuarios registrados.";
   } else {
     cout << "--- Usuarios registrados ---" << endl;
     for (string nick : usuarios) {
@@ -35,7 +35,7 @@ string DejarComentario::dejarComentario() {
   cout << "Ingrese codigo del Producto: ";
   cin >> codigo;
   if(!controlador.seleccionarProducto(codigo)){
-    return respuesta="Error: No se encontro el Producto.";
+    return "Error: No se encontro el Producto.";
   }
   cout <<endl << "Seleccione opcion deseada: " << endl;
   cout <<endl << "1- Realizar comentario nuevo" << endl;
@@ -73,7 +73,7 @@ string DejarComentario::dejarComentario() {
     cout << "Ingrese id del Comentario: ";
     cin >> id;
     if(!controlador.seleccionarComentario(id)){
-      return respuesta="Error: No se encontro el Comentario.";
+      return "Error: No se encontro el Comentario.";
     }
     string texto;
     cout << endl << "** Dejar Respuesta **" << endl;

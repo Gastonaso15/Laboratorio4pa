@@ -1,5 +1,6 @@
 #include "ConsultarProducto.h"
 #include "../DTs/DTProducto.h"
+#include "../DTs/DTVendedor.h"
 #include <string>
 #include <iostream>
 using namespace std;
@@ -28,7 +29,7 @@ string ConsultarProducto::consultarProducto() {
     cin >> codigo;
     DTProducto * producto  = controlador.selectProd(codigo);
     if (producto != nullptr) {
-        cout << "Precio: " << producto->precio << endl << "Stock: " << producto->stock << endl
+        cout << "Precio: $" << producto->precio << endl << "Stock: " << producto->stock << endl
         << "Descripcion: " << producto->descripcion << endl << "Categoria: " << DTProducto::catToString(producto->categoria) << endl
         << "Vendedor: " << producto->vendedor->nick << endl;
         respuesta="Informacion de Producto mostrada con exito";

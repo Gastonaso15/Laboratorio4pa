@@ -1,4 +1,5 @@
 #include "ConsultarPromocion.h"
+#include "../DTs/DTVendedor.h"
 #include <iostream>
 #include <string>
 #include "../logica/controlador/SistemaControlador.h"
@@ -37,10 +38,10 @@ string ConsultarPromocion::consultarPromocion() {
         } else {
             for (DTProdPromocion* p : prodprom) {
                 cout << "Cantidad Minima: " << p->cantMinima << endl
-                     << "Descuento: " << p->descuento << endl;
+                     << "Descuento: " << p->descuento << "%" << endl;
                 cout << "Codigo: " << p->producto.codigo << endl
                          << "Nombre: " << p->producto.nombre << endl
-                         << "Precio: " << p->producto.precio << endl
+                         << "Precio: $" << p->producto.precio << endl
                          << "Stock: " << p->producto.stock << endl
                          << "Descripcion: " << p->producto.descripcion << endl
                          << "Categoria: " << DTProducto::catToString(p->producto.categoria) << endl;

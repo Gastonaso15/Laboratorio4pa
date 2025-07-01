@@ -1,5 +1,6 @@
 #include "Producto.h"
 #include "Comentario.h"
+#include "../../DTs/DTVendedor.h"
 #include "ProdComprado.h"
 #include "../../DTs/DTProducto.h"
 
@@ -68,22 +69,12 @@ DTProducto* Producto::retornarDTProducto() const {
   return new DTProducto(this->codigo, this->nombre, this->precio, this->stock, this->descripcion, this->categoria, dtVen);
 }
 
-/*DTProducto Producto::retornarDTProducto() {
-  DTVendedor* dtVen = nullptr;
-  if (this->vendedor != nullptr) {
-    dtVen = this->vendedor->retornarDTVendedor(); // Asumo que retornarDTVendedor() devuelve NEW DTVendedor*
-  }
-  return DTProducto(this->codigo, this->nombre, this->precio, this->stock,
-                    this->descripcion, this->categoria, dtVen);
-}*/
-
 void Producto::asociarProdVendedor(Vendedor* vendedor) {
   this->vendedor=vendedor;
 }
 
 
 bool Producto::productoEnPromo() {
-  //Cambios respecto al Diagrama de Clase; asi es mas eficiente
   bool enPromo=!prodsprom.empty();
   if (enPromo) {
     for (const auto& prodProm : prodsprom) {
@@ -95,7 +86,7 @@ bool Producto::productoEnPromo() {
   return false;
 }
 
-void Producto::agregarProdPromocion(ProdPromocion* pp) { //
+void Producto::agregarProdPromocion(ProdPromocion* pp) {
   this->prodsprom.insert(pp);
 }
 

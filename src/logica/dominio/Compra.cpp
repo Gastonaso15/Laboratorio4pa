@@ -45,13 +45,20 @@ Compra::~Compra(){
 }
 
 int Compra::getId() const {
-  return id; }
+  return id;
+}
+
 int Compra::getCantProd() const {
-  return cantProd; }
+  return cantProd;
+}
+
 DTFecha* Compra::getFecCompra() const {
-  return fecCompra; }
+  return fecCompra;
+}
+
 Cliente* Compra::getCliente() const {
-  return cliente; }
+  return cliente;
+}
 
 DTCompra* Compra::getCompra() {
   set<DTProdComprado*> productos ;
@@ -64,8 +71,6 @@ DTCompra* Compra::getCompra() {
   DTCompra*  carrito = new DTCompra(this->getId(), this->getCantProd(), fecha, this->getMontoTotal(), productos,cli);
   return carrito;
 }
-
-
 
 set<ProdComprado*> Compra::getProdComprado() const {
   return productosComprados;
@@ -87,21 +92,6 @@ void Compra::agregarProdComprado(ProdComprado* pc) {
 
 }
 
-/*bool Compra::agregoProd(DTProdComprado p){
-  for(auto* prodComp : productosComprados){
-    bool b = prodComp->tieneArt(p.producto);
-    if(!b){
-      Producto* prod = controlador.buscarProductoPorDT(p.producto);
-      ProdComprado * cp = new ProdComprado(prod, this, p.cantidad, false);
-      productosComprados.insert(cp);
-      delete sistemaGlobal;
-      return true;
-    }
-
-  }
-  return false;
-}*/
-
 bool Compra::agregoProd(DTProdComprado p_dto){
   for(auto* prodComp : productosComprados){
     if(prodComp->tieneArt(p_dto.producto)){
@@ -119,12 +109,15 @@ bool Compra::agregoProd(DTProdComprado p_dto){
 void Compra::setId(int id) {
   this->id = id;
 }
+
 void Compra::setFecCompra(DTFecha* fecha) {
   this->fecCompra = fecha;
 }
+
 void Compra::setMontoTotal(float monto) {
   this->montoTotal = monto;
 }
+
 void Compra::setCliente(Cliente* cliente) {
   this->cliente=cliente;
 }

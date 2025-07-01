@@ -13,7 +13,6 @@ CrearPromocion::CrearPromocion(SistemaControlador& controlador):controlador(cont
 CrearPromocion::~CrearPromocion() {}
 
 string CrearPromocion::crearPromocion() {
-  //ingDatos
   string nombre,descripcion,respuesta;
   int dia,mes,anio;
   cout << "--- Crear Promocion ---" << endl;

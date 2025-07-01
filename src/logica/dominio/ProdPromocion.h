@@ -16,7 +16,6 @@ class ProdPromocion {
     public:
         ProdPromocion();
         ProdPromocion(int cantMininima, int descuento, Producto* prod, Promocion* promo);
-
         virtual ~ProdPromocion();
 
         Promocion* retornarPromocion();

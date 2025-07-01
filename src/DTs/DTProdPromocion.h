@@ -11,10 +11,10 @@ class DTProdPromocion {
 
     DTProducto producto;
     DTPromocion * promocion;
-
+    //--------------------------------------------------------------------------------------------------------------------
     DTProdPromocion();
-    ~DTProdPromocion();
     DTProdPromocion(int cantMinima, int descuento, const DTProducto& prod);
+    ~DTProdPromocion();
 
     bool operator<(const DTProdPromocion& otro) const;
 

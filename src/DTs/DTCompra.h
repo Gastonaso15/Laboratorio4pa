@@ -4,37 +4,39 @@
 #include <iostream>
 #include "DTFecha.h"
 #include "DTProducto.h"
+#include "DTProdComprado.h"
 #include "DTCliente.h"
 #include <set>
 
-#include "Compra.h"
-
-
 class DTCompra {
-
   public:
-  int cantProd;
-  DTFecha *fecCompra;
-  float montoTotal;
-  set<DTProdComprado*> productosComprados;
-  int id;
-  //set<DTProducto> productos;
-  DTCliente * cliente;
-  set<DTProdComprado*> getProductosComprados();
+    int id;
+    int cantProd;
+    float montoTotal;
 
-  DTCompra();
-  DTCompra(int id, int cantProd, DTFecha *fecCompra, float montoTotal, DTCliente *clienteParam);
-  ~DTCompra();
-  DTCompra(int id, int cantProd, DTFecha *fecCompra, float montoTotal, set<DTProdComprado*> productos);
+    DTFecha *fecCompra;
+    DTCliente * cliente;
+
+    set<DTProdComprado*> productosComprados;
+    //--------------------------------------------------------------------------------------------------------------------
+    DTCompra();
+    DTCompra(int id, int cantProd, DTFecha *fecCompra, float montoTotal, DTCliente *clienteParam);
+    DTCompra(int id, int cantProd, DTFecha *fecCompra, float montoTotal, set<DTProdComprado*> productos);
     DTCompra(int id, int cantProd, DTFecha *fecCompra, float montoTotal, set<DTProdComprado*> productos,DTCliente * cliente);
-  DTCompra(int id, int cantProd, DTFecha *fecCompra, float montoTotal);
+    DTCompra(int id, int cantProd, DTFecha *fecCompra, float montoTotal);
+    ~DTCompra();
 
-  void agregarProd(DTProducto* producto);
     int getIdCompra() const;
+    int getCantidadProductos() const;
+
+    float getMontoTotal() const;
+
+    void agregarProd(DTProducto* producto);
+
     DTFecha * getFecha() const;
     DTCliente * getCliente() const;
-    float getMontoTotal() const;
-    int getCantidadProductos() const;
+
+    set<DTProdComprado*> getProductosComprados();
 
     bool operator<(const DTCompra& other) const {
         return this->id < other.id;

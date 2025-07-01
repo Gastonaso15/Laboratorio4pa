@@ -7,27 +7,26 @@
 
 class Cliente: public Usuario{
 protected:
-
-    DTDireccion * direccion;
     string ciudad;
+    DTDireccion * direccion;
 
     map<int,Compra*> compras;
-
 public:
     Cliente(string nick, string pass, DTFecha *  fechaNac,DTDireccion* direccion, string ciudad);
-    //Cliente getCliente();
     Cliente();
     ~Cliente();
 
     void asociarProd();
+    void agregarCompra(Compra* compra);
 
-    std::string getCiudad() const;
+    string getCiudad() const;
 
     DTCliente getCliente() const;
     DTUsuario* retornarDTUsuario() const override;
     DTDireccion* getDireccion() const;
     DTCliente* toDT();
-    void agregarCompra(Compra* compra);
+
+    set<DTCompra*> retornarCompras();
 
 };
 

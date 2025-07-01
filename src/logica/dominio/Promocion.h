@@ -14,10 +14,9 @@ class Promocion {
 private:
     string nom;
     string desc;
-
     DTFecha * fecVencimiento;
-    Vendedor * vendedor;
 
+    Vendedor * vendedor;
     set<ProdPromocion*> prodsprom;
 public:
     Promocion();
@@ -25,6 +24,7 @@ public:
     virtual ~Promocion();
 
     void agregarProdProm(Producto* p, int cantMinima, int descuento);
+    void setVendedor(Vendedor* v);
 
     bool estaVigente();
 

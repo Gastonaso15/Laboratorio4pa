@@ -7,7 +7,6 @@ DTComentario::DTComentario(){
 
 }
 
-
 DTComentario::DTComentario(int id, string texto, DTFecha* fecEscrito){
   this->id=id;
   this->texto=texto;
@@ -24,6 +23,7 @@ DTComentario::DTComentario(int id, string texto, DTFecha* fecEscrito, DTComentar
 DTComentario::~DTComentario() {
 
 }
+
 void DTComentario::borrarRespuesta() {
 
 }

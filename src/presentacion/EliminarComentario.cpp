@@ -8,7 +8,7 @@ string EliminarComentario::eliminarComentario() {
   string respuesta;
   set<string> usuarios =controlador.listarNicknamesUsuario();
   if(usuarios.empty()){
-    return respuesta="Error: No hay usuarios registrados.";
+    return "Error: No hay usuarios registrados.";
   } else {
     cout << "--- Usuarios registrados ---" << endl;
     for (string nick : usuarios) {

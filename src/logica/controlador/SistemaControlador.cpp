@@ -65,7 +65,6 @@ string SistemaControlador::altaUsuario(DTUsuario* usuario) {
             dtoCli->direccion,
             dtoCli->ciudad
         );
-
     } else if (DTVendedor* dtoVen = dynamic_cast<DTVendedor*>(usuario)) {
         DTFecha* fechaNac = new DTFecha(*dtoVen->fechaNac);
 
@@ -76,7 +75,6 @@ string SistemaControlador::altaUsuario(DTUsuario* usuario) {
             dtoVen->rut
         );
     }
-
     if (nuevoUsuario != nullptr) {
         string nick = usuario->nick;
         if (usuarios.find(nick) == usuarios.end()) {
@@ -185,12 +183,12 @@ set<DTProducto> SistemaControlador::seleccionarVendedor(string nick) {
             vendedorSeleccionado = v;
             set<DTProducto> productosVendedor;
             for (const auto& p : v->retornarProductos()) {
-                productosVendedor.insert(p);
+                productosVendedor.insert(*p);
             }
             return productosVendedor;
         }
     }
-    return set<DTProducto>();  // Retorna set vacío si no encuentra el vendedor
+    return set<DTProducto>();
 }
 
 string SistemaControlador::agregarProdProm(set<DTProdPromocion> productosDT) {
@@ -207,8 +205,15 @@ string SistemaControlador::agregarProdProm(set<DTProdPromocion> productosDT) {
             return "Error: No existe el Producto seleccionado";
         }
     }
+    if (vendedorSeleccionado!= nullptr) {
+        promocionActual->setVendedor(vendedorSeleccionado);
+        vendedorSeleccionado->agregarPromocion(promocionActual);
+    }else {
+        return "Error: No hay vendedor seleccionado";
+    }
     return "Promocion creada con exito";
 }
+
 set<string> SistemaControlador::listarClientes() {
     set<string> nicksClientes;
     for (const auto& par : usuarios) {
@@ -339,7 +344,7 @@ set<DTProducto> SistemaControlador::seleccionarUsuario(string nick) {
         }
         return prods;
     }
-    return prods;  // Retorna set vacío si no encuentra al usuario
+    return prods;
 }
 
 bool SistemaControlador::seleccionarProducto(int codigo) {
@@ -431,7 +436,6 @@ string SistemaControlador::borrarComentario(int id) {
 
 set<DTCompra> SistemaControlador::seleccionarProductoC(int codigoProducto) {
     set<DTCompra> resultado;
-
     for (const auto& par : compras) {
         Compra* compra = par.second;
         for (ProdComprado* pc : compra->getProdComprado()) {
@@ -482,6 +486,24 @@ set<DTProducto> SistemaControlador::obtenerProductosPendientesPorVendedor(string
     return resultado;
 }
 
+DTUsuario* SistemaControlador::seleccionarUsuarioExpediente(string nick) {
+    auto it = usuarios.find(nick);
+    if (it == usuarios.end()) {
+        return nullptr;
+    }
+    Usuario* usuario = it->second;
+    if (Vendedor* vendedor = dynamic_cast<Vendedor*>(usuario)) {
+        set<DTProducto*> productosEx=vendedor->retornarProductos();
+        set<DTPromocion*> promocionesEx=vendedor->getPromocion();
+        DTVendedor* venedorCompleto=new DTVendedor(vendedor->getNickname(),"",vendedor->getFechaNac(),vendedor->getRut(),promocionesEx,productosEx);
+        return venedorCompleto;
+    }else if (Cliente* cliente = dynamic_cast<Cliente*>(usuario)) {
+        set<DTCompra*> comprasEx=cliente->retornarCompras();
+        DTCliente* clienteCompleto=new DTCliente(cliente->getNickname(),"",cliente->getFechaNac(),cliente->getCiudad(),cliente->getDireccion(),comprasEx);
+        return clienteCompleto;
+    }
+    return nullptr;
+}
 
 void SistemaControlador::cargarDatosPrueba() {
     string resultado;
@@ -536,35 +558,30 @@ void SistemaControlador::cargarDatosPrueba() {
 
 
     DTPromocion promo1("Picos 2x1", "2 picos por el valor de 1", new DTFecha(2025, 8, 25));
-    set<string> vendedores = ingDatos(promo1);
+    ingDatos(promo1);
     set<DTProducto> productosVend = seleccionarVendedor("Agustin");
     set<DTProdPromocion> productosParaPromo;
     DTProducto producto;
-    bool encontrado = false;
     for (const DTProducto& produ : productosVend) {
         if (produ.codigo == 1) {
             producto = produ;
-            encontrado = true;
-            break;
         }
     }
     productosParaPromo.insert(DTProdPromocion(2, 50, producto));
     agregarProdProm(productosParaPromo);
 
     DTPromocion promo3("Mucha Ropa?", "Roperos para toda la familia", new DTFecha(2025, 9, 21));
-    vendedores = ingDatos(promo3);
-    productosVend = seleccionarVendedor("Luca");
+    ingDatos(promo3);
+    set<DTProducto> productosVend3 = seleccionarVendedor("Luca");
     set<DTProdPromocion> productosParaPromo3;
-    encontrado = false;
-    for (const DTProducto& prod : productosVend) {
+    DTProducto producto2;
+    for (const DTProducto& prod : productosVend3) {
         if (prod.codigo == 4) {
-            producto = prod;
-            encontrado = true;
-            break;
+            producto2 = prod;
         }
     }
-    productosParaPromo.insert(DTProdPromocion(3, 20, producto));
-    agregarProdProm(productosParaPromo);
+    productosParaPromo3.insert(DTProdPromocion(3, 20, producto2));
+    agregarProdProm(productosParaPromo3);
 
 
     seleccionarUsuario("Martin");
@@ -659,97 +676,4 @@ void SistemaControlador::cargarDatosPrueba() {
     delete prodPtr8;
     delete prodPtr9;
     delete prodPtr10;
-
 }
-
-/*DTUsuario* SistemaControlador::seleccionarNickname(const std::string& nick) {
-    // Buscar el usuario en el mapa
-    auto it = usuarios.find(nick);
-    Usuario* usuario = it->second;
-
-    // Crear copia de la fecha de nacimiento
-    DTFecha* fechaNacCopy = new DTFecha(*usuario->getFechaNac());
-
-    // Determinar si es vendedor o cliente
-    if (Vendedor* vendedor = dynamic_cast<Vendedor*>(usuario)) {
-        set<DTProducto> productosSet;
-        for (Producto* prod : vendedor->retornarProductos()) {
-            productosSet.insert(DTProducto{
-                prod->getCodigo(),
-                prod->getNombre(),
-                prod->getDescripcion(),
-                prod->getPrecio(),
-                prod->getStock(),
-                prod->catToString()
-            });
-        }
-
-        std::set<DTPromocion> promocionesSet;
-        time_t ahora = time(nullptr);
-        for (Promocion* promo : vendedor->getPromociones()) {
-            if (promo->getFechaVencimiento() > ahora) {
-                std::set<DTProductoPromo> productosPromoSet;
-                for (ProdPromocion* pp : promo->getProductos()) {
-                    Producto* prod = pp->getProducto();
-                    productosPromoSet.insert(DTProductoPromo{
-                        prod->getCodigo(),
-                        prod->getNombre(),
-                        prod->getPrecio(),
-                        pp->getDescuentoAplicado()
-                    });
-                }
-
-                promocionesSet.insert(DTPromocion{
-                    promo->getNombre(),
-                    promo->getDescripcion(),
-                    promo->getFechaVencimientoAsString(),
-                    promo->getDescuento(),
-                    productosPromoSet
-                });
-            }
-        }
-
-        return new DTVendedorCompleto(
-            nick,
-            usuario->getPassword(),
-            fechaNacCopy,
-            vendedor->getRUT(),
-            productosSet,
-            promocionesSet
-        );
-    }
-    else if (Cliente* cliente = dynamic_cast<Cliente*>(usuario)) {
-        std::set<DTCompra> comprasSet;
-        for (Compra* compra : cliente->getCompras()) {
-            std::set<DTProductoCompra> productosCompraSet;
-            for (ProdComprado* item : compra->getProductos()) {
-                Producto* prod = item->getProducto();
-                productosCompraSet.insert(DTProductoCompra{
-                    prod->getCodigo(),
-                    prod->getNombre(),
-                    item->getCantidad(),
-                    item->getPrecioUnitario(),
-                    item->isEnviado()
-                });
-            }
-
-            comprasSet.insert(DTCompra{
-                compra->getId(),
-                compra->getMontoTotal(),
-                compra->getFechaAsString(),
-                productosCompraSet
-            });
-        }
-
-        return new DTClienteCompleto(
-            nick,
-            usuario->getPassword(),
-            fechaNacCopy,
-            comprasSet
-        );
-    }
-    else {
-        delete fechaNacCopy;
-        throw std::runtime_error("Tipo de usuario desconocido");
-    }
-}*/

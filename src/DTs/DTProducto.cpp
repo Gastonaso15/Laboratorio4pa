@@ -1,17 +1,21 @@
 #include "DTProducto.h"
 #include "../../DTs/Definiciones.h"
+#include "DTVendedor.h"
 #include <iostream>
 using namespace std;
 
 DTProducto::~DTProducto() {
 
 }
+
 DTProducto::DTProducto() {
     this->vendedor = nullptr;
 }
+
 int DTProducto::getCodDTProd() const {
     return this->codigo;
 }
+
 DTProducto::DTProducto(int codigo, string nombre, int precio, int stock, string descripcion, cat categoria){
     this->codigo = codigo;
     this->nombre = nombre;
@@ -25,7 +29,7 @@ ostream& operator<<(std::ostream& os, const DTProducto& dtProducto) {
     os  << "Codigo: " << dtProducto.codigo << endl
         << "Nombre: " << dtProducto.nombre << endl
         << "Descripcion: " << dtProducto.descripcion << endl
-        << "Precio Unitario: " << dtProducto.precio << endl;
+        << "Precio: $" << dtProducto.precio << endl;
     return os;
 }
 
@@ -46,7 +50,6 @@ DTProducto::DTProducto(int codigo, string nombre, int precio, int stock, string 
 string DTProducto::getNombreDTProd() {
     return this->nombre;
 }
-
 
 string DTProducto::catToString(cat categoria) {
     switch (categoria) {

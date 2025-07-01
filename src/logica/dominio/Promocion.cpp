@@ -61,4 +61,8 @@ set<DTProdPromocion*> Promocion::retornarDTProdPromocion() {
     return dtprods;
 }
 
+void Promocion::setVendedor(Vendedor *v) {
+    this->vendedor = v;
+}
+
 

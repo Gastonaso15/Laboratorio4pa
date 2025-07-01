@@ -12,9 +12,9 @@
 #include "../dominio/Vendedor.h"
 #include "../dominio/Promocion.h"
 #include "../dominio/Compra.h"
+#include "../../DTs/DTPromocion.h"
 #include <map>
 #include <set>
-#include "../../DTs/DTPromocion.h"
 #include <string>
 
 class SistemaControlador{
@@ -39,7 +39,7 @@ protected:
 
 	int ultimoCodigoProducto = 0;
 	int ultimoCodigoComentario = 0;
-	int ultimoCodigoCompra=0;
+	int ultimoCodigoCompra = 0;
 public:
 	virtual ~SistemaControlador();
 	static SistemaControlador& getInstancia();
@@ -54,33 +54,33 @@ public:
 	string agregarRespuesta(string texto);
 	string borrarComentario(int id);
 	string marcarProductoComoEnviado(int codigoProducto, int idCompra);
-
-	set<DTUsuario*> listarUsuarios();
-	set<string> listarNickVendedor();
 	string selectVendedor(string nick);
+	string confirmarCompra();
 
-	Producto *buscarProductoPorDT(const DTProducto* dtp);
-
-	set<DTProducto> listarProd();
-	DTProducto* selectProd(int codigo);
+	set<string> listarNicknamesUsuario();
+	set<string> listarNickVendedor();
+	set<string> listarClientes();
 	set<string> ingDatos(DTPromocion prom);
+	set<DTUsuario*> listarUsuarios();
+	set<DTProducto> listarProd();
 	set<DTProducto> seleccionarVendedor(string nick);
 	set<DTPromocion*> listarPromociones();
 	set<DTProdPromocion*> selectPromo(string nombre);
-	set<string> listarClientes();
 	set<DTProducto> seleccionarCliente(string nick);
-	void agregarProducto(DTProdComprado p);
-	void auxBorrarComentarioRecursivo(Comentario* com, Usuario* usuario, Producto* producto);
-
-	DTCompra * verDetalleCompra();
-
-	set<string> listarNicknamesUsuario();
 	set<DTProducto> seleccionarUsuario(string nick);
 	set<DTComentario*> listarComentario();
 	set<DTProducto> obtenerProductosPendientesPorVendedor(string nickVendedor);
 	set<DTCompra> seleccionarProductoC(int codigoProducto);
 	set<DTComentario*> seleccionarUsuarioComentario(string nick);
-	string confirmarCompra();
+
+	Producto *buscarProductoPorDT(const DTProducto* dtp);
+
+	DTUsuario* seleccionarUsuarioExpediente(string nick);
+	DTProducto* selectProd(int codigo);
+	DTCompra * verDetalleCompra();
+
+	void agregarProducto(DTProdComprado p);
+	void auxBorrarComentarioRecursivo(Comentario* com, Usuario* usuario, Producto* producto);
 	void cargarDatosPrueba();
 };
 

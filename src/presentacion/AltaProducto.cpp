@@ -4,7 +4,6 @@
 #include "../DTs/DTProducto.h"
 #include "../DTs/Definiciones.h"
 #include "AltaProducto.h"
-#include <limits>
 using namespace std;
 
 AltaProducto::AltaProducto(SistemaControlador& controlador):controlador(controlador) {}

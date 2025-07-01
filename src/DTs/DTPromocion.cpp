@@ -30,3 +30,12 @@ bool DTPromocion::operator<(const DTPromocion& other) const {
 string DTPromocion::obtenerInfo() const {
     return "Nombre: " + nom + "\nDescripcion: " + desc + "\nFecha de Vencimiento: " + fecVencimiento->toString();
 }
+
+bool DTPromocion::estaVigente() {
+    DTFecha hoy =  DTFecha::obtenerFechaActual();
+    if (hoy <= *fecVencimiento) {
+        return true;
+    }else {
+        return false;
+    }
+}

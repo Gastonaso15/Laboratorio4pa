@@ -21,14 +21,12 @@ class Producto {
     int codigo;
     int precio;
     int stock;
-
     string nombre;
     string descripcion;
-
     cat categoria;
+
     Vendedor * vendedor;
     map<int,Comentario*> comentarios;
-
     set<ProdPromocion*> prodsprom;
     set<ProdComprado*> prodscom;
   public:
@@ -45,17 +43,21 @@ class Producto {
     string catToString(cat categoria);
 
     cat getCategoria();
-    set<DTComentario*> getComentarios();
-    Comentario* getComentario(int id);
-    DTProducto* retornarDTProducto()const ;
-    Vendedor* getVendedor()const;
 
-    bool productoEnPromo();
     void asociarProdVendedor(Vendedor* vendedor);
     void agregarProdPromocion(ProdPromocion* pp);
     void asociarComentarioProducto(Comentario *com);
     void eliminarComentario(int id);
     void restarStock(int cantidad);
+
+    set<DTComentario*> getComentarios();
+
+    Comentario* getComentario(int id);
+    DTProducto* retornarDTProducto()const ;
+    Vendedor* getVendedor()const;
+
+    bool productoEnPromo();
+
     const set<ProdPromocion*>& getProdPromociones() const;
 
 };

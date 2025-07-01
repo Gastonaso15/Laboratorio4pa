@@ -18,6 +18,15 @@ DTVendedor::DTVendedor(string nick, string pass, DTFecha * fechaNac, string rut)
     this->fechaNac=fechaNac;
 }
 
+DTVendedor::DTVendedor(string nick, string pass, DTFecha * fechaNac, string rut,set<DTPromocion*> setPromos,set<DTProducto*> setProductos) {
+    this->nick=nick;
+    this->pass=pass;
+    this->rut=rut;
+    this->fechaNac=fechaNac;
+    this->setPromos=setPromos;
+    this->setProductos=setProductos;
+}
+
 string DTVendedor::getRUT() {
     return this->rut;
 }

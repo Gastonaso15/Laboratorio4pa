@@ -15,24 +15,30 @@ ProdComprado::ProdComprado(Producto* producto,  Compra* compra, int cantidad,boo
   this->cantidad=cantidad;
   this->enviado=enviado;
 }
+
 int ProdComprado::getCantidad() const {
   return cantidad;
 }
+
 bool ProdComprado::tieneArt(DTProducto* p) {
   return this->producto->getCodigo() == p->codigo;
 }
+
 Producto* ProdComprado::getProducto() const {
   return this->producto;
 }
+
 bool ProdComprado::getEnviado() const {
   return this->enviado;
 }
+
 DTProducto ProdComprado::getProductos() {
   DTProducto prod = DTProducto(producto->getCodigo(),
       producto->getNombre(),producto->getPrecio(), producto->getStock(),producto->getDescripcion(),
       producto->getCategoria());
   return prod;
 }
+
 void ProdComprado::setEnviado(bool valor) {
   this->enviado = valor;
 }

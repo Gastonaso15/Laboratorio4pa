@@ -20,23 +20,35 @@ DTCliente::DTCliente(string nick, string pass, DTFecha * fecha, string ciudad, D
     this->direccion= direccion;
 }
 
+DTCliente::DTCliente(string nick, string pass, DTFecha * fecha, string ciudad, DTDireccion * direccion,set<DTCompra*> setCompras){
+    this->nick= nick;
+    this->pass= pass;
+    this->fechaNac= fecha;
+    this->ciudad= ciudad;
+    this->direccion= direccion;
+    this->setCompras= setCompras;
+}
+
 string DTCliente::getCiudad() const {
     return this->ciudad;
 }
+
 string DTCliente::getNickname() const {
     return this->nick;
 }
+
 DTDireccion DTCliente::getDireccion() const {
     return *(this->direccion);
 }
+
 void DTCliente::asociarProd() {
 
 }
+
 DTCliente::DTCliente(string nick, string pass, DTFecha * fecha)
-    : DTUsuario(nick, pass, fecha), ciudad(""), direccion(nullptr) { // Inicializa los miembros adicionales si los tiene
-    // Puedes dejar 'ciudad' como "" y 'direccion' como nullptr
-    // o usar valores por defecto si tienen sentido.
+    : DTUsuario(nick, pass, fecha), ciudad(""), direccion(nullptr) {
 }
+
 string DTCliente::getTipo() const {
     return "Cliente";
 }

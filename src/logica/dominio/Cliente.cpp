@@ -57,11 +57,6 @@ std::string Cliente::getCiudad() const {
 }
 
 DTDireccion* Cliente::getDireccion() const {
-    /*if (this->direccion != nullptr) {
-        return this->direccion->toDT();
-    }
-    return nullptr;
-    */
     return this->direccion;
 }
 
@@ -69,4 +64,12 @@ void Cliente::agregarCompra(Compra* compra) {
     if (compra != nullptr) {
         this->compras[compra->getId()] = compra;
     }
+}
+
+set<DTCompra*> Cliente::retornarCompras() {
+    set<DTCompra*> retorno;
+    for (auto const com : compras) {
+        retorno.insert(com.second->getCompra());
+    }
+    return retorno;
 }

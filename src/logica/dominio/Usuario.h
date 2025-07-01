@@ -21,20 +21,20 @@ public:
 	Usuario();
 	Usuario(string nick, string contrasenia, DTFecha * fechaNac);
 	virtual ~Usuario();
+
 	virtual DTUsuario* retornarDTUsuario()const=0;
 
 	void asociarComentarioUsuario(Comentario * com);
+	void eliminarComentario(int id);
 
 	string getNick();
 	string getNickname() const;
 	string getContrasenia() const;
 
 	DTFecha* getFechaNac() const;
+	Comentario* obtenerComentario(int id);
 
 	set<DTComentario*> getComentarios();
-	Comentario* obtenerComentario(int id);
-	void eliminarComentario(int id);
-
 };
 
 

@@ -29,8 +29,6 @@ DTCompra::DTCompra(int id, int cantProd, DTFecha * fecCompra, float montoTotal, 
     this->cliente = cliente;
 }
 
-
-
 DTCompra::DTCompra(int id, int cantProd, DTFecha *fecCompra, float montoTotal) {
     this->id = id;
     this->cantProd = cantProd;
@@ -38,8 +36,6 @@ DTCompra::DTCompra(int id, int cantProd, DTFecha *fecCompra, float montoTotal) {
     this->montoTotal = montoTotal;
 }
 
-
-// Getters
 int DTCompra::getIdCompra() const {
     return id;
 }

@@ -9,13 +9,14 @@ class DTDireccion {
 public:
     string calle;
     int nroPuerta;
-
+    //--------------------------------------------------------------------------------------------------------------------
     DTDireccion();
-    ~DTDireccion();
     DTDireccion(string calle, int nroPuerta);
+    ~DTDireccion();
+
+    int getNroPuerta();
 
     string getCalle();
-    int getNroPuerta();
     string toString() const;
 };
 

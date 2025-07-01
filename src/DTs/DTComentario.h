@@ -10,10 +10,12 @@ class DTComentario {
         string texto;
         DTFecha *fecEscrito;
         DTComentario * padre;
+        //--------------------------------------------------------------------------------------------------------------------
         DTComentario();
-        ~DTComentario();
         DTComentario(int id, string texto, DTFecha *fecEscrito);
         DTComentario(int id, string texto, DTFecha *fecEscrito, DTComentario * padre);
+        ~DTComentario();
+
         void borrarRespuesta();
 
 };
